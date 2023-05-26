@@ -1,0 +1,14 @@
+{
+  "name": "recommend-apps",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "@octokit/core": "^4.2.1",
+    "cheerio": "^1.0.0-rc.12",
+    "gray-matter": "^4.0.3"
+  }
+}

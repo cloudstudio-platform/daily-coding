@@ -1,0 +1,38 @@
+name: CI
+defaults:
+  run:
+    working-directory: ./recommend-apps
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+
+      - name: Build project
+        run: yarn && yarn build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload COS
+        uses: zkqiang/tencent-cos-action@v0.1.0
+        with:
+          args: upload -r ./recommend-apps/dist/ /
+          secret_id: ${{ secrets.COS_SECRET_ID }}
+          secret_key: ${{ secrets.COS_SECRET_KEY }}
+          bucket: cs-daily-coding-1258344699
+          region: ap-shanghai
