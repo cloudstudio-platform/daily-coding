@@ -81,6 +81,8 @@ const all = docs.map((doc) => {
   // 解析元数据和内容
   const { data, content } = matter(fileContent);
 
+  const fileId = crypto.createHash("md5").update(doc + fileContent).digest("hex");
+
   // 使用 github markdown api 将 content 转换为 html
 
   return octokit
@@ -130,7 +132,7 @@ const all = docs.map((doc) => {
         data.readmeHtml = $.html();
       });
 
-      index.push({ ...data, readme: content });
+      index.push({ ...data, readme: content, id: fileId });
     });
 });
 
