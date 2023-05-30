@@ -129,7 +129,8 @@ const all = docs.map((doc) => {
           }
         }
 
-        data.readmeHtml = $.html();
+        // 将 html 片段写入到 data.readmeHtml 中
+        data.readmeHtml = $("body").html();
       });
 
       index.push({ ...data, readme: content, id: fileId });
