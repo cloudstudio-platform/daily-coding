@@ -72,6 +72,35 @@ function readDirRecursively(dir) {
   return result;
 }
 
+// 将需要 copy 的相对文件路径添加到 output_files 中，并返回 cos 访问路径
+function copyFileToOutputDir(addr , currentfile) {
+  // 判断是否为相对路径
+  if (addr && !url.parse(addr).protocol) {
+    const filepath = path.resolve(path.dirname(currentfile), addr);
+
+    // 判断文件是否存在 && 文件不是当前文件
+    if (fs.existsSync(filepath) && filepath !== currentfile) {
+      const filename = path.basename(filepath);
+      const fileContent = fs.readFileSync(filepath);
+      const copntentHash = crypto
+        .createHash("md5")
+        .update(fileContent)
+        .digest("hex");
+        const dist = path.resolve(
+          output_dir,
+          `${copntentHash}-${filename}`
+        );
+
+        output_files[dist] = {
+          type: "file",
+          value: filepath,
+        };
+
+        return url.resolve(CDN_URL, `${copntentHash}-${filename}`);
+    }
+  }
+}
+
 const docs = readDirRecursively(root_dir);
 
 const all = docs.map((doc) => {
@@ -81,10 +110,12 @@ const all = docs.map((doc) => {
   // 解析元数据和内容
   const { data, content } = matter(fileContent);
 
+  data.banner = copyFileToOutputDir(data.banner, doc) || data.banner;
+  data.video = copyFileToOutputDir(data.video, doc) || data.video;
+
   const fileId = crypto.createHash("md5").update(doc + fileContent).digest("hex");
 
   // 使用 github markdown api 将 content 转换为 html
-
   return octokit
     .request("POST /markdown", {
       text: content,
@@ -101,34 +132,12 @@ const all = docs.map((doc) => {
         const src = $element.attr("src");
         const hrefOrSrc = url.parse(href || src).href;
 
-        // 判断是否为相对路径
-        if (hrefOrSrc && !url.parse(hrefOrSrc).protocol) {
-          // 判断资源是否存在
-          const filepath = path.resolve(path.dirname(doc), href || src);
-          if (fs.existsSync(filepath) && filepath !== doc) {
-            // 文件名添加 hash
-            // 将文件复制到 dist 目录中
-            const filename = path.basename(filepath);
-            const fileContent = fs.readFileSync(filepath);
-            const copntentHash = crypto
-              .createHash("md5")
-              .update(fileContent)
-              .digest("hex");
-            const dist = path.resolve(
-              output_dir,
-              `${copntentHash}-${filename}`
-            );
-            copyFileSync(filepath, dist);
-            output_files[dist] = {
-              type: "file",
-              value: filepath,
-            };
-            $element.attr(
-              href ? "href" : "src",
-              url.resolve(CDN_URL, `${copntentHash}-${filename}`)
-            );
-          }
-        }
+        const cdnUrl = copyFileToOutputDir(hrefOrSrc, doc);
+
+        cdnUrl && $element.attr(
+          href ? "href" : "src",
+          cdnUrl,
+        );
 
         // 将 html 片段写入到 data.readmeHtml 中
         data.readmeHtml = $("body").html();
