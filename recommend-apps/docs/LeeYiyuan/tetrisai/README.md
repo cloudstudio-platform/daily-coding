@@ -19,7 +19,7 @@ language:
 star: '171'
 fork: '49'
 url: https://github.com/LeeYiyuan/tetrisai
-banner: ''
+banner: ./tetrisai-banner.png
 order: 9
 ---
 

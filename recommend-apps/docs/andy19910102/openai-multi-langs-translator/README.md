@@ -13,7 +13,7 @@ language:
 star: '5'
 fork: '0'
 url: https://github.com/andy19910102/openai-multi-langs-translator
-banner: ''
+banner: ./openai-multi-langs-translator-banner.png
 order: 12
 ---
 

@@ -37,7 +37,7 @@ language:
 star: 2k
 fork: '692'
 url: https://github.com/marytts/marytts
-banner: ''
+banner: ./tts-banner.png
 order: 4
 ---
 

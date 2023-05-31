@@ -14,7 +14,7 @@ language:
 star: '257'
 fork: '56'
 url: https://github.com/replicate/inpainter
-banner: ''
+banner: ./inpainter-banner.png
 order: 7
 ---
 
