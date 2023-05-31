@@ -15,6 +15,7 @@ star: '574'
 fork: '35'
 url: https://github.com/Chainlit/chainlit
 banner: https://github.com/Chainlit/chainlit/raw/main/images/quick-start.png
+video: ./images/Chainlit.mov
 order: 18
 ---
 

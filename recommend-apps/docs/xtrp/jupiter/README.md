@@ -15,6 +15,7 @@ star: '49'
 fork: '3'
 url: https://github.com/xtrp/jupiter
 banner: https://github.com/xtrp/jupiter/raw/master/demo-image.png
+video: ./2048.mov
 order: 10
 ---
 

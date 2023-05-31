@@ -34,6 +34,7 @@ star: 26.8k
 fork: 23.2k
 url: https://github.com/Yidadaa/ChatGPT-Next-Web
 banner: https://github.com/Yidadaa/ChatGPT-Next-Web/raw/main/docs/images/cover.png
+video: ./docs/images/ChatGPT-Next-Web.mov
 order: 11
 ---
 

@@ -13,6 +13,7 @@ fork: '0'
 url: https://github.com/ozboware/Javascript-AI-Rock-Paper-Scissors
 banner: >-
   https://user-images.githubusercontent.com/95859352/223067524-cfb54c8f-9bf1-442f-8022-7cf13b766745.png
+video: ./石头剪刀布.mov
 order: 8
 ---
 

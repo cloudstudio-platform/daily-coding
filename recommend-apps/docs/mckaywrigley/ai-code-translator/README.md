@@ -22,6 +22,7 @@ fork: '80'
 url: https://github.com/mckaywrigley/ai-code-translator
 banner: >-
   https://github.com/mckaywrigley/ai-code-translator/raw/main/public/screenshot.png
+video: ./AI-Code-Translator.mov
 order: 1
 ---
 

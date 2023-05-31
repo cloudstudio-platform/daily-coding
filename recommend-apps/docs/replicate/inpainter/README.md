@@ -15,6 +15,7 @@ star: '257'
 fork: '56'
 url: https://github.com/replicate/inpainter
 banner: ./inpainter-banner.png
+video: ./Inpainter.mov
 order: 7
 ---
 

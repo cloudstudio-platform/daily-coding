@@ -38,6 +38,7 @@ star: 2k
 fork: '692'
 url: https://github.com/marytts/marytts
 banner: ./tts-banner.png
+video: ./MaryTTS.mov
 order: 4
 ---
 

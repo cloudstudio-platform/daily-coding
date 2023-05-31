@@ -36,6 +36,7 @@ star: '23.1k'
 fork: '9k'
 url: https://github.com/Chanzhaoyu/chatgpt-web
 banner: https://github.com/Chanzhaoyu/chatgpt-web/raw/main/docs/c1.png
+video: ./ChatGPT-Web.mov
 order: 17
 ---
 

@@ -21,6 +21,7 @@ star: 1.2k
 fork: '351'
 url: https://github.com/Nutlope/twitterbio
 banner: https://github.com/Nutlope/twitterbio/raw/main/public/screenshot.png
+video: ./public/TwitterBio.mov
 order: 2
 ---
 

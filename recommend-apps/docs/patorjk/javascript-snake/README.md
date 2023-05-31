@@ -33,6 +33,7 @@ star: '478'
 fork: '601'
 url: https://github.com/patorjk/JavaScript-Snake
 banner: './image.png'
+video: ./snake-game.mov
 order: 3
 ---
 
