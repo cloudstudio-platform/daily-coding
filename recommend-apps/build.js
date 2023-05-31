@@ -99,12 +99,13 @@ const all = docs.map((doc) => {
         const $element = $(element);
         const href = $element.attr("href");
         const src = $element.attr("src");
+        const hrefOrSrc = url.parse(href || src).href;
 
         // 判断是否为相对路径
-        if (/^\.{0,2}\//.test(href || src)) {
+        if (hrefOrSrc && !url.parse(hrefOrSrc).protocol) {
           // 判断资源是否存在
           const filepath = path.resolve(path.dirname(doc), href || src);
-          if (fs.existsSync(filepath)) {
+          if (fs.existsSync(filepath) && filepath !== doc) {
             // 文件名添加 hash
             // 将文件复制到 dist 目录中
             const filename = path.basename(filepath);
