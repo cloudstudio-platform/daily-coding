@@ -20,7 +20,7 @@ star: '171'
 fork: '49'
 url: https://github.com/LeeYiyuan/tetrisai
 banner: ./tetrisai-banner.png
-icon: https://cs-res.codehub.cn/vscode/javascript.svg
+icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./俄罗斯方块.mov
 order: 9
 ---

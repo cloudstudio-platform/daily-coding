@@ -21,7 +21,7 @@ fork: '46'
 url: https://github.com/replicate/paint-by-text
 banner: >-
   https://paintbytext.chat/_next/image?url=https%3A%2F%2Fuser-images.githubusercontent.com%2F2289%2F215248708-80787623-fff4-4b22-a548-e5c46b055244.png&w=640&q=75
-icon: https://cs-res.codehub.cn/vscode/javascript.svg
+icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./paint-by-text.mov
 order: 6
 ---

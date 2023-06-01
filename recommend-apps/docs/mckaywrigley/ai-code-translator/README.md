@@ -23,7 +23,7 @@ url: https://github.com/mckaywrigley/ai-code-translator
 banner: >-
   https://github.com/mckaywrigley/ai-code-translator/raw/main/public/screenshot.png
 video: ./AI-Code-Translator.mov
-icon: https://cs-res.codehub.cn/vscode/typescript.svg
+icon: https://cs-res.codehub.cn/vscode/node.svg
 order: 1
 ---
 

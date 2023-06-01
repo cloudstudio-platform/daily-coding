@@ -15,7 +15,7 @@ star: '257'
 fork: '56'
 url: https://github.com/replicate/inpainter
 banner: ./inpainter-banner.png
-icon: https://cs-res.codehub.cn/vscode/javascript.svg
+icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./Inpainter.mov
 order: 7
 ---

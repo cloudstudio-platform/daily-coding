@@ -34,7 +34,7 @@ star: '6.3k'
 fork: '1.5k'
 url: https://github.com/FlowiseAI/Flowise
 banner: 'https://github.com/FlowiseAI/Flowise/raw/main/images/flowise.gif?raw=true'
-icon: https://cs-res.codehub.cn/vscode/javascript.svg
+icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./Flowise.mov
 order: 16
 ---

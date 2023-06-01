@@ -14,7 +14,7 @@ star: '5'
 fork: '0'
 url: https://github.com/andy19910102/openai-multi-langs-translator
 banner: ./openai-multi-langs-translator-banner.png
-icon: /language-icons/javascript.svg
+icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./OpenAIMultiLangsTranslator.mov
 order: 12
 ---
