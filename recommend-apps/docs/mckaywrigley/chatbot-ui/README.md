@@ -33,6 +33,7 @@ star: 14.5k
 fork: 3.9k
 url: https://github.com/mckaywrigley/chatbot-ui
 banner: https://github.com/mckaywrigley/chatbot-ui/raw/main/public/screenshots/screenshot-0402023.jpg
+icon: https://cs-res.codehub.cn/vscode/typescript.svg
 video: ./public/ChatGPT-UI.mov
 order: 13
 ---

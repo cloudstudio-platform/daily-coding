@@ -9,6 +9,7 @@ language:
 star: '0'
 fork: '0'
 url: https://github.com/cloudstudio-platform/openai-proxy
+icon: https://cs-res.codehub.cn/vscode/typescript.svg
 banner: ''
 order: 14
 ---

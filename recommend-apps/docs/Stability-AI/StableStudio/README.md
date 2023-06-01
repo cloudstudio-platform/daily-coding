@@ -17,6 +17,7 @@ fork: '80'
 url: https://github.com/Stability-AI/StableStudio
 banner: >-
   https://github.com/Stability-AI/StableStudio/blob/main/misc/Banner.png?raw=true
+icon: https://cs-res.codehub.cn/vscode/typescript.svg
 video: ./misc/StableStudio.mov
 order: 0
 ---
