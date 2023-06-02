@@ -25,8 +25,8 @@ interface LayoutProps {
   children: ReactNode
 }
 
-export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
-  const { filePath, path, slug, date, title, tags } = content
+export default function PostLayout({ content, authorDetails, next, prev }: LayoutProps) {
+  const { path, date, title, tags } = content
   const basePath = path.split('/')[0]
   // const [loadComments, setLoadComments] = useState(false)
 
@@ -36,7 +36,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
       <ScrollTopAndComment />
       <article>
         <div className="xl:divide-y xl:divide-gray-200">
-          <header className="xl:pb-6 pt-6">
+          <header className="pt-6 xl:pb-6">
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
@@ -53,11 +53,11 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </div>
             </div>
           </header>
-          <div className="xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0 grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8">
+          <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0">
             <footer>
-              <div className="xl:col-start-1 xl:row-start-2 xl:divide-y divide-gray-200 text-sm font-medium leading-5">
+              <div className="divide-gray-200 text-sm font-medium leading-5 xl:col-start-1 xl:row-start-2 xl:divide-y">
                 {tags && (
-                  <div className="xl:py-8 py-4">
+                  <div className="py-4 xl:py-8">
                     <h2 className="text-xs uppercase tracking-wide text-gray-500">标签</h2>
                     <div className="flex flex-wrap">
                       {tags.map((tag) => (
@@ -67,7 +67,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   </div>
                 )}
                 {(next || prev) && (
-                  <div className="xl:block xl:space-y-8 xl:py-8 flex justify-between py-4">
+                  <div className="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
                     {prev && (
                       <div>
                         <h2 className="text-xs uppercase tracking-wide text-gray-500">前一篇</h2>
@@ -87,7 +87,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   </div>
                 )}
               </div>
-              <div className="xl:pt-8 pt-4">
+              <div className="pt-4 xl:pt-8">
                 <Link
                   href={`/${basePath}`}
                   className="text-primary-500 hover:text-primary-600"

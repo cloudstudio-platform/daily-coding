@@ -40,6 +40,7 @@ export default function BlogPage({
           <img
             src="https://help-assets.codehub.cn/enterprise/new-static/images/insight/index_bg.png"
             className="tablet:hidden"
+            alt=""
           />
         </div>
         <Recommand posts={posts} />

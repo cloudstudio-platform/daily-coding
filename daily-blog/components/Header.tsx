@@ -51,7 +51,7 @@ const Header = () => {
               </Link>
             </h1>
 
-            <nav className="hidden h-full items-center xl:col-span-6 xl:flex xxl:col-span-8 xxl:flex">
+            <nav className="hidden h-full items-center xl:col-span-6 xl:flex xxl:col-span-7 xxl:flex">
               <AntdMenu className="menus-box" mode="horizontal" selectable={false}>
                 <SubMenu key="online-code" title="在线编程">
                   <AntdMenu.ItemGroup title="产品特性" key="online-code-1">
@@ -118,7 +118,7 @@ const Header = () => {
               </AntdMenu>
             </nav>
 
-            <nav className="col-span-4 flex items-center justify-end sm:col-span-2 xxl:col-span-2 xxl:flex">
+            <nav className="col-span-4 flex items-center justify-end sm:col-span-2 xxl:col-span-3 xxl:flex">
               <Button
                 className="btn-login mr-4 cursor-pointer text-sm sm:hidden md:mr-5 md:hidden"
                 onClick={handleLogin}
