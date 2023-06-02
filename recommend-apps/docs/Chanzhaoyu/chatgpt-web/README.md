@@ -46,7 +46,7 @@ fork: '9k'
 url: https://github.com/Chanzhaoyu/chatgpt-web
 banner: https://github.com/Chanzhaoyu/chatgpt-web/raw/main/docs/c1.png
 icon: https://cs-res.codehub.cn/workspace/assets/icons/vuejs.svg
-video: ./ChatGPT-Web.mov
+video: ./docs/ChatGPT-Web.mov
 order: 17
 ---
 
