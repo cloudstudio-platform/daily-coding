@@ -30,37 +30,37 @@ export const FOOTER_ATOM = [
       },
     ],
   },
-  {
-    id: 'solutions',
-    category: '解决方案',
-    list: [
-      {
-        key: 'education',
-        name: '教育开发场景',
-        link: '/',
-      },
-      {
-        key: 'cloudorigin',
-        name: '云原生应用开发场景',
-        link: '/',
-      },
-      {
-        key: 'pr',
-        name: 'PR 代码评审场景',
-        link: '/',
-      },
-      {
-        key: 'idepages',
-        name: '企业级插件市场',
-        link: '/',
-      },
-      {
-        key: 'plugins',
-        name: '行业集成',
-        link: '/',
-      },
-    ],
-  },
+  // {
+  //   id: 'solutions',
+  //   category: '解决方案',
+  //   list: [
+  //     {
+  //       key: 'education',
+  //       name: '教育开发场景',
+  //       link: '/',
+  //     },
+  //     {
+  //       key: 'cloudorigin',
+  //       name: '云原生应用开发场景',
+  //       link: '/',
+  //     },
+  //     {
+  //       key: 'pr',
+  //       name: 'PR 代码评审场景',
+  //       link: '/',
+  //     },
+  //     {
+  //       key: 'idepages',
+  //       name: '企业级插件市场',
+  //       link: '/',
+  //     },
+  //     {
+  //       key: 'plugins',
+  //       name: '行业集成',
+  //       link: '/',
+  //     },
+  //   ],
+  // },
   {
     id: 'resource',
     category: '资源',

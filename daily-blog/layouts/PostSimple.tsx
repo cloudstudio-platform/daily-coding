@@ -28,7 +28,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
       <ScrollTopAndComment />
       <div className="blog-article_detail_bg"></div>
       <article className="relative z-10">
-        <div className="pb-[88px] pt-[128px] xs:px-4 sm:px-6 md:px-8 xl:px-12 xxl:px-12">
+        <div className="pb-[88px] pt-[128px]">
           <header>
             <div className="flex">
               <Link href="/blog">首页</Link>
@@ -74,7 +74,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
           </header>
           <div className="">
             <div className="relative flex justify-between">
-              <div className="prose max-w-[860px] pb-8 pt-10 lgS:max-w-[55vw] layer:w-full layer:max-w-[none]">
+              <div className="prose max-w-[980px] pb-8 pt-10 lgS:max-w-[55vw] layer:w-full layer:max-w-[none]">
                 {children}
               </div>
               <AsideBar newClass="absolute top-0 right-[-32px] layer:hidden" />
