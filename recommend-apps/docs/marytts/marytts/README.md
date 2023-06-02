@@ -31,12 +31,18 @@ contributors:
   - name: giuliopaci
     avatar: https://avatars.githubusercontent.com/u/311723?s=64&v=4
 language:
-  - Java
-  - XSLT
-  - Groovy
-  - JavaScript
-  - HTML
-  - Raku
+  - language: Java
+    percentage: 97.4
+  - language: XSLT
+    percentage: 1.1
+  - language: Groovy
+    percentage: 0.6
+  - language: JavaScript
+    percentage: 0.4
+  - language: HTML
+    percentage: 0.3
+  - language: Raku
+    percentage: 0.1
 star: 2k
 fork: '692'
 url: https://github.com/marytts/marytts

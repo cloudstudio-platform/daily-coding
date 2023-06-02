@@ -16,10 +16,12 @@ contributors:
   - name: tedspare
     avatar: https://avatars.githubusercontent.com/u/36117635?s=64&v=4
 language:
-  - TypeScript
-  - CSS
-  - JavaScript
-  - Shell
+  - language: TypeScript
+    percentage: 91.1
+  - language: CSS
+    percentage: 5.0
+  - language: JavaScript
+    percentage: 3.9
 star: 1.2k
 fork: '351'
 url: https://github.com/Nutlope/twitterbio

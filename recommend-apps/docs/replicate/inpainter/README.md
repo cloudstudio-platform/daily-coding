@@ -12,8 +12,10 @@ contributors:
   - name: ParentZap
     avatar: https://avatars.githubusercontent.com/u/63628065?s=64&v=4
 language:
-  - Javascript
-  - CSS
+  - language: Javascript
+    percentage: 97.2
+  - language: CSS
+    percentage: 2.8
 star: '257'
 fork: '56'
 url: https://github.com/replicate/inpainter

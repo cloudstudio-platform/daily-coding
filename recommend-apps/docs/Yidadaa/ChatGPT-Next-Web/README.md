@@ -30,9 +30,10 @@ contributors:
   - name: pBrambi
     avatar: https://avatars.githubusercontent.com/u/51099204?s=64&v=4
 language:
-  - Javascript
-  - scss
-  - Javascript
+  - language: Javascript
+    percentage: 81.5
+  - language: scss
+    percentage: 16.5
 star: 26.8k
 fork: 23.2k
 url: https://github.com/Yidadaa/ChatGPT-Next-Web

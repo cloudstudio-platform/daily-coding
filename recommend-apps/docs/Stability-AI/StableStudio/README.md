@@ -14,7 +14,8 @@ contributors:
   - name: cruhl
     avatar: https://avatars.githubusercontent.com/u/4983357?v=4
 language:
-  - TypeScript
+  - language: TypeScript
+    percentage: 99.6
 star: 1.4k
 fork: '80'
 url: https://github.com/Stability-AI/StableStudio

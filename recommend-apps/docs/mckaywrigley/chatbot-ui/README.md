@@ -31,7 +31,8 @@ contributors:
   - name: ryanhex53
     avatar: https://avatars.githubusercontent.com/u/360426?s=64&v=4
 language:
-  - Typescript
+  - language: Typescript
+    percentage: 98.1
 star: 14.5k
 fork: 3.9k
 url: https://github.com/mckaywrigley/chatbot-ui

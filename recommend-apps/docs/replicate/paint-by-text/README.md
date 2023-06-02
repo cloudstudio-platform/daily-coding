@@ -16,9 +16,12 @@ contributors:
   - name: steven-tey
     avatar: https://avatars.githubusercontent.com/u/28986134?s=64&v=4
 language:
-  - JavaScript
-  - CSS
-  - Shell
+  - language: JavaScript
+    percentage: 96.1
+  - language: CSS
+    percentage: 3.5
+  - language: Shell
+    percentage: 0.4
 star: '276'
 fork: '46'
 url: https://github.com/replicate/paint-by-text

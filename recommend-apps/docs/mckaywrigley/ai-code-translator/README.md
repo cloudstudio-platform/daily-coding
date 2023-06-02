@@ -16,10 +16,14 @@ contributors:
   - name: dreamYiZ
     avatar: https://avatars.githubusercontent.com/u/16505845?s=64&v=4
 language:
-  - Typescript
-  - Javascript
-  - Dockerfile
-  - css
+  - language: Typescript
+    percentage: 94.5
+  - language: Javascript
+    percentage: 2.8
+  - language: Dockerfile
+    percentage: 2.4
+  - language: css
+    percentage: 0.3
 star: 1.4k
 fork: '80'
 url: https://github.com/mckaywrigley/ai-code-translator

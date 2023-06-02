@@ -10,9 +10,12 @@ author:
   avatar: https://avatars.githubusercontent.com/u/14119945?s=96&v=4
 contributors: []
 language:
-  - Javascript
-  - CSS
-  - shell
+  - language: Javascript
+    percentage: 76.8
+  - language: CSS
+    percentage: 22.0
+  - language: shell
+    percentage: 1.2
 star: '5'
 fork: '0'
 url: https://github.com/andy19910102/openai-multi-langs-translator

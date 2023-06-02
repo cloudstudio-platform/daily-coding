@@ -27,12 +27,18 @@ contributors:
   - name: xianjianlf2
     avatar: https://avatars.githubusercontent.com/u/53885024?s=64&v=4
 language:
-  - JavaScript
-  - TypeScript
-  - CSS
-  - SCSS
-  - HTML
-  - Dockerfile
+  - language: JavaScript
+    percentage: 50.1
+  - language: TypeScript
+    percentage: 46.8
+  - language: CSS
+    percentage: 1.6
+  - language: SCSS
+    percentage: 0.9
+  - language: HTML
+    percentage: 0.5
+  - language: Dockerfile
+    percentage: 0.1
 star: '6.3k'
 fork: '1.5k'
 url: https://github.com/FlowiseAI/Flowise

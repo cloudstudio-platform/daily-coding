@@ -8,7 +8,8 @@ author:
   avatar: https://avatars.githubusercontent.com/u/131568360?s=88&v=4
 contributors: []
 language:
-  - Typescript
+  - language: Typescript
+    percentage: 100
 star: '0'
 fork: '0'
 url: https://github.com/cloudstudio-platform/openai-proxy

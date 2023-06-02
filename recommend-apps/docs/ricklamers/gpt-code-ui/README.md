@@ -14,13 +14,20 @@ contributors:
   - name: tajkirkpatrick
     avatar: https://avatars.githubusercontent.com/u/50558516?s=64&v=4
 language:
-  - Python
-  - TypeScript
-  - CSS
-  - Makefile
-  - Shell
-  - JavaScript
-  - HTML
+  - language: Python
+    percentage: 53.4
+  - language: TypeScript
+    percentage: 32.0
+  - language: CSS
+    percentage: 8.6
+  - language: Makefile
+    percentage: 2.8
+  - language: Shell
+    percentage: 1.5
+  - language: JavaScript
+    percentage: 0.9
+  - language: HTML
+    percentage: 0.8
 star: 1.7k
 fork: 163
 url: https://github.com/ricklamers/gpt-code-ui

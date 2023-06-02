@@ -9,8 +9,10 @@ description: >-
   historical moves
 contributors: []
 language:
-  - Javascript
-  - CSS
+  - language: Javascript
+    percentage: 98.9
+  - language: CSS
+    percentage: 1.1
 star: '10'
 fork: '0'
 url: https://github.com/ozboware/Javascript-AI-Rock-Paper-Scissors

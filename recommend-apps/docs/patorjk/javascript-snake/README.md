@@ -29,9 +29,12 @@ contributors:
   - name: Thunderforge
     avatar: https://avatars.githubusercontent.com/u/6200170?s=64&v=4
 language:
-  - Javascript
-  - CSS
-  - HTML
+  - language: Javascript
+    percentage: 62.7
+  - language: CSS
+    percentage: 30.4
+  - language: HTML
+    percentage: 6.9
 star: '478'
 fork: '601'
 url: https://github.com/patorjk/JavaScript-Snake

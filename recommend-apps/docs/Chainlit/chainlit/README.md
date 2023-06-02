@@ -12,8 +12,10 @@ contributors:
   - name: constantinidan  
     avatar: https://avatars.githubusercontent.com/u/16107237?s=64&v=4
 language:
-  - TypeScript
-  - Python
+  - language: TypeScript
+    percentage: 58.0
+  - language: Python
+    percentage: 41.5
 star: '574'
 fork: '35'
 url: https://github.com/Chainlit/chainlit

@@ -35,12 +35,18 @@ contributors:
   - name: ares0x
     avatar: https://avatars.githubusercontent.com/u/53114112?s=64&v=4
 language:
-  - TypeScript
-  - Python
-  - CSS
-  - SCSS
-  - JavaScript
-  - PHP
+  - language: TypeScript
+    percentage: 51
+  - language: Python
+    percentage: 42.9
+  - language: CSS
+    percentage: 3.3
+  - language: SCSS
+    percentage: 1.2
+  - language: JavaScript
+    percentage: 1.1
+  - language: PHP
+    percentage: 0.2
 star: 3k
 fork: '396'
 url: https://github.com/langgenius/dify

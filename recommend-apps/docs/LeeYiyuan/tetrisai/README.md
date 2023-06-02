@@ -16,9 +16,12 @@ contributors:
   - name: cmacmillan
     avatar: https://avatars.githubusercontent.com/u/10664877?s=64&v=4
 language:
-  - Javascript
-  - CSS
-  - HTML
+  - language: Javascript
+    percentage: 87.5
+  - language: CSS
+    percentage: 7.3
+  - language: HTML
+    percentage: 5.2
 star: '171'
 fork: '49'
 url: https://github.com/LeeYiyuan/tetrisai

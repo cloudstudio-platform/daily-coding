@@ -10,10 +10,14 @@ author:
   avatar: https://avatars.githubusercontent.com/u/36894883?s=96&v=4
 contributors: []
 language:
-  - Javascript
-  - CSS
-  - HTML
-  - Python
+  - language: Javascript
+    percentage: 40.3
+  - language: CSS
+    percentage: 27.8
+  - language: HTML
+    percentage: 24
+  - language: Python
+    percentage: 7.9
 star: '49'
 fork: '3'
 url: https://github.com/xtrp/jupiter

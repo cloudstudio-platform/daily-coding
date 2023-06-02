@@ -29,12 +29,18 @@ contributors:
   - name: quzard
     avatar: https://avatars.githubusercontent.com/u/30899719?s=64&v=4
 language:
-  - Vue
-  - TypeScript
-  - Less
-  - HTML
-  - Dockerfile
-  - JavaScript
+  - language: Vue
+    percentage: 56.6
+  - language: TypeScript
+    percentage: 28.8
+  - language: Less
+    percentage: 13.0
+  - language: HTML
+    percentage: 0.7
+  - language: Dockerfile
+    percentage: 0.4
+  - language: JavaScript
+    percentage: 0.3
 star: '23.1k'
 fork: '9k'
 url: https://github.com/Chanzhaoyu/chatgpt-web
