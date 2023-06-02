@@ -1,5 +1,8 @@
 ---
 name: Javascript AI Rock Paper Scissors
+author:
+  name: ozboware
+  avatar: https://avatars.githubusercontent.com/u/95859352?s=96&v=4
 description: >-
   A rock, paper, scissors game using artificial intelligence as the computer
   player. The program will remember patterns and make moves based on your

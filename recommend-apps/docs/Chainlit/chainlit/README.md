@@ -3,6 +3,9 @@ name: Chainlit
 description: >-
   Build Python LLM apps in minutes ⚡️
   Chainlit lets you create ChatGPT-like UIs on top of any Python code in minutes! Some of the key features include intermediary steps visualisation, element management & display (images, text, carousel, etc.) as well as cloud deployment.
+author:
+  name: Chainlit
+  avatar: https://avatars.githubusercontent.com/u/128686189?s=64&v=4
 contributors: 
   - name: willydouhard
     avatar: https://avatars.githubusercontent.com/u/13104895?s=64&v=4

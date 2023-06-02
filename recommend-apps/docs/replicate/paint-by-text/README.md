@@ -1,6 +1,9 @@
 ---
 name: Paint by Text
 description: Modify images by chatting with a generative AI model.
+author:
+  name: replicate
+  avatar: https://avatars.githubusercontent.com/u/60410876?s=88&v=4
 contributors:
   - name: zeke
     avatar: https://avatars.githubusercontent.com/u/2289?s=64&v=4

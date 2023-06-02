@@ -3,6 +3,9 @@ name: ChatGPT Next Web
 description: >-
   One-Click to deploy well-designed ChatGPT web UI on Vercel. 一键拥有你自己的 ChatGPT
   网页服务。
+author:
+  name: Yidadaa
+  avatar: https://avatars.githubusercontent.com/u/16968934?s=88&v=4
 contributors:
   - name: Yidadaa
     avatar: https://avatars.githubusercontent.com/u/16968934?s=64&v=4

@@ -1,6 +1,9 @@
 ---
 name: TwitterBio
 description: This project generates Twitter bios for you using AI.
+author:
+  name: Nutlope
+  avatar: https://avatars.githubusercontent.com/u/63742054?s=64&v=4
 contributors:
   - name: Nutlope
     avatar: https://avatars.githubusercontent.com/u/63742054?s=64&v=4

@@ -1,6 +1,9 @@
 ---
 name: Inpainter
 description: A web GUI for inpainting with Stable Diffusion using the Replicate API.
+author:
+  name: zeke
+  avatar: https://avatars.githubusercontent.com/u/2289?s=64&v=4
 contributors:
   - name: zeke
     avatar: https://avatars.githubusercontent.com/u/2289?s=64&v=4

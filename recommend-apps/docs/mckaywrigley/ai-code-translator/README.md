@@ -1,6 +1,9 @@
 ---
 name: AI Code Translator
 description: Use AI to translate code from one language to another.
+author:
+  name: mckaywrigley
+  avatar: https://avatars.githubusercontent.com/u/29221284?v=4
 contributors:
   - name: mckaywrigley
     avatar: https://avatars.githubusercontent.com/u/29221284?v=4

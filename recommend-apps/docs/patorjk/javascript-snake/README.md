@@ -2,6 +2,9 @@
 name: JavaScript Snake Game
 description: >-
     This is a DOM-based game of Snake that I wrote in JavaScript over a decade ago. It was made to have sort of a nostalgic feel to it.
+author:
+  name: patorjk
+  avatar: https://avatars.githubusercontent.com/u/521224?s=64&v=4
 contributors: 
   - name: patorjk
     avatar: https://avatars.githubusercontent.com/u/521224?s=64&v=4

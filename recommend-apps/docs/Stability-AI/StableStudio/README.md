@@ -7,6 +7,9 @@ description: >-
       It is a web-based application that allows users to create and edit generated images.
       
       We're not entirely sure where this project is going just yet, but we're excited to see what the community does with it!
+author:
+  name: Stability AI
+  avatar: https://avatars.githubusercontent.com/u/100950301?s=88&v=4
 contributors:
   - name: cruhl
     avatar: https://avatars.githubusercontent.com/u/4983357?v=4

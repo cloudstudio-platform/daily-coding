@@ -3,6 +3,9 @@ name: OPEN AI 的 API 代理项目
 description: >-
   在国内直接访问 OPEN AI 的 API 存在被封账号的风险，本项目可以快速搭建一个 OPEN AI
   的接口代理服务。然后一键部署到腾讯云云函数的国外节点上，比如新加坡地域，不需要特意买一台云服务器，按量付费，成本低，且无需运维。
+author:
+  name: cloudstudio-platform
+  avatar: https://avatars.githubusercontent.com/u/131568360?s=88&v=4
 contributors: []
 language:
   - Typescript

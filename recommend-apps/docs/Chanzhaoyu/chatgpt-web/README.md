@@ -2,6 +2,9 @@
 name: ChatGPT Web
 description: >-
   用 Express 和 Vue3 搭建的 ChatGPT 演示网页
+author:
+  name: Chanzhaoyu
+  avatar: https://avatars.githubusercontent.com/u/24789441?s=64&v=4
 contributors: 
   - name: Chanzhaoyu
     avatar: https://avatars.githubusercontent.com/u/24789441?s=64&v=4

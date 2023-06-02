@@ -4,6 +4,9 @@ description: >-
   This is the source code repository for the multilingual open-source MARY
   text-to-speech platform (MaryTTS). MaryTTS is a client-server system written
   in pure Java, so it runs on many platforms.
+author:
+  name: marytts
+  avatar: https://avatars.githubusercontent.com/u/1397306?s=88&v=4
 contributors:
   - name: psibre
     avatar: https://avatars.githubusercontent.com/u/1278639?s=64&v=4

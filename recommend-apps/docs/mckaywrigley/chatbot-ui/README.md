@@ -2,6 +2,9 @@
 name: Chatbot UI
 description: >-
   Chatbot UI is an open source chat UI for AI models.
+author:
+  name: mckaywrigley
+  avatar: https://avatars.githubusercontent.com/u/29221284?s=88&v=4
 contributors:
   - name: mckaywrigley
     avatar: https://avatars.githubusercontent.com/u/29221284?s=64&v=4

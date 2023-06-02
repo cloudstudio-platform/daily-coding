@@ -5,6 +5,9 @@ description: >-
   text-davinci-003
   模型來實現多國語言一次性翻譯的網站應用程式介面。使用者可以在此網站上輸入待翻譯的文字，並選擇所需的語言進行翻譯。此外，Open AI Multi Langs
   Translator 也支持多種語言之間的翻譯，例如英語、中文、西班牙語、法語、德語等。
+author:
+  name: andy19910102
+  avatar: https://avatars.githubusercontent.com/u/14119945?s=96&v=4
 contributors: []
 language:
   - Javascript

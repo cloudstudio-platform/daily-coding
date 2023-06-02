@@ -5,6 +5,9 @@ description: >-
   popular online game 2048. Jupiter is run on the web, and can consistently win
   (achieve the 2048 tile) given a sufficient number of simulations, a number
   which can be easily changed on the site.
+author:
+  name: xtrp
+  avatar: https://avatars.githubusercontent.com/u/36894883?s=96&v=4
 contributors: []
 language:
   - Javascript

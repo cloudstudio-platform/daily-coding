@@ -3,6 +3,9 @@ name: GPT-Code-UI
 description: >-
   An open source implementation of OpenAI's ChatGPT Code interpreter.
   Simply ask the OpenAI model to do something and it will generate & execute the code for you.
+author:
+  name: ricklamers
+  avatar: https://avatars.githubusercontent.com/u/1309307?s=88&v=4
 contributors:
   - name: ricklamers
     avatar: https://avatars.githubusercontent.com/u/1309307?s=64&v=4

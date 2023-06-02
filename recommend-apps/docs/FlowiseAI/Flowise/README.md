@@ -2,6 +2,9 @@
 name: https://github.com/FlowiseAI/Flowise
 description: >-
   Drag & drop UI to build your customized LLM flow using LangchainJS
+author:
+  name: FlowiseAI
+  avatar: https://avatars.githubusercontent.com/u/128289781?s=88&v=4
 contributors: 
   - name: HenryHengZJ
     avatar: https://avatars.githubusercontent.com/u/26460777?s=64&v=4

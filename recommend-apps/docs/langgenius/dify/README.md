@@ -8,6 +8,9 @@ description: >-
   development process with one API for plugins and datasets integration, and
   streamline your operations using a single interface for prompt engineering,
   visual analytics, and continuous improvement.
+author:
+  name: LangGenius
+  avatar: https://avatars.githubusercontent.com/u/127165244?s=88&v=4
 contributors:
   - name: takatost
     avatar: https://avatars.githubusercontent.com/u/5485478?s=64&v=4

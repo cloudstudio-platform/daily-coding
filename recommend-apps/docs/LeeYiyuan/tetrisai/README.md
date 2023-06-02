@@ -3,6 +3,9 @@ name: Tetris AI
 description: >-
   A graphical interface for Tetris that contains an AI and a genetic tuner for
   the AI. You can also play it yourself.
+author:
+  name: LeeYiyuan
+  avatar: https://avatars.githubusercontent.com/u/2479951?s=64&v=4
 contributors:
   - name: LeeYiyuan
     avatar: https://avatars.githubusercontent.com/u/2479951?s=64&v=4
