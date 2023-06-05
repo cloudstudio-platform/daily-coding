@@ -9,7 +9,7 @@ interface CardWithAvatarProps {
   name?: string
 }
 
-const DEFAULT_AVATAR = 'https://help-assets.codehub.cn/enterprise/guanwang/coding-logo.svg'
+const DEFAULT_AVATAR = 'https://help-assets.codehub.cn/enterprise/new-static/images/cs/logo.png'
 
 const CardWithAvatar = ({ avatar, className = '', name }: CardWithAvatarProps) => (
   <div className={classNames('flex items-center', className)}>

@@ -214,6 +214,88 @@
     }
 }
 
+.ant-popover {
+    width: rem(360);
+    .ant-popover-inner {
+        background: #1d1d1d !important;
+
+        .ant-popover-inner-content {
+            padding: rem(16);
+        }
+    }
+
+    .ant-popover-arrow {
+        border: #1d1d1d;
+    }
+
+    .download-tabs {
+        .ant-tabs-nav {
+            &::before {
+                border-bottom: rem(2) solid #111111 !important;
+            }
+
+            .ant-tabs-nav-list {
+                .ant-tabs-tab {
+                    width: rem(100) !important;
+                    display: flex;
+                    justify-content: center;
+                    padding: 0 rem(10) rem(10) rem(10) !important;
+                    color: #fff;
+                    font-size: rem(14);
+                }
+
+                .ant-tabs-tab-active {
+                    .ant-tabs-tab-btn {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .load-items {
+            height: rem(40);
+            border-radius: rem(8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 rem(11) 0 rem(15);
+
+            &-title-box {
+                display: flex;
+                .items-icon {
+                    height: rem(22);
+                    width: rem(22);
+                    color: red;
+                    margin-right: rem(10);
+                }
+
+                .items-title {
+                    font-size: rem(14);
+                    color: #ffffff;
+                }
+            }
+
+            &-desc {
+                color: #ffffff;
+                font-size: rem(12);
+                opacity: 0.6;
+            }
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.04);
+                cursor: pointer;
+            }
+        }
+
+        .load-divider {
+            background: #000000;
+            height: rem(1);
+            width: 100%;
+            margin: rem(10) 0;
+        }
+    }
+}
+
 .menu-header {
     background-color: transparent;
     height: 60px;
@@ -700,6 +782,58 @@
                     }
                 }
             }
+        }
+    }
+
+    .popover-content {
+        width: rem(360);
+        background: #1d1d1d;
+        border-radius: rem(8);
+    }
+
+    .download-btn {
+        background: #1d1d1d;
+        border-radius: rem(4);
+        width: rem(131);
+        height: rem(32);
+        color: #fff;
+        font-size: rem(16);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .dtn-one {
+            width: rem(1);
+            height: rem(16);
+            background: #ffffff;
+            opacity: 0.2;
+            margin: 0 rem(10);
+        }
+
+        svg {
+            font-size: rem(12);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .btn-try {
+        width: 96px;
+        height: 32px;
+        text-align: center;
+        border-radius: 2px;
+        transition: all 0.2s ease;
+        font-family: "PingFang SC";
+        font-style: normal;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        background: linear-gradient(82.83deg, #eb5950 2.94%, #4983f7 76.94%);
+        border-radius: 4px;
+        font-weight: 500;
+        &:hover {
+            outline: none;
         }
     }
 }
