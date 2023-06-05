@@ -21,7 +21,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200">
+      {/* <div className="divide-y divide-gray-200">
         <ul className="divide-y divide-gray-200">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
@@ -79,7 +79,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             博客列表 &rarr;
           </Link>
         </div>
-      )}
+      )} */}
     </>
   )
 }

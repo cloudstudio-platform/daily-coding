@@ -3,6 +3,7 @@ import { Inter } from '@next/font/google'
 import Footer from './Footer'
 import { ReactNode } from 'react'
 import Header from './Header'
+import StartAI from './StartAI'
 
 interface Props {
   children: ReactNode
@@ -23,6 +24,11 @@ const LayoutWrapper = ({ children }: Props) => {
           <main>{children}</main>
         </div>
       </section>
+      <StartAI
+        tryout={() => {
+          console.log(111)
+        }}
+      />
       <Footer />
     </section>
   )

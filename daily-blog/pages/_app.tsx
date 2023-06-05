@@ -4,6 +4,7 @@ import 'katex/dist/katex.css'
 import '@/css/footer.scss'
 import '@/css/header.scss'
 import '@/css/global.scss'
+import '@/css/start-ai.scss'
 // import '@/css/docsearch.css' // Uncomment if using algolia docsearch
 // import '@docsearch/css' // Uncomment if using algolia docsearch
 
