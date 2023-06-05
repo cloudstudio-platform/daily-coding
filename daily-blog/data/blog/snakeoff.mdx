@@ -1,0 +1,46 @@
+---
+title: 'Cloud Studio 开发运行 GUI 程序之贪吃蛇'
+subTitle: Cloud Studio 开发运行示例
+date: 2023-05-22
+tags: ['云端 IDE', '开发示例']
+draft: false
+summary: '以贪吃蛇小游戏为示例，讲述使用 Cloud Studio 基于用户体验为基础的方案优化'
+---
+
+# **一、引言**
+从 Cloud Studio 工作空间运行的代码，最终都是在相应的服务器容器中执行。这就导致了在执行一些带 UI 的程序时，没办法正确的展示对应的UI。
+
+为了解决该问题，优化用户的体验，Cloud Studio 团队提供了以 noVNC 为基础的解决方案。
+# **二、方案选型**
+## **1、X11 方案**
+![descript](https://help-assets.codehub.cn/enterprise/cloudStudio/001.png)
+
+其原理是利用 X11 协议，把界面投射转化为网络协议，到达目的端显示出来。
+
+但是这种方案，有一个硬性要求：就是目标端必须要安装一个“投屏软件（X11 Server）”，如：VcXsrv 或者 MobaXterm。
+
+即：用户想要看到 App 的界面，必须额外安装一个软件，用户体验不最佳。
+## **2、VNC 方案**
+![descript](https://help-assets.codehub.cn/enterprise/cloudStudio/002.png)
+
+VNC 就是 Linux 版的远程桌面。它可以将屏幕通过网络共享给客户端。在服务端，安装 vncserver。 在客户端，安装 vncviewer。
+
+用户需要安装一个 vnc-viewer 客户端。和 X11 方案差不多，还是不够方便。
+## **3、noVNC 方案**
+VNC-Viewer 有一个 WEB 版的客户端：noVNC。可以直接打开网页，获得 VNC-Viewer 能力，用户无需自己安装 vnc-viewer 客户端。
+
+于是，我们可以将方案拓展为：
+
+![descript](https://help-assets.codehub.cn/enterprise/cloudStudio/003.png)
+
+可以通过 Cloud Studio 工作空间提供的插件来直接预览用户项目运行后生成的 UI 页面。
+
+通过对比多种远程桌面方案，最终选择 noVNC 方案作为在 Cloud Studio 运行 GUI 程序的解决方案。
+# **三、Cloud Studio 开发运行 GUI 程序项目展示**
+本次演示以贪吃蛇案例为示例：
+
+[屏幕录制2023-03-21 上午10.29.52.mov](https://drive.weixin.qq.com/s?k=AJEAIQdfAAooIBLxjjAZQApAYNADA)
+
+该项目使用 Python 编写，Cloud Studio 也支持各种主流语言的 GUI 程序运行。
+
+运行项目之后，可以通过控制台的端口标签，选择 noVNC 服务的端口（默认6080），就可以在右上角打开预览页面，看到对应的项目。
