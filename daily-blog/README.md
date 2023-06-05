@@ -52,4 +52,5 @@ next.js 13 以前的版本使用 `next/legacy/image`，之后新页面编写都�
 - `src/public` logo, favicons 等简单图片，其他图片建议存放在 COS
 - `src/script` 工具类函数
 - `src/store` 存放静态数据
+- `src/hook` 自定义hook
 
