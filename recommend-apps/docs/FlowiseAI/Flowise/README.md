@@ -1,5 +1,5 @@
 ---
-name: https://github.com/FlowiseAI/Flowise
+name: Flowise
 description: >-
   Drag & drop UI to build your customized LLM flow using LangchainJS
 author:
@@ -47,8 +47,6 @@ icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./Flowise.mov
 order: 16
 ---
-
-<!-- markdownlint-disable MD030 -->
 
 # Flowise - LangchainJS UI
 
