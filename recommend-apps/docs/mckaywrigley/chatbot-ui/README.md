@@ -39,6 +39,7 @@ url: https://github.com/mckaywrigley/chatbot-ui
 banner: https://github.com/mckaywrigley/chatbot-ui/raw/main/public/screenshots/screenshot-0402023.jpg
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./public/ChatGPT-UI.mov
+license: MIT
 order: 13
 ---
 

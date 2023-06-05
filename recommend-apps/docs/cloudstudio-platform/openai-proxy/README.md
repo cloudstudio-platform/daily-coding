@@ -15,6 +15,7 @@ fork: '0'
 url: https://github.com/cloudstudio-platform/openai-proxy
 icon: https://cs-res.codehub.cn/vscode/node.svg
 banner: ''
+license: ''
 order: 14
 ---
 

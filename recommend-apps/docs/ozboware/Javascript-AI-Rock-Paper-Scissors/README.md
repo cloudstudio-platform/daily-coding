@@ -20,6 +20,7 @@ banner: >-
   https://user-images.githubusercontent.com/95859352/223067524-cfb54c8f-9bf1-442f-8022-7cf13b766745.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./Rock-Paper-Scissors.mov
+license: GPL-3.0
 order: 8
 ---
 

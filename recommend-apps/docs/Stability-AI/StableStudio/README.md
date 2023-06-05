@@ -23,6 +23,7 @@ banner: >-
   https://github.com/Stability-AI/StableStudio/blob/main/misc/Banner.png?raw=true
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./misc/StableStudio.mov
+license: MIT
 order: 0
 ---
 

@@ -22,6 +22,7 @@ url: https://github.com/andy19910102/openai-multi-langs-translator
 banner: ./openai-multi-langs-translator-banner.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./OpenAIMultiLangsTranslator.mov
+license: MIT
 order: 12
 ---
 

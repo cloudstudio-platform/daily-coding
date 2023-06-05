@@ -28,6 +28,7 @@ url: https://github.com/Nutlope/twitterbio
 banner: https://github.com/Nutlope/twitterbio/raw/main/public/screenshot.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./public/TwitterBio.mov
+license: ''
 order: 2
 ---
 

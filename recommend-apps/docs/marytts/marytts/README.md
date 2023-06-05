@@ -49,6 +49,7 @@ url: https://github.com/marytts/marytts
 banner: ./tts-banner.png
 icon: https://cs-res.codehub.cn/vscode/java.svg
 video: ./MaryTTS.mov
+license: LGPL-3.0
 order: 4
 ---
 

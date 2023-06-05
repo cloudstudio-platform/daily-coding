@@ -41,6 +41,7 @@ url: https://github.com/patorjk/JavaScript-Snake
 banner: './image.png'
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./snake-game.mov
+license: MIT
 order: 3
 ---
 

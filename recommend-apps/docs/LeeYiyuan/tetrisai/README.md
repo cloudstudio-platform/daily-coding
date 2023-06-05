@@ -28,6 +28,7 @@ url: https://github.com/LeeYiyuan/tetrisai
 banner: ./tetrisai-banner.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./tetrisai.mov
+license: MIT
 order: 9
 ---
 

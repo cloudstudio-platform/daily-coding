@@ -22,6 +22,7 @@ url: https://github.com/Chainlit/chainlit
 banner: https://github.com/Chainlit/chainlit/raw/main/images/quick-start.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./images/Chainlit.mov
+license: Apache-2.0
 order: 18
 ---
 

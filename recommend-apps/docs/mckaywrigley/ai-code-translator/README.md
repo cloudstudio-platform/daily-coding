@@ -31,6 +31,7 @@ banner: >-
   https://github.com/mckaywrigley/ai-code-translator/raw/main/public/screenshot.png
 video: ./public/AI-Code-Translator.mov
 icon: https://cs-res.codehub.cn/vscode/node.svg
+license: ''
 order: 1
 ---
 

@@ -34,6 +34,7 @@ url: https://github.com/ricklamers/gpt-code-ui
 banner: https://user-images.githubusercontent.com/1309307/239578679-c29c504a-a7ed-4ae0-9360-d7224bc3e3d6.png
 icon: https://cs-res.codehub.cn/vscode/python.svg
 video: ./GPT-Code-UI.mov
+license: MIT
 order: 5
 ---
 

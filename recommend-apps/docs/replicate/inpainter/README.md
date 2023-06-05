@@ -22,6 +22,7 @@ url: https://github.com/replicate/inpainter
 banner: ./inpainter-banner.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./Inpainter.mov
+license: MIT
 order: 7
 ---
 
