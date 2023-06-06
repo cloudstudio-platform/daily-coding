@@ -5,7 +5,7 @@ import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
 import { InferGetStaticPropsType } from 'next'
 import { allBlogs } from 'contentlayer/generated'
 import type { Blog } from 'contentlayer/generated'
-import Recommand from '@/components/Recommand'
+import Recommend from '@/components/Recommend'
 import CommunityLink from '@/components/CommuityLink'
 
 export const POSTS_PER_PAGE = 15
@@ -43,7 +43,7 @@ export default function BlogPage({
             alt=""
           />
         </div>
-        <Recommand posts={posts} />
+        <Recommend posts={posts} />
         <CommunityLink />
         <ListLayout
           posts={posts}

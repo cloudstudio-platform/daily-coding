@@ -93,10 +93,10 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
                   </div>
                 )}
                 {next && (
-                  <div className="pt-4 xl:pt-8">
+                  <div className="self-end pt-4 xl:pt-8">
                     <Link
                       href={`/${next.path}`}
-                      className="self-end text-[#0066ff] hover:opacity-80"
+                      className="text-[#0066ff] hover:opacity-80"
                       aria-label={`Next post: ${next.title}`}
                     >
                       {next.title} &rarr;

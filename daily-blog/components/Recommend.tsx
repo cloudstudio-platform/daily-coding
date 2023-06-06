@@ -2,7 +2,7 @@ import React from 'react'
 import ArticleItem from './CardImg'
 import Link from 'next/link'
 
-const Recommand = ({ posts }) => {
+const Recommend = ({ posts }) => {
   const recommendList = posts.filter((item) => item.isRecommend)
   // const firstRecommend = posts.filter((item) => item.isFirstRecommend)
 
@@ -20,7 +20,7 @@ const Recommand = ({ posts }) => {
           </div>
         ))} */}
       <Link
-        href="/"
+        href="https://cloudstudio.net/incentive"
         target="_blank"
         className="insight_article_noName_item relative row-span-3 rounded-lg bg-white px-10 py-8 pcMin:row-span-1 mb:px-5 mb:py-8"
       >
@@ -54,4 +54,4 @@ const Recommand = ({ posts }) => {
   )
 }
 
-export default Recommand
+export default Recommend
