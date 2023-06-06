@@ -34,7 +34,7 @@ export default function BlogPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <PageSEO title="博客中心 -- Cloud Studio" description={siteMetadata.description} />
+      <PageSEO title="博客 -- Cloud Studio" description={siteMetadata.description} />
       <div className="w-full">
         <div className="insight_mb_index_bg absolute left-0 right-0 top-0 w-full">
           <img

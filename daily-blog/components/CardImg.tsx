@@ -51,7 +51,7 @@ const ArticleItem = ({
       <p
         className={classNames(
           'font-medium text-[#232D3F] hover:text-[#0066FF]',
-          !isShowName ? 'pb-8' : 'pb-4',
+          !isShowName ? 'pb-8 mb:pb-4' : 'pb-4',
           !linkBoxClass && isShowName && 'min-h-[64px] maxEdge:min-h-[77px]',
           isFirst
             ? 'max-w-[65%] text-[40px] leading-[56px] mb:max-w-full mb:text-[24px] mb:leading-8'
@@ -65,7 +65,7 @@ const ArticleItem = ({
         <p
           className={classNames(
             'text-[#4C576E]',
-            !isShowName ? 'text-[16px] leading-[22px]' : 'text-[14px] leading-[20px]',
+            !isShowName ? 'text-[16px] leading-[22px] mb:text-sm' : 'text-[14px] leading-[20px]',
             'insight_multi_desc'
           )}
         >

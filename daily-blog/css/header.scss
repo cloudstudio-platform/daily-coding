@@ -19,6 +19,18 @@
         color: rgba(73, 131, 247, 1) !important;
     }
 
+    .alone-menu-item {
+        .ant-menu-title-content {
+            a {
+                color: #171d26;
+                cursor: pointer;
+                &:hover {
+                    color: #4983f7;
+                }
+            }
+        }
+    }
+
     .ant-menu-submenu-arrow {
         display: block;
     }
@@ -40,12 +52,14 @@
         > .ant-menu-submenu-title
         > .ant-menu-submenu-arrow::before {
         transform: rotate(45deg) translateX(2.5px);
+        background-color: #4983f7;
     }
 
     .ant-menu-submenu-open.ant-menu-submenu-horizontal
         > .ant-menu-submenu-title
         > .ant-menu-submenu-arrow::after {
         transform: rotate(-45deg) translateX(-2.5px);
+        background-color: #4983f7;
     }
 
     .ant-menu-submenu-open.ant-menu-submenu-horizontal
@@ -125,6 +139,7 @@
             height: rem(22) !important;
             line-height: rem(22);
             margin: rem(16) 0;
+            background: transparent;
             a {
                 color: #606c80;
                 &:hover {
@@ -153,6 +168,7 @@
 .ant-menu-horizontal > .ant-menu-item::after,
 .ant-menu-horizontal > .ant-menu-submenu::after {
     border-bottom: 0px solid #fff;
+    transition: none !important;
 }
 
 .ant-menu.ant-menu-sub.ant-menu-inline {
@@ -173,6 +189,23 @@
         font-weight: 500;
         font-size: rem(14);
         padding-left: rem(10) !important;
+    }
+    .alone-menu-item {
+        padding-right: 0;
+        font-family: "PingFang SC";
+        font-style: normal;
+        font-weight: 500;
+        font-size: rem(14);
+        padding-left: rem(10) !important;
+
+        .ant-menu-title-content {
+            a {
+                color: #171d26;
+                &:hover {
+                    color: #1890ff;
+                }
+            }
+        }
     }
     .ant-menu-item-group {
         &:not(:last-child) {
@@ -871,6 +904,9 @@
             //     }
             // }
         }
+        .nav-panel {
+            padding: 0 !important;
+        }
         .btn-login {
             margin-left: 0 !important;
         }
@@ -925,7 +961,7 @@
         }
         .nav-panel {
             top: 64px;
-            padding: 0 rem(24) !important;
+            padding: 0 !important;
         }
         .logo {
             width: 211px;

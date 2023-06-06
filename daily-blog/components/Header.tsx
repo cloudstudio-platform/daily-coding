@@ -17,7 +17,7 @@ const downloadList = {
   package: 'https://cloudstudio.net/docs/zips/cloud-studio-browser-extension.zip',
 }
 
-const Header = ({ tryout }) => {
+const Header = () => {
   const [mdActive, setMdActive] = useState(false)
   const [headerTop, setHeaderTop] = useState(0)
   const scroll = useScroll()
@@ -215,12 +215,12 @@ const Header = ({ tryout }) => {
             </nav>
 
             <nav className="col-span-4 flex items-center justify-end sm:col-span-2 xxl:col-span-3 xxl:flex">
-              <Button
+              {/* <Button
                 className="btn-login mr-4 cursor-pointer text-sm sm:hidden md:mr-5 md:hidden"
                 onClick={handleLogin}
               >
                 注册/登录
-              </Button>
+              </Button> */}
 
               <div className="sm:hidden md:hidden">
                 <Popover
@@ -343,10 +343,10 @@ const Header = ({ tryout }) => {
               </div>
 
               <button
-                className="btn-try text-sm text-white sm:hidden md:mr-5 md:block md:hidden"
-                onClick={() => tryout()}
+                className="btn-try text-sm text-white sm:hidden md:mr-5 md:hidden"
+                onClick={handleLogin}
               >
-                快速体验
+                登录/注册
               </button>
 
               <Button

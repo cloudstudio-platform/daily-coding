@@ -2,7 +2,7 @@
 
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Cloud Studio 博客中心',
+  title: 'Cloud Studio 博客',
   author: 'Cloud Studio',
   headerTitle: '博客',
   description: '',
