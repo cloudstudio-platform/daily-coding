@@ -10,7 +10,7 @@ const CommunityLink = () => (
       </p>
       <Link
         href="https://cloud.tencent.com/developer/zone/cloudstudio?from=19165"
-        className="text-[#0066ff]"
+        className="text-[#0066ff] hover:opacity-80"
       >
         立即查看 &rarr;
       </Link>
@@ -20,7 +20,7 @@ const CommunityLink = () => (
       <p className="pb-12 text-[16px] leading-[22px]">
         致力于为中国软件开发者提供知识传播、在线学习、职业发展等全生命周期服务。
       </p>
-      <Link href="/" className="text-[#0066ff]">
+      <Link href="/" className="text-[#0066ff] hover:opacity-80">
         立即查看 &rarr;
       </Link>
     </div>

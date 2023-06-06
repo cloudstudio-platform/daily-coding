@@ -30,6 +30,13 @@ const Recommand = ({ posts }) => {
             alt=""
           />
         </div>
+        <div className="mb-3 flex">
+          <div key={`tag-activity`} className="mr-3 rounded bg-[#FDEAD9] px-3">
+            <span className="whitespace-nowrap text-[14px] font-semibold leading-7 text-[#ED7B2F]">
+              最新活动
+            </span>
+          </div>
+        </div>
         <p className="max-w-[65%] pb-8 text-[40px] font-medium leading-[56px] text-[#232D3F] hover:text-[#0066FF] mb:max-w-full mb:text-[24px] mb:leading-8">
           云端开发激励计划
         </p>
