@@ -76,7 +76,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
           </header>
           <div className="">
             <div className="relative flex justify-between">
-              <div className="prose max-w-[980px] pb-[120px] pt-10 lgS:max-w-[55vw] layer:w-full layer:max-w-[none] mb:pb-20">
+              <div className="article-content-box prose max-w-[980px] pb-[120px] pt-10 lgS:max-w-[55vw] layer:w-full layer:max-w-[none] mb:pb-20">
                 {children}
               </div>
               <AsideBar newClass="absolute top-[-12px] right-[-32px] layer:hidden" />
