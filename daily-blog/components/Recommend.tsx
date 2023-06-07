@@ -25,10 +25,12 @@ const Recommend = ({ posts }) => {
         className="insight_article_noName_item relative row-span-3 rounded-lg bg-white px-10 py-8 pcMin:row-span-1 mb:px-5 mb:py-8"
       >
         <div className="mb-10 flex h-[360px] w-full items-center justify-center rounded-lg mb:h-auto">
-          <img
-            src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/test-banner.png"
-            alt=""
-          />
+          <picture>
+            <img
+              src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/test-banner.png"
+              alt=""
+            />
+          </picture>
         </div>
         <div className="mb-3 flex">
           <div key={`tag-activity`} className="mr-3 rounded bg-[#FDEAD9] px-3">
