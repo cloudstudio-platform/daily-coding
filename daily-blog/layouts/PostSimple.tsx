@@ -20,7 +20,7 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, next, prev, children }: LayoutProps) {
-  const { path, date, title, avatar, author } = content
+  const { path, date, title, avatar, author, tags } = content
 
   return (
     <SectionContainer>
@@ -28,12 +28,14 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
       <ScrollTopAndComment />
       <div className="blog-article_detail_bg"></div>
       <article className="relative z-10">
-        <div className="pb-[88px] pt-[128px]">
+        <div className="pb-0 pt-[128px]">
           <header>
             <div className="flex">
-              <Link href="/blog">首页</Link>
+              <Link href="/blog" className="text-[#4C576E] hover:text-blue-hover">
+                首页
+              </Link>
               <span className="px-4">&gt;</span>
-              <span>文章页</span>
+              <span className="text-[#202D40]">文章页</span>
             </div>
             <div className="border-b border-gray-200 py-10">
               <div>
@@ -74,21 +76,33 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
           </header>
           <div className="">
             <div className="relative flex justify-between">
-              <div className="prose max-w-[980px] pb-8 pt-10 lgS:max-w-[55vw] layer:w-full layer:max-w-[none]">
+              <div className="prose max-w-[980px] pb-[120px] pt-10 lgS:max-w-[55vw] layer:w-full layer:max-w-[none] mb:pb-20">
                 {children}
               </div>
-              <AsideBar newClass="absolute top-0 right-[-32px] layer:hidden" />
+              <AsideBar newClass="absolute top-[-12px] right-[-32px] layer:hidden" />
             </div>
             <footer>
-              <div className="mt-6 flex justify-between text-sm font-medium sm:text-base">
+              <div className="mb-12 h-px w-full bg-gray-200"></div>
+              <div className="mb-16 flex w-full items-center">
+                <p className="pr-8 text-[18px] font-medium leading-6 text-[#232D3F]">标签</p>
+                {tags.map((data: string, index: number) => (
+                  <div key={`tag${index}`} className="mr-3 rounded bg-[#FDEAD9] px-3">
+                    <span className="whitespace-nowrap text-[14px] font-semibold leading-7 text-[#ED7B2F]">
+                      {data}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-12 flex justify-between text-sm font-medium sm:text-base">
                 {prev && (
                   <div className="pt-4 xl:pt-8">
                     <Link
                       href={`/${prev.path}`}
-                      className="text-[#0066ff] hover:opacity-80"
+                      className="text-base text-[#0066ff] hover:opacity-80"
                       aria-label={`Previous post: ${prev.title}`}
                     >
-                      &larr; {prev.title}
+                      <span className="pr-2">&lt;</span>
+                      上一篇：{prev.title}
                     </Link>
                   </div>
                 )}
@@ -96,10 +110,11 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
                   <div className="self-end pt-4 xl:pt-8">
                     <Link
                       href={`/${next.path}`}
-                      className="text-[#0066ff] hover:opacity-80"
+                      className="text-base text-[#0066ff] hover:opacity-80"
                       aria-label={`Next post: ${next.title}`}
                     >
-                      {next.title} &rarr;
+                      下一篇：{next.title}
+                      <span className="pl-2">&gt;</span>
                     </Link>
                   </div>
                 )}
