@@ -31,7 +31,10 @@
 
   .article-content-box {
     a {
-      color: #0066ff !important;
+      color: #0066ff;
+      &:hover {
+        color: rgba(#0066ff, .8) !important;
+      }
     }
     em {
       font-style: normal;
