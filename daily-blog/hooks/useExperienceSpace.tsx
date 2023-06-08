@@ -18,7 +18,11 @@ const useExperienceSpace = () => {
       description: `${description}`,
       placement: 'bottomRight',
       className: 'cs-notification',
-      icon: <img src={statusSvg} />,
+      icon: (
+        <picture>
+          <img src={statusSvg} alt="" />
+        </picture>
+      ),
     })
   }
 
@@ -26,7 +30,6 @@ const useExperienceSpace = () => {
     const fp = await fpPromise
     const result = await fp.get()
     const visitorId = result.visitorId
-    console.log('visitorId:', visitorId)
     setCanvasId(visitorId)
   }
 
@@ -34,7 +37,6 @@ const useExperienceSpace = () => {
     setConfirmLoading(true)
     const getData = (id) => {
       const sourceAPI = `/api/public/experience?fingerprint=${id}`
-      console.log('sourceAPI:', sourceAPI)
       return instancePost(sourceAPI)
     }
     const res: any = await getData(canvasId)
