@@ -75,7 +75,6 @@ export default function ListLayout({
     const searchContent = post.title + post.summary + post.tags.join(' ')
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
-  console.log(tags)
 
   const sortedTags = Object.keys(tags).sort((a, b) => a.localeCompare(b))
 
