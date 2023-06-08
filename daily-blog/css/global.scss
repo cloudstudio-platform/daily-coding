@@ -24,7 +24,12 @@
     left: 0;
     z-index: 1;
   }
-  
+  .selected {
+    background-color: #ED7B2F;
+    span {
+      color: #ffffff;
+    }
+  }
   .insight-article-index-aside-bar {
     right: calc((100% - 2200px) / 2);
   }

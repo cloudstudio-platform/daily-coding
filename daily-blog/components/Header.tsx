@@ -231,10 +231,13 @@ const Header = () => {
                         <Tabs.TabPane tab="客户端" key="item-1">
                           <div className="load-items">
                             <div className="load-items-title-box">
-                              <img
-                                className="items-icon"
-                                src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/apple.svg"
-                              />
+                              <picture>
+                                <img
+                                  className="items-icon"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/apple.svg"
+                                  alt=""
+                                />
+                              </picture>
                               <div className="items-title">macOS</div>
                             </div>
                             <div className="load-items-desc">X86 (适用于 inter 芯片)</div>
@@ -242,10 +245,13 @@ const Header = () => {
 
                           <div className="load-items">
                             <div className="load-items-title-box">
-                              <img
-                                className="items-icon"
-                                src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/apple.svg"
-                              />
+                              <picture>
+                                <img
+                                  className="items-icon"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/apple.svg"
+                                  alt=""
+                                />
+                              </picture>
                               <div className="items-title">macOS</div>
                             </div>
                             <div className="load-items-desc">ARM (适用于 M 系列芯片)</div>
@@ -255,10 +261,13 @@ const Header = () => {
 
                           <div className="load-items">
                             <div className="load-items-title-box">
-                              <img
-                                className="items-icon"
-                                src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/windows.svg"
-                              />
+                              <picture>
+                                <img
+                                  className="items-icon"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/windows.svg"
+                                  alt=""
+                                />
+                              </picture>
                               <div className="items-title">Windows</div>
                             </div>
                             <div className="load-items-desc">敬请期待</div>
@@ -268,26 +277,29 @@ const Header = () => {
 
                           <div className="load-items">
                             <div className="load-items-title-box">
-                              <img
-                                className="items-icon"
-                                src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/airplay.svg"
-                              />
+                              <picture>
+                                <img
+                                  className="items-icon"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/airplay.svg"
+                                  alt=""
+                                />
+                              </picture>
                               <div className="items-title">
                                 <Link href="/download">前往下载中心</Link>
                               </div>
                             </div>
-                            {/* <div className="load-items-desc">
-                                                    敬请期待
-                                                </div> */}
                           </div>
                         </Tabs.TabPane>
                         <Tabs.TabPane tab="浏览器插件" key="item-2">
                           <div className="load-items">
                             <div className="load-items-title-box">
-                              <img
-                                className="items-icon"
-                                src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/chrome.png"
-                              />
+                              <picture>
+                                <img
+                                  className="items-icon"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/chrome.png"
+                                  alt=""
+                                />
+                              </picture>
                               <div className="items-title">Chrome</div>
                             </div>
                           </div>
@@ -296,10 +308,13 @@ const Header = () => {
 
                           <div className="load-items">
                             <div className="load-items-title-box">
-                              <img
-                                className="items-icon"
-                                src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/edge.png"
-                              />
+                              <picture>
+                                <img
+                                  className="items-icon"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/edge.png"
+                                  alt=""
+                                />
+                              </picture>
                               <div className="items-title">Edge</div>
                             </div>
                           </div>
@@ -308,10 +323,13 @@ const Header = () => {
 
                           <Button className="load-items" onClick={() => download('package')}>
                             <div className="load-items-title-box">
-                              <img
-                                className="items-icon"
-                                src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/package.svg"
-                              />
+                              <picture>
+                                <img
+                                  className="items-icon"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/package.svg"
+                                  alt=""
+                                />
+                              </picture>
                               <div className="items-title">离线安装包</div>
                             </div>
                           </Button>
@@ -320,10 +338,13 @@ const Header = () => {
 
                           <div className="load-items">
                             <div className="load-items-title-box">
-                              <img
-                                className="items-icon"
-                                src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/airplay.svg"
-                              />
+                              <picture>
+                                <img
+                                  className="items-icon"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/airplay.svg"
+                                  alt=""
+                                />
+                              </picture>
                               <div className="items-title">
                                 <Link href="/download">前往下载中心</Link>
                               </div>
@@ -384,7 +405,6 @@ const Header = () => {
           </section>
         </div>
       </header>
-      {/* <NewMessage dark distanceFromTop></NewMessage> */}
     </>
   )
 }
