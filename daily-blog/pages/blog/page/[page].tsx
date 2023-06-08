@@ -6,6 +6,9 @@ import { POSTS_PER_PAGE } from '../index'
 import { InferGetStaticPropsType } from 'next'
 import { allBlogs } from 'contentlayer/generated'
 import type { Blog } from 'contentlayer/generated'
+import { getAllTags } from 'pliny/utils/contentlayer'
+import Recommend from '@/components/Recommend'
+import CommunityLink from '@/components/CommuityLink'
 
 export const getStaticPaths = async () => {
   const totalPosts = allBlogs
@@ -24,6 +27,7 @@ export const getStaticProps = async (context) => {
   const {
     params: { page },
   } = context
+  const tags = await getAllTags(allBlogs)
   const posts = sortedBlogPost(allBlogs) as Blog[]
   const pageNumber = parseInt(page as string)
   const initialDisplayPosts = posts.slice(
@@ -40,6 +44,7 @@ export const getStaticProps = async (context) => {
       initialDisplayPosts: allCoreContent(initialDisplayPosts),
       posts: allCoreContent(posts),
       pagination,
+      tags,
     },
   }
 }
@@ -48,16 +53,31 @@ export default function PostPage({
   posts,
   initialDisplayPosts,
   pagination,
+  tags,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <ListLayout
-        posts={posts}
-        initialDisplayPosts={initialDisplayPosts}
-        pagination={pagination}
-        title="All Posts"
-      />
+      <PageSEO title="博客列表" description={siteMetadata.description} />
+      <div className="w-full">
+        <div className="insight_mb_index_bg absolute left-0 right-0 top-0 w-full">
+          <picture>
+            <img
+              src="https://help-assets.codehub.cn/enterprise/new-static/images/insight/index_bg.png"
+              className="tablet:hidden"
+              alt=""
+            />
+          </picture>
+        </div>
+        <Recommend posts={posts} />
+        <CommunityLink />
+        <ListLayout
+          posts={posts}
+          initialDisplayPosts={initialDisplayPosts}
+          pagination={pagination}
+          title="博客列表"
+          tags={tags}
+        />
+      </div>
     </>
   )
 }
