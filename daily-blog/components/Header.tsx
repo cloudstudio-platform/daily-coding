@@ -196,7 +196,7 @@ const Header = () => {
   return (
     <>
       <header className={classNames('menu-header fixed', headerTop && 'header-fixed')}>
-        <div className="h-full w-full xs:px-4 sm:px-6 md:px-8 xl:px-12 xxl:px-12">
+        <div className="h-full w-full max-w-[1440px] xs:px-4 sm:px-6 md:px-8 xl:px-12 xxl:px-12">
           <section className="menu-component grid grid-cols-12 items-center xxl:container">
             <h1 className="col-span-8 sm:col-span-10 md:col-span-8 xl:col-span-2 xxl:col-span-2">
               <Link href="https://cloudstudio.net" className="flex items-center">
