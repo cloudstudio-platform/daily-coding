@@ -136,7 +136,7 @@ export default function ListLayout({
                   'mr-3 mt-2 h-7 cursor-pointer rounded border-0 bg-[#FDEAD9] px-3',
                   activeObj.name === data && 'selected'
                 )}
-                id={activeObj.name === data && 'selected-tag'}
+                id={activeObj.name === data ? 'selected-tag' : ''}
                 onClick={handleClick}
               >
                 <span className="whitespace-nowrap text-[14px] font-semibold leading-5 text-[#ED7B2F]">
