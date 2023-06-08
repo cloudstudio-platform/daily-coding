@@ -4,7 +4,7 @@ import { PageSEO } from '@/components/SEO'
 import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
 import { InferGetStaticPropsType } from 'next'
 import { allBlogs } from 'contentlayer/generated'
-// import { getAllTags } from 'pliny/utils/contentlayer'
+import { getAllTags } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
 import Recommend from '@/components/Recommend'
 import CommunityLink from '@/components/CommuityLink'
@@ -12,7 +12,7 @@ import CommunityLink from '@/components/CommuityLink'
 export const POSTS_PER_PAGE = 15
 
 export const getStaticProps = async () => {
-  // const tags = await getAllTags(allBlogs)
+  const tags = await getAllTags(allBlogs)
   const posts = sortedBlogPost(allBlogs) as Blog[]
   const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
   const pagination = {
@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
       initialDisplayPosts: allCoreContent(initialDisplayPosts),
       posts: allCoreContent(posts),
       pagination,
-      // tags,
+      tags,
     },
   }
 }
@@ -34,6 +34,7 @@ export default function BlogPage({
   posts,
   initialDisplayPosts,
   pagination,
+  tags,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
@@ -55,7 +56,7 @@ export default function BlogPage({
           initialDisplayPosts={initialDisplayPosts}
           pagination={pagination}
           title=""
-          // tags={tags}
+          tags={tags}
         />
       </div>
     </>

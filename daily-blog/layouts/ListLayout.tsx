@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
@@ -7,6 +7,8 @@ import Link from '@/components/Link'
 import ArticleItem from '@/components/CardImg'
 import AsideBar from '@/components/AsideBar'
 import Code from '@/components/Code'
+import { Button } from 'antd'
+import classNames from 'classnames'
 
 interface PaginationProps {
   totalPages: number
@@ -17,6 +19,7 @@ interface ListLayoutProps {
   title: string
   initialDisplayPosts?: CoreContent<Blog>[]
   pagination?: PaginationProps
+  tags?: any
 }
 
 function Pagination({ totalPages, currentPage }: PaginationProps) {
@@ -64,16 +67,33 @@ export default function ListLayout({
   title,
   initialDisplayPosts = [],
   pagination,
+  tags,
 }: ListLayoutProps) {
+  const [activeObj, setActiveObj] = useState({ name: '' })
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((post) => {
     const searchContent = post.title + post.summary + post.tags.join(' ')
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
+  console.log(tags)
+
+  const sortedTags = Object.keys(tags).sort((a, b) => a.localeCompare(b))
 
   // If initialDisplayPosts exist, display it if no searchValue is specified
   const displayPosts =
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
+
+  const handleClick = (e) => {
+    const searchTag = e.target.innerHTML
+    if (!searchTag) return
+    if (document.getElementById('selected-tag')?.innerText === searchTag) {
+      setActiveObj({ name: '' })
+      setSearchValue('')
+    } else {
+      setActiveObj({ name: searchTag })
+      setSearchValue(searchTag)
+    }
+  }
 
   return (
     <>
@@ -82,7 +102,7 @@ export default function ListLayout({
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
           </h1>
-          <div className="relative mx-auto max-w-lg">
+          <div className="relative mx-auto w-full">
             <label>
               <span className="sr-only">搜索博客</span>
               <input
@@ -107,6 +127,24 @@ export default function ListLayout({
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
+          </div>
+          <div className="mt-4 flex w-full items-start">
+            <p className="mr-4 mt-2 font-medium leading-8">热门标签: </p>
+            {sortedTags.map((data: string, index: number) => (
+              <Button
+                key={`tag${index}`}
+                className={classNames(
+                  'mr-3 mt-2 h-7 cursor-pointer rounded border-0 bg-[#FDEAD9] px-3',
+                  activeObj.name === data && 'selected'
+                )}
+                id={activeObj.name === data && 'selected-tag'}
+                onClick={handleClick}
+              >
+                <span className="whitespace-nowrap text-[14px] font-semibold leading-5 text-[#ED7B2F]">
+                  {data}
+                </span>
+              </Button>
+            ))}
           </div>
         </div>
         <div className="relative flex justify-between">
