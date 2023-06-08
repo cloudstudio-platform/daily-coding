@@ -45,19 +45,19 @@ summary: 教您在 Cloud Studio 中快速玩转 YAML 模版
 该表单一共有 7 项可以填充的。![](https://help-assets.codehub.cn/enterprise/cloudStudio/020.jpeg)
 
 1.  环境镜像，**顾名思义就是决定你模板的基本环境，提供了大多数语言的的开发环境**。![](https://help-assets.codehub.cn/enterprise/cloudStudio/021.jpeg)
-    
+
 2.  额外资源，**目前提供 mysql 和 redis 预安装**。
-    
+
     ![](https://help-assets.codehub.cn/enterprise/cloudStudio/022.jpeg)
-    
+
 3.  预装插件，**为工作空间默认安装 VSCode 插件，支持选择版本。**![](https://help-assets.codehub.cn/enterprise/cloudStudio/023.jpeg)
-    
+
     ![](https://help-assets.codehub.cn/enterprise/cloudStudio/024.jpeg)
-    
+
 4.  自定义命令, 支持在不同阶段执行自定义 Shell 命令。![](https://help-assets.codehub.cn/enterprise/cloudStudio/025.jpeg)分为：**初始化命令，启动命令，关机命令**。**支持 tab 键跳转下一行。**
-    
+
 5.  环境变量，**免去配置一堆默认环境变量的烦恼。**![](https://help-assets.codehub.cn/enterprise/cloudStudio/026.jpeg)
-    
+
 
 ### 3.1 导出/导入 `workspace.yml`
 
@@ -77,32 +77,29 @@ summary: 教您在 Cloud Studio 中快速玩转 YAML 模版
 让我们来一项项拆解。
 
 *   `envs`: 对应初始环境变量
-    
+
 *   `extensions`：
-    
 
 定义的是编辑器中需要使用的插件，比如`Maven for Java`等等
 
 ![](https://help-assets.codehub.cn/enterprise/cloudStudio/028.jpeg)
 
 *   `lifecycle`：
-    
 
 `lifecycle` 中定义的是整个项目的生命周期各个阶段需要执行的内容，各个定义的生命周期如下图所示：
 
 ![](https://help-assets.codehub.cn/enterprise/cloudStudio/029.jpeg)
 
 1.  `init`：首次创建空间后的启动，启动后执行。
-    
+
 2.  `start`：日常启动空间后执行。
-    
+
 3.  `destroy`：停止空间前执行。
-    
+
 
 **注意：由于运行时机的原因，`init` 和 `start` 阶段的 `lifecycle` 命令不能使用由代码仓库中的文件、脚本等内容构成的可执行命令**
 
 *   `sidecar`
-    
 
 常用的组件，支持以`sidecar`定义，目前支持的组件有`mysql`、`redis`，如果你的项目需要使用到这两类组件，则定义`enabled`为`true`即可，否则可以置为`false`。
 
@@ -111,7 +108,6 @@ summary: 教您在 Cloud Studio 中快速玩转 YAML 模版
 ![](https://help-assets.codehub.cn/enterprise/cloudStudio/030.jpeg)
 
 5.  使用`YAML`模板
-    
 
 以电商模版为例说明如何使用
 
@@ -140,12 +136,10 @@ summary: 教您在 Cloud Studio 中快速玩转 YAML 模版
 您可以通过以下两个 链接查看由该功能生成的工作空间，并可以将`workspace.yml`复制下来体验使用：
 
 1.  `https://cloudstudio.net/templates/hBswiZB0M4Z`
-    
 
 ![](https://help-assets.codehub.cn/enterprise/cloudStudio/036.jpeg)
 
 2.  `https://cloudstudio.net/templates/hQGhL1EYuEF`
-    
 
 ![](https://help-assets.codehub.cn/enterprise/cloudStudio/037.jpeg)
 
