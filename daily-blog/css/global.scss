@@ -215,12 +215,6 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .cloudstudio_article_noName_item {
-    min-height: unset;
-  }
-}
-
 .commuity-link-box {
   box-shadow: 0px 1px 4px rgba(0, 80, 191, 0.0456748), 0px 7px 17px rgba(0, 80, 191, 0.05);
   background: #ffffff;
@@ -229,6 +223,16 @@
   padding: 32px;
   &:hover {
     transform: translateY(-8px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cloudstudio_article_noName_item {
+    min-height: unset;
+  }
+
+  .commuity-link-box {
+    padding: 24px;
   }
 }
 

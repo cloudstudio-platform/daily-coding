@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
-import { Menu as AntdMenu, Popover, Tabs, Divider, Button } from 'antd'
+import { Popover, Tabs, Divider, Button } from 'antd'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useScroll } from 'ahooks'
 import { DownOutlined } from '@ant-design/icons'
+import MenuBox from './Menu'
 
 export const getCookieValue = (name) => {
   const match = document.cookie.match('(^|[^;]+)\\s*' + name + '\\s*=\\s*([^;]+)')
   return match ? match.pop() : null
 }
-
-const { SubMenu } = AntdMenu
 
 const downloadList = {
   package: 'https://cloudstudio.net/docs/zips/cloud-studio-browser-extension.zip',
@@ -46,160 +45,13 @@ const Header = () => {
     down.remove() //此步骤可省略
   }
 
-  const HeaderMenus = ({ className, mode }) => {
-    return (
-      <AntdMenu className={classNames(className)} mode={mode} selectable={false}>
-        <SubMenu key="online-code" title="在线编程">
-          <AntdMenu.ItemGroup title="产品特性" key="online-code-1">
-            <AntdMenu.Item key="online-cloud">
-              <Link href="https://cloudstudio.net/cde">云端开发环境</Link>
-            </AntdMenu.Item>
-            <AntdMenu.Item key="online-metawork">
-              <Link href="https://cloudstudio.net/metawork">MetaWork 多人协作</Link>
-            </AntdMenu.Item>
-            <AntdMenu.Item key="online-deploykit">
-              <Link href="https://cloudstudio.net/deploykit">DeployKit 云部署</Link>
-            </AntdMenu.Item>
-            {/* <AntdMenu.Item key="online-ai">
-              <Link href="https://cloudstudio.net/ai">AI 代码助手 (Beta) </Link>
-            </AntdMenu.Item> */}
-            <AntdMenu.Item key="online-teams">
-              <Link href="https://cloudstudio.net/teams">Teams 团队</Link>
-            </AntdMenu.Item>
-          </AntdMenu.ItemGroup>
-        </SubMenu>
-        <SubMenu key="code-design" title="开发者社区">
-          <AntdMenu.ItemGroup title="开发者社区" key="code-design-1">
-            <AntdMenu.Item key="design-csdn">
-              <Link href="https://cloudstudio.net/incentive">开发者激励计划</Link>
-            </AntdMenu.Item>
-            <AntdMenu.Item key="tx-cloud">
-              <Link
-                href="https://cloud.tencent.com/developer/zone/cloudstudio?from=19165"
-                target="_blank"
-              >
-                腾讯云
-              </Link>
-            </AntdMenu.Item>
-            <AntdMenu.Item key="blog">
-              <Link href="https://daily-blog-eta.vercel.app/blog" target="_blank">
-                博客
-              </Link>
-            </AntdMenu.Item>
-          </AntdMenu.ItemGroup>
-        </SubMenu>
-
-        {/* <AntdMenu.Item className="alone-menu-item" key="code-teaching">
-                <Link href="/code-teaching" >CODING 达人</Link>
-            </AntdMenu.Item> */}
-        {/* <SubMenu
-                key="code-learning"
-                title="CODING 达人"
-            >
-                <AntdMenu.ItemGroup title="CODING 达人" key="code-learning-1">
-                    <AntdMenu.Item key="learn-management">
-                        <Link href="/code-teaching">CODING 达人</Link>
-                    </AntdMenu.Item>
-                    <AntdMenu.Item key="learn-ai">
-                        <Link href="/code-teaching">AI 助教</Link>
-                    </AntdMenu.Item>
-                    <AntdMenu.Item key="learn-classroom">
-                        <Link href="/code-teaching">在线课堂</Link>
-                    </AntdMenu.Item>
-                    <AntdMenu.Item key="learn-interaction">
-                        <Link href="/code-teaching">互动教程</Link>
-                    </AntdMenu.Item>
-                </AntdMenu.ItemGroup>
-            </SubMenu> */}
-        {/* <SubMenu
-                key="code-solution"
-                title="解决方案"
-            >
-                <AntdMenu.ItemGroup title="按人群">
-                    <AntdMenu.Item key="solution-enterprise">企业</AntdMenu.Item>
-                    <AntdMenu.Item key="solution-startup">初创团队</AntdMenu.Item>
-                    <AntdMenu.Item key="solution-beginners">初学者</AntdMenu.Item>
-                    <AntdMenu.Item key="solution-interaction">互动教程</AntdMenu.Item>
-                </AntdMenu.ItemGroup>
-                <AntdMenu.ItemGroup title="按场景">
-                    <AntdMenu.Item key="solution-education">教育开发场景</AntdMenu.Item>
-                    <AntdMenu.Item key="solution-cloudorigin">云原生应用开发场景</AntdMenu.Item>
-                    <AntdMenu.Item key="solution-pr">PR - CODING / Github</AntdMenu.Item>
-                </AntdMenu.ItemGroup>
-                <AntdMenu.ItemGroup title="集成案例">
-                    <AntdMenu.Item key="solution-idepages">IDE Pages</AntdMenu.Item>
-                    <AntdMenu.Item key="solution-plugins">插件市场</AntdMenu.Item>
-                </AntdMenu.ItemGroup>
-            </SubMenu> */}
-        <SubMenu key="code-language" title="编程语言">
-          <AntdMenu.ItemGroup title="编程语言" key="code-language-1">
-            <AntdMenu.Item key="lan-c">
-              <Link href="https://cloudstudio.net/language/c">C</Link>
-            </AntdMenu.Item>
-            <AntdMenu.Item key="lan-cpp">
-              <Link href="https://cloudstudio.net/language/cpp">C++</Link>
-            </AntdMenu.Item>
-            <AntdMenu.Item key="lan-cp">
-              <Link href="https://cloudstudio.net/language/cp">C#</Link>
-            </AntdMenu.Item>
-            <AntdMenu.Item key="lan-java">
-              <Link href="https://cloudstudio.net/language/java">Java</Link>
-            </AntdMenu.Item>
-            <AntdMenu.Item key="lan-python">
-              <Link href="https://cloudstudio.net/language/python">Python</Link>
-            </AntdMenu.Item>
-            <AntdMenu.Item key="lan-javascript">
-              <Link href="https://cloudstudio.net/language/javascript">JavaScript</Link>
-            </AntdMenu.Item>
-            <AntdMenu.Item key="lan-php">
-              <Link href="https://cloudstudio.net/language/php">PHP</Link>
-            </AntdMenu.Item>
-            <AntdMenu.Item key="lan-go">
-              <Link href="https://cloudstudio.net/language/go">Go</Link>
-            </AntdMenu.Item>
-            <AntdMenu.Item key="lan-rust">
-              <Link href="https://cloudstudio.net/language/rust">Rust</Link>
-            </AntdMenu.Item>
-          </AntdMenu.ItemGroup>
-        </SubMenu>
-        {/* <SubMenu
-                key="advanced-active"
-                title="进阶与活动"
-            >
-                <AntdMenu.ItemGroup title="进阶与活动"  key="advanced-active-1">
-                    <AntdMenu.Item key="advanced-active-2">
-                        <Link href="/incentive" >开发者激励计划</Link>
-                    </AntdMenu.Item>
-                    <AntdMenu.Item key="advanced-active-3">
-                        <Link href="/incentive">今日技术热点</Link>
-                    </AntdMenu.Item>
-                    <AntdMenu.Item key="advanced-active-4">
-                        <Link href="/incentive">优秀应用推荐</Link>
-                    </AntdMenu.Item>
-                    <AntdMenu.Item key="advanced-active-5">
-                        <Link href="/incentive">代码修道院</Link>
-                    </AntdMenu.Item>
-                </AntdMenu.ItemGroup>
-            </SubMenu> */}
-        <AntdMenu.Item className="alone-menu-item" key="docs">
-          <Link href="https://cloudstudio.net/docs" target="_blank">
-            产品文档
-          </Link>
-        </AntdMenu.Item>
-        <AntdMenu.Item className="alone-menu-item" key="mony">
-          <Link href="https://cloudstudio.net/payment">定价</Link>
-        </AntdMenu.Item>
-      </AntdMenu>
-    )
-  }
-
   return (
     <>
       <header className={classNames('menu-header fixed', headerTop && 'header-fixed')}>
-        <div className="h-full w-full max-w-[1440px] xs:px-4 sm:px-6 md:px-8 xl:px-12 xxl:px-12">
-          <section className="menu-component grid grid-cols-12 items-center xxl:container">
-            <h1 className="col-span-8 sm:col-span-10 md:col-span-8 xl:col-span-2 xxl:col-span-2">
-              <Link href="https://cloudstudio.net" className="flex items-center">
+        <div className="h-full w-full xs:px-4 sm:px-6 md:px-8 xl:px-12 xxl:px-12">
+          <section className="menu-component flex items-center justify-between">
+            <nav className="flex items-center">
+              <Link href="https://cloudstudio.net" className="mr-2 flex items-center">
                 <Image
                   alt="cs-logo"
                   src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/logo.png"
@@ -208,20 +60,13 @@ const Header = () => {
                   width={208}
                 />
               </Link>
-            </h1>
 
-            <nav className="hidden h-full items-center xl:col-span-6 xl:flex xxl:col-span-7 xxl:flex">
-              <HeaderMenus className="menus-box" mode="horizontal" key="horizontal-menus" />
+              <div className="hidden h-full items-center xl:flex xxl:flex">
+                <MenuBox isInline={false} />
+              </div>
             </nav>
 
-            <nav className="col-span-4 flex items-center justify-end sm:col-span-2 xxl:col-span-3 xxl:flex">
-              {/* <Button
-                className="btn-login mr-4 cursor-pointer text-sm sm:hidden md:mr-5 md:hidden"
-                onClick={handleLogin}
-              >
-                注册/登录
-              </Button> */}
-
+            <nav className="flex items-center justify-end xxl:flex">
               <div className="sm:hidden md:hidden">
                 <Popover
                   placement="bottomLeft"
@@ -391,11 +236,8 @@ const Header = () => {
               })}
             >
               <div className="nav-panel-box">
-                <HeaderMenus className="menus-box" mode="inline" key="inline-menus-light" />
+                <MenuBox isInline={true} />
                 <div className="nav-login flex items-center justify-center py-8 xs:px-4 sm:px-2">
-                  {/* <a className="hidden md:block try" onClick={() => tryout()}>
-                                    云端体验
-                                    </a> */}
                   <Button className="login" onClick={handleLogin}>
                     登录/注册
                   </Button>

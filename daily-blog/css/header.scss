@@ -98,7 +98,7 @@
     }
 
     .ant-menu-overflow-item.ant-menu-submenu.ant-menu-submenu-horizontal {
-        padding: 0 36px 0 20px !important;
+        padding: 0 32px !important;
     }
 }
 
@@ -381,6 +381,12 @@
         color: rgba(23, 29, 38, 1);
         border: none;
         font-size: rem(16);
+        border-inline-end: none !important;
+        .ant-menu-item-only-child {
+            &:hover {
+                color: #4080ff !important;
+            }
+        }
     }
 
     .nav-panel {
@@ -876,6 +882,15 @@
         height: 48px;
         font-size: 12px;
         width: 100vw;
+        .menus-box {
+            .ant-menu-item-only-child {
+                padding-left: 8px !important;
+                .ant-menu-title-content {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+        }
         &.md-hover {
             .sticky-blur {
                 box-shadow: inherit !important;
