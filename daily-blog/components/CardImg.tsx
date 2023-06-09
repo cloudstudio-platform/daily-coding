@@ -17,7 +17,7 @@ const ArticleItem = ({
     href={`/${item.path}`}
     className={classNames(
       'relative block rounded-lg bg-white',
-      isShowName ? 'insight_article_item' : 'insight_article_noName_item',
+      isShowName ? 'cloudstudio_article_item' : 'cloudstudio_article_noName_item',
       linkBoxClass
     )}
     target="_blank"
@@ -66,14 +66,14 @@ const ArticleItem = ({
           className={classNames(
             'text-[#4C576E]',
             !isShowName ? 'text-[16px] leading-[22px] mb:text-sm' : 'text-[14px] leading-[20px]',
-            'insight_multi_desc'
+            'cloudstudio_multi_desc'
           )}
         >
           {item.subTitle}
         </p>
       )}
       {item.list && (
-        <ul className="insight_list_ul">
+        <ul className="cloudstudio_list_ul">
           {item.list.map((data: string, index: number) => (
             <li key={index} className="pl-3 pt-[2px] text-[14px] leading-[22px] text-[#4C576E]">
               <div className=" relative top-2 bg-[#4493FB]"></div>

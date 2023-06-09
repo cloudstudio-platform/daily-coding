@@ -40,7 +40,7 @@ export default function BlogPage({
     <>
       <PageSEO title="博客 -- Cloud Studio" description={siteMetadata.description} />
       <div className="w-full">
-        <div className="insight_mb_index_bg absolute left-0 right-0 top-0 w-full">
+        <div className="cloudstudio_mb_index_bg absolute left-0 right-0 top-0 w-full">
           <picture>
             <img
               src="https://help-assets.codehub.cn/enterprise/new-static/images/insight/index_bg.png"
