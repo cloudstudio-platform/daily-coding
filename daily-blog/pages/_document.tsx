@@ -6,7 +6,6 @@ class MyDocument extends Document {
     return (
       <Html lang={siteMetadata.language} className="scroll-smooth">
         <Head>
-          <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
           <link rel="icon" type="image/x-icon" href="/static/favicons/favicon.ico" />
           <link rel="shortcut icon" type="image/x-icon" href="/static/favicons/favicon.ico" />
           <meta name="msapplication-TileColor" content="#000000" />
