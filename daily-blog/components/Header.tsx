@@ -52,26 +52,26 @@ const Header = () => {
         <SubMenu key="online-code" title="在线编程">
           <AntdMenu.ItemGroup title="产品特性" key="online-code-1">
             <AntdMenu.Item key="online-cloud">
-              <Link href="/cde">云端开发环境</Link>
+              <Link href="https://cloudstudio.net/cde">云端开发环境</Link>
             </AntdMenu.Item>
             <AntdMenu.Item key="online-metawork">
-              <Link href="/metawork">MetaWork 多人协作</Link>
+              <Link href="https://cloudstudio.net/metawork">MetaWork 多人协作</Link>
             </AntdMenu.Item>
             <AntdMenu.Item key="online-deploykit">
-              <Link href="/deploykit">DeployKit 云部署</Link>
+              <Link href="https://cloudstudio.net/deploykit">DeployKit 云部署</Link>
             </AntdMenu.Item>
-            <AntdMenu.Item key="online-ai">
-              <Link href="/ai">AI 代码助手 (Beta) </Link>
-            </AntdMenu.Item>
+            {/* <AntdMenu.Item key="online-ai">
+              <Link href="https://cloudstudio.net/ai">AI 代码助手 (Beta) </Link>
+            </AntdMenu.Item> */}
             <AntdMenu.Item key="online-teams">
-              <Link href="/teams">Teams 团队</Link>
+              <Link href="https://cloudstudio.net/teams">Teams 团队</Link>
             </AntdMenu.Item>
           </AntdMenu.ItemGroup>
         </SubMenu>
         <SubMenu key="code-design" title="开发者社区">
           <AntdMenu.ItemGroup title="开发者社区" key="code-design-1">
             <AntdMenu.Item key="design-csdn">
-              <Link href="/incentive">开发者激励计划</Link>
+              <Link href="https://cloudstudio.net/incentive">开发者激励计划</Link>
             </AntdMenu.Item>
             <AntdMenu.Item key="tx-cloud">
               <Link
@@ -134,31 +134,31 @@ const Header = () => {
         <SubMenu key="code-language" title="编程语言">
           <AntdMenu.ItemGroup title="编程语言" key="code-language-1">
             <AntdMenu.Item key="lan-c">
-              <Link href="/language/c">C</Link>
+              <Link href="https://cloudstudio.net/language/c">C</Link>
             </AntdMenu.Item>
             <AntdMenu.Item key="lan-cpp">
-              <Link href="/language/cpp">C++</Link>
+              <Link href="https://cloudstudio.net/language/cpp">C++</Link>
             </AntdMenu.Item>
             <AntdMenu.Item key="lan-cp">
-              <Link href="/language/cp">C#</Link>
+              <Link href="https://cloudstudio.net/language/cp">C#</Link>
             </AntdMenu.Item>
             <AntdMenu.Item key="lan-java">
-              <Link href="/language/java">Java</Link>
+              <Link href="https://cloudstudio.net/language/java">Java</Link>
             </AntdMenu.Item>
             <AntdMenu.Item key="lan-python">
-              <Link href="/language/python">Python</Link>
+              <Link href="https://cloudstudio.net/language/python">Python</Link>
             </AntdMenu.Item>
             <AntdMenu.Item key="lan-javascript">
-              <Link href="/language/javascript">JavaScript</Link>
+              <Link href="https://cloudstudio.net/language/javascript">JavaScript</Link>
             </AntdMenu.Item>
             <AntdMenu.Item key="lan-php">
-              <Link href="/language/php">PHP</Link>
+              <Link href="https://cloudstudio.net/language/php">PHP</Link>
             </AntdMenu.Item>
             <AntdMenu.Item key="lan-go">
-              <Link href="/language/go">Go</Link>
+              <Link href="https://cloudstudio.net/language/go">Go</Link>
             </AntdMenu.Item>
             <AntdMenu.Item key="lan-rust">
-              <Link href="/language/rust">Rust</Link>
+              <Link href="https://cloudstudio.net/language/rust">Rust</Link>
             </AntdMenu.Item>
           </AntdMenu.ItemGroup>
         </SubMenu>
@@ -182,12 +182,12 @@ const Header = () => {
                 </AntdMenu.ItemGroup>
             </SubMenu> */}
         <AntdMenu.Item className="alone-menu-item" key="docs">
-          <Link href="/docs" target="_blank">
+          <Link href="https://cloudstudio.net/docs" target="_blank">
             产品文档
           </Link>
         </AntdMenu.Item>
         <AntdMenu.Item className="alone-menu-item" key="mony">
-          <Link href="/payment">定价</Link>
+          <Link href="https://cloudstudio.net/payment">定价</Link>
         </AntdMenu.Item>
       </AntdMenu>
     )
@@ -285,7 +285,7 @@ const Header = () => {
                                 />
                               </picture>
                               <div className="items-title">
-                                <Link href="/download">前往下载中心</Link>
+                                <Link href="https://cloudstudio.net/download">前往下载中心</Link>
                               </div>
                             </div>
                           </div>
@@ -346,7 +346,7 @@ const Header = () => {
                                 />
                               </picture>
                               <div className="items-title">
-                                <Link href="/download">前往下载中心</Link>
+                                <Link href="https://cloudstudio.net/download">前往下载中心</Link>
                               </div>
                             </div>
                           </div>

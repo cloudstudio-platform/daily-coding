@@ -6,27 +6,27 @@ export const FOOTER_ATOM = [
       {
         key: 'env',
         name: '云端开发环境',
-        link: '/',
+        link: 'https://cloudstudio.net/cde',
       },
-      {
-        key: 'ai',
-        name: 'AI 代码助手',
-        link: '/ai',
-      },
+      // {
+      //   key: 'ai',
+      //   name: 'AI 代码助手',
+      //   link: '/ai',
+      // },
       {
         key: 'metawork',
         name: 'Metawork 多人协作',
-        link: '/metawork',
+        link: 'https://cloudstudio.net/metawork',
       },
       {
         key: 'deployKit',
         name: 'DeployKit 云部署',
-        link: '/deployKit',
+        link: 'https://cloudstudio.net/deployKit',
       },
       {
         key: 'teams',
         name: 'Teams 团队',
-        link: '/teams',
+        link: 'https://cloudstudio.net/teams',
       },
     ],
   },
@@ -68,17 +68,17 @@ export const FOOTER_ATOM = [
       {
         key: 'community',
         name: '开发者社区',
-        link: '/',
+        link: 'https://cloud.tencent.com/developer/zone/cloudstudio?from=19165',
       },
       {
         key: 'blog',
         name: '博客',
-        link: '/',
+        link: 'https://cloudstudio-daily-blog.vercel.app/blog',
       },
       {
         key: 'download',
         name: '下载中心',
-        link: '/',
+        link: 'https://cloudstudio.net/download',
       },
       {
         key: 'terms',
@@ -98,13 +98,13 @@ export const FOOTER_ATOM = [
       {
         key: 'docs',
         name: '产品文档',
-        link: '/docs',
+        link: 'https://cloudstudio.net/docs',
       },
-      {
-        key: 'changelog',
-        name: '产品更新日志',
-        link: '/',
-      },
+      // {
+      //   key: 'changelog',
+      //   name: '产品更新日志',
+      //   link: '/',
+      // },
     ],
   },
   {
@@ -113,48 +113,48 @@ export const FOOTER_ATOM = [
     list: [
       {
         key: 'c',
-        name: 'C/C++',
-        link: '/',
+        name: 'C',
+        link: 'https://cloudstudio.net/language/c',
+      },
+      {
+        key: 'c++',
+        name: 'C++',
+        link: 'https://cloudstudio.net/language/cpp',
       },
       {
         key: 'c#',
         name: 'C#',
-        link: '/',
-      },
-      {
-        key: 'go',
-        name: 'Go',
-        link: '/',
+        link: 'https://cloudstudio.net/language/cp',
       },
       {
         key: 'java',
         name: 'Java',
-        link: '/',
-      },
-      {
-        key: 'javascript',
-        name: 'Javascript',
-        link: '/',
-      },
-      {
-        key: 'node',
-        name: 'Node.js',
-        link: '/',
-      },
-      {
-        key: 'php',
-        name: 'Php',
-        link: '/',
+        link: 'https://cloudstudio.net/language/java',
       },
       {
         key: 'python',
         name: 'Python',
-        link: '/',
+        link: 'https://cloudstudio.net/language/python',
+      },
+      {
+        key: 'go',
+        name: 'Go',
+        link: 'https://cloudstudio.net/language/go',
+      },
+      {
+        key: 'javascript',
+        name: 'JavaScript',
+        link: 'https://cloudstudio.net/language/javascript',
+      },
+      {
+        key: 'php',
+        name: 'PHP',
+        link: 'https://cloudstudio.net/language/php',
       },
       {
         key: 'rust',
         name: 'Rust',
-        link: '/',
+        link: 'https://cloudstudio.net/language/rust',
       },
     ],
   },
