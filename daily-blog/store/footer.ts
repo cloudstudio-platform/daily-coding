@@ -143,12 +143,12 @@ export const FOOTER_ATOM = [
       },
       {
         key: 'javascript',
-        name: 'Javascript',
+        name: 'JavaScript',
         link: 'https://cloudstudio.net/language/javascript',
       },
       {
         key: 'php',
-        name: 'Php',
+        name: 'PHP',
         link: 'https://cloudstudio.net/language/php',
       },
       {
