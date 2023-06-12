@@ -21,7 +21,7 @@ language:
 star: '49'
 fork: '3'
 url: https://github.com/xtrp/jupiter
-banner: https://github.com/xtrp/jupiter/raw/master/demo-image.png
+banner: ./demo-image.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./2048.mov
 license: MIT

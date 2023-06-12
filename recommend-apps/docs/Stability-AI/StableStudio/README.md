@@ -19,8 +19,7 @@ language:
 star: 1.4k
 fork: '80'
 url: https://github.com/Stability-AI/StableStudio
-banner: >-
-  https://github.com/Stability-AI/StableStudio/blob/main/misc/Banner.png?raw=true
+banner: ./misc/Banner.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./misc/StableStudio.mov
 license: MIT

@@ -44,7 +44,7 @@ language:
 star: '23.1k'
 fork: '9k'
 url: https://github.com/Chanzhaoyu/chatgpt-web
-banner: https://github.com/Chanzhaoyu/chatgpt-web/raw/main/docs/c1.png
+banner: ./docs/c1.png
 icon: https://cs-res.codehub.cn/workspace/assets/icons/vuejs.svg
 video: ./docs/ChatGPT-Web.mov
 license: MIT

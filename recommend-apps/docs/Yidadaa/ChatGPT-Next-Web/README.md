@@ -37,7 +37,7 @@ language:
 star: 26.8k
 fork: 23.2k
 url: https://github.com/Yidadaa/ChatGPT-Next-Web
-banner: https://github.com/Yidadaa/ChatGPT-Next-Web/raw/main/docs/images/cover.png
+banner: ./docs/images/cover.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./docs/images/ChatGPT-Next-Web.mov
 license: Anti 996

@@ -27,8 +27,7 @@ language:
 star: 1.4k
 fork: '80'
 url: https://github.com/mckaywrigley/ai-code-translator
-banner: >-
-  https://github.com/mckaywrigley/ai-code-translator/raw/main/public/screenshot.png
+banner: ./public/screenshot.png
 video: ./public/AI-Code-Translator.mov
 icon: https://cs-res.codehub.cn/vscode/node.svg
 license: ''

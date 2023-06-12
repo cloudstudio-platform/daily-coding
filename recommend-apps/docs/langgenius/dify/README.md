@@ -50,7 +50,7 @@ language:
 star: 3k
 fork: '396'
 url: https://github.com/langgenius/dify
-banner: https://github.com/langgenius/dify/raw/main/images/describe-en.png
+banner: ./describe-en.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 license: MIT
 order: 15
