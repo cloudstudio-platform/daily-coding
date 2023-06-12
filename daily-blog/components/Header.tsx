@@ -48,7 +48,7 @@ const Header = () => {
   return (
     <>
       <header className={classNames('menu-header fixed', headerTop && 'header-fixed')}>
-        <div className="h-full w-full xs:px-4 sm:px-6 md:px-8 xl:px-12 xxl:px-12">
+        <div className="h-full w-full max-w-[1440px] xs:px-4 sm:px-6 md:px-8 xl:px-12 xxl:px-12">
           <section className="menu-component flex items-center justify-between">
             <nav className="flex items-center">
               <Link href="https://cloudstudio.net" className="mr-2 flex items-center">
@@ -203,7 +203,12 @@ const Header = () => {
                   <button className="download-btn mr-4 sm:hidden md:mr-5 md:hidden">
                     <span>下载客户端</span>
                     <div className="dtn-one"></div>
-                    <DownOutlined />
+                    <Image
+                      src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download-arr.png"
+                      width={11}
+                      height={6}
+                      alt=""
+                    />
                   </button>
                 </Popover>
               </div>
@@ -245,6 +250,27 @@ const Header = () => {
               </div>
             </nav>
           </section>
+          <div className="sticky-blur message-header">
+            <section className="message-component flex w-full items-center justify-center xs:px-4 sm:px-6 md:px-8 xl:px-12 xxl:px-12">
+              <nav className="message-box flex items-center">
+                <Image
+                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/new-btn.png"
+                  width={40}
+                  height={20}
+                  className="mr-5"
+                  alt=""
+                />
+                <div className="message-text flex items-center text-black">
+                  Cloud Studio AI 代码助手已经上线内测，用技术改变世界，用 AI 改变代码！
+                </div>
+              </nav>
+              <nav className="flex flex-nowrap items-center justify-end pl-5 xs:pl-2 sm:pl-3">
+                <Link href="/appointment" className="appointment-text flex items-center">
+                  预约申请
+                </Link>
+              </nav>
+            </section>
+          </div>
         </div>
       </header>
     </>

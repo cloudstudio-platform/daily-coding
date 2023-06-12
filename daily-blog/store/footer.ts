@@ -151,11 +151,11 @@ export const FOOTER_ATOM = [
         name: 'PHP',
         link: 'https://cloudstudio.net/language/php',
       },
-      {
-        key: 'rust',
-        name: 'Rust',
-        link: 'https://cloudstudio.net/language/rust',
-      },
+      // {
+      //   key: 'rust',
+      //   name: 'Rust',
+      //   link: 'https://cloudstudio.net/language/rust',
+      // },
     ],
   },
   {

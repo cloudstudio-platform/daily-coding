@@ -100,10 +100,10 @@ const items: MenuProps['items'] = [
             label: <Link href="https://cloudstudio.net/language/go">Go</Link>,
             key: 'go',
           },
-          {
-            label: <Link href="https://cloudstudio.net/language/rust">Rust</Link>,
-            key: 'rust',
-          },
+          // {
+          //   label: <Link href="https://cloudstudio.net/language/rust">Rust</Link>,
+          //   key: 'rust',
+          // },
         ],
       },
     ],

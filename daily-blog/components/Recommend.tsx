@@ -6,7 +6,7 @@ const Recommend = ({ posts }) => {
   const recommendList = posts.filter((item) => item.isRecommend)
 
   return (
-    <div className="mt-[140px] grid w-full grid-flow-col grid-rows-3 gap-10 pcMin:flex pcMin:flex-col layer:mt-[92px] mb:mt-[87px]">
+    <div className="mt-[220px] grid w-full grid-flow-col grid-rows-3 gap-10 pcMin:flex pcMin:flex-col layer:mt-[152px] mb:mt-[127px]">
       <Link
         href="https://cloudstudio.net/incentive"
         target="_blank"
