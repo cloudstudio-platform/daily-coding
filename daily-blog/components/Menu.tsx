@@ -21,7 +21,7 @@ const items: MenuProps['items'] = [
             key: 'online-metawork',
           },
           {
-            label: <Link href="https://cloudstudio.net/deployKit">DeployKit 云部署</Link>,
+            label: <Link href="https://cloudstudio.net/deploykit">DeployKit 云部署</Link>,
             key: 'online-deploykit',
           },
           {
