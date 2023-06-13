@@ -17,7 +17,7 @@ const inter = Inter({
 const LayoutWrapper = ({ children }: Props) => {
   const { handleOk } = useExperienceSpace()
   return (
-    <section className="relative flex w-full flex-col items-center bg-[#FAFAFA]">
+    <section className="relative flex w-full flex-col items-center bg-white">
       <div className="z-index-1000 relative flex w-full justify-center">
         <Header />
       </div>

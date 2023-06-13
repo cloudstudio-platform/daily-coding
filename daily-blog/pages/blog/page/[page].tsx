@@ -59,11 +59,16 @@ export default function PostPage({
     <>
       <PageSEO title="博客列表" description={siteMetadata.description} />
       <div className="w-full">
-        <div className="cloudstudio_mb_index_bg absolute left-0 right-0 top-0 w-full">
+        <div className="absolute left-0 right-0 top-0 w-full">
           <picture>
             <img
-              src="https://help-assets.codehub.cn/enterprise/new-static/images/insight/index_bg.png"
-              className="tablet:hidden"
+              src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/article-banner.png"
+              className="xs:hidden sm:hidden"
+              alt=""
+            />
+            <img
+              className="hidden xs:block sm:block"
+              src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/mb-bg.png"
               alt=""
             />
           </picture>

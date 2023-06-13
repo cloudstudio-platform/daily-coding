@@ -97,7 +97,7 @@ export default function ListLayout({
   return (
     <>
       <div className="relative">
-        <div className="py-12">
+        <div className="py-12 mb:pb-6 mb:pt-4">
           <h1 className="mb-4 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
           </h1>
@@ -127,23 +127,25 @@ export default function ListLayout({
               />
             </svg>
           </div>
-          <div className="mt-4 flex w-full items-start">
+          <div className="mt-4 flex w-full flex-wrap items-start mb:mt-2">
             <p className="mr-4 mt-2 font-medium leading-8">热门标签: </p>
-            {sortedTags.map((data: string, index: number) => (
-              <Button
-                key={`tag${index}`}
-                className={classNames(
-                  'mr-3 mt-2 h-7 cursor-pointer rounded border-0 bg-[#FDEAD9] px-3',
-                  activeObj.name === data && 'selected'
-                )}
-                id={activeObj.name === data ? 'selected-tag' : ''}
-                onClick={handleClick}
-              >
-                <span className="whitespace-nowrap text-[14px] font-semibold leading-5 text-[#ED7B2F]">
-                  {data}
-                </span>
-              </Button>
-            ))}
+            <div className="flex flex-wrap">
+              {sortedTags.map((data: string, index: number) => (
+                <Button
+                  key={`tag${index}`}
+                  className={classNames(
+                    'mr-3 mt-2 h-7 cursor-pointer rounded border-0 bg-[#FDEAD9] px-3 mb:mr-4',
+                    activeObj.name === data && 'selected'
+                  )}
+                  id={activeObj.name === data ? 'selected-tag' : ''}
+                  onClick={handleClick}
+                >
+                  <span className="whitespace-nowrap text-[14px] font-semibold leading-5 text-[#ED7B2F]">
+                    {data}
+                  </span>
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
         <div className="relative flex justify-between">

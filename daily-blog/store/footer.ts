@@ -21,7 +21,7 @@ export const FOOTER_ATOM = [
       {
         key: 'deployKit',
         name: 'DeployKit 云部署',
-        link: 'https://cloudstudio.net/deployKit',
+        link: 'https://cloudstudio.net/deploykit',
       },
       {
         key: 'teams',
@@ -100,11 +100,11 @@ export const FOOTER_ATOM = [
         name: '产品文档',
         link: 'https://cloudstudio.net/docs',
       },
-      // {
-      //   key: 'changelog',
-      //   name: '产品更新日志',
-      //   link: '/',
-      // },
+      {
+        key: 'changelog',
+        name: '产品更新日志',
+        link: 'https://cloudstudio.net/docs/others/changelog.html',
+      },
     ],
   },
   {
@@ -146,16 +146,16 @@ export const FOOTER_ATOM = [
         name: 'JavaScript',
         link: 'https://cloudstudio.net/language/javascript',
       },
-      {
-        key: 'php',
-        name: 'PHP',
-        link: 'https://cloudstudio.net/language/php',
-      },
-      {
-        key: 'rust',
-        name: 'Rust',
-        link: 'https://cloudstudio.net/language/rust',
-      },
+      // {
+      //   key: 'php',
+      //   name: 'PHP',
+      //   link: 'https://cloudstudio.net/language/php',
+      // },
+      // {
+      //   key: 'rust',
+      //   name: 'Rust',
+      //   link: 'https://cloudstudio.net/language/rust',
+      // },
     ],
   },
   {

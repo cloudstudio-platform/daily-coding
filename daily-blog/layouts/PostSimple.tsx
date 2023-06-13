@@ -26,9 +26,8 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
     <SectionContainer>
       <BlogSEO url={`${siteMetadata.siteUrl}/${path}`} {...content} />
       <ScrollTopAndComment />
-      <div className="blog-article_detail_bg"></div>
       <article className="relative z-10">
-        <div className="pb-0 pt-[128px]">
+        <div className="pb-[104px] pt-[208px] mb:pt-[140px]">
           <header>
             <div className="flex">
               <Link href="/blog" className="text-[#4C576E] hover:text-blue-hover">

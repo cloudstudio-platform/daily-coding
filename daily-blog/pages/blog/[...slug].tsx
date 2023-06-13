@@ -48,26 +48,29 @@ export default function BlogPostPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      {'draft' in post && post.draft === true ? (
-        <div className="mt-24 text-center">
-          <PageTitle>
-            Under Construction{' '}
-            <span role="img" aria-label="roadwork sign">
-              🚧
-            </span>
-          </PageTitle>
-        </div>
-      ) : (
-        <MDXLayoutRenderer
-          layout={DEFAULT_LAYOUT}
-          content={post}
-          MDXComponents={MDXComponents}
-          toc={post.toc}
-          authorDetails={authorDetails}
-          prev={prev}
-          next={next}
-        />
-      )}
+      <div className="absolute left-0 w-full">
+        <picture>
+          <img
+            src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/article-banner.png"
+            className="xs:hidden sm:hidden"
+            alt=""
+          />
+          <img
+            className="hidden xs:block sm:block"
+            src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/mb-bg.png"
+            alt=""
+          />
+        </picture>
+      </div>
+      <MDXLayoutRenderer
+        layout={DEFAULT_LAYOUT}
+        content={post}
+        MDXComponents={MDXComponents}
+        toc={post.toc}
+        authorDetails={authorDetails}
+        prev={prev}
+        next={next}
+      />
     </>
   )
 }
