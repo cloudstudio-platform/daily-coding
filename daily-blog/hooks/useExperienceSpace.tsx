@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { message, Modal, notification } from 'antd'
 import { instancePost } from '../until/http'
 import statusSvg from '../public/static/images/icon.svg'
 import FingerprintJS from '@fingerprintjs/fingerprintjs'
 
-const fpPromise = FingerprintJS.load()
-
 const useExperienceSpace = () => {
   const [confirmLoading, setConfirmLoading] = useState(false)
   const [canvasId, setCanvasId] = useState(null)
   const [isModalVisible, setIsModalVisible] = useState(false)
+  const [fpPromise, setFpPromise] = useState(null)
+
+  useEffect(() => {
+    setFpPromise(FingerprintJS.load())
+  }, [])
 
   const openNotification = (description) => {
     notification.info({
@@ -26,12 +29,13 @@ const useExperienceSpace = () => {
     })
   }
 
-  const makeCanvas = async () => {
+  const makeCanvas = useCallback(async () => {
     const fp = await fpPromise
+    if(!fp) return
     const result = await fp.get()
     const visitorId = result.visitorId
     setCanvasId(visitorId)
-  }
+  }, [fpPromise])
 
   const handleOk = async () => {
     setConfirmLoading(true)
