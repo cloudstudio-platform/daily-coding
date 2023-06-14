@@ -8,11 +8,11 @@ export const FOOTER_ATOM = [
         name: '云端开发环境',
         link: 'https://cloudstudio.net/cde',
       },
-      // {
-      //   key: 'ai',
-      //   name: 'AI 代码助手',
-      //   link: '/ai',
-      // },
+      {
+        key: 'ai',
+        name: 'AI 代码助手 (beta)',
+        link: '/ai',
+      },
       {
         key: 'metawork',
         name: 'Metawork 多人协作',
@@ -79,6 +79,7 @@ export const FOOTER_ATOM = [
         key: 'download',
         name: '下载中心',
         link: 'https://cloudstudio.net/download',
+        isTabletHidden: true
       },
       {
         key: 'terms',

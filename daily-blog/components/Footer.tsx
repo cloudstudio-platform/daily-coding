@@ -2,11 +2,10 @@ import { FOOTER_ATOM } from 'store/footer'
 import Link from './Link'
 import classNames from 'classnames'
 import Image from 'next/image'
-
-// import siteMetadata from '@/data/siteMetadata'
-// import SocialIcon from '@/components/social-icons'
+import useWindowSize from 'hooks/windowSize'
 
 export default function Footer() {
+  const { width } = useWindowSize()
   return (
     <footer className="relative flex w-full flex-col">
       <div className={classNames('common-footer-box relative w-full')}>
@@ -42,7 +41,10 @@ export default function Footer() {
                   <p className="pb-4 text-xs leading-6 text-gray-light">{item.category}</p>
                   <ul className="list-none">
                     {item.list.map((data) => (
-                      <li key={data.key}>
+                      <li
+                        key={data.key}
+                        className={width < 1136 && data.isTabletHidden && 'hidden'}
+                      >
                         <a
                           href={data.link}
                           className="normal:text-[16px] normal:leading-[26px] inline-block pb-2 text-sm leading-6 text-gray-lighter hover:text-blue-hover layer:font-[16px]"

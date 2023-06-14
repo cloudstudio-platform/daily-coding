@@ -4,8 +4,8 @@ import { Popover, Tabs, Divider, Button } from 'antd'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useScroll } from 'ahooks'
-import { DownOutlined } from '@ant-design/icons'
 import MenuBox from './Menu'
+import useWindowSize from 'hooks/windowSize'
 
 export const getCookieValue = (name) => {
   const match = document.cookie.match('(^|[^;]+)\\s*' + name + '\\s*=\\s*([^;]+)')
@@ -19,6 +19,8 @@ const downloadList = {
 const Header = () => {
   const [mdActive, setMdActive] = useState(false)
   const [headerTop, setHeaderTop] = useState(0)
+  const { width } = useWindowSize()
+  const [isPcMenu, setIsPcMenu] = useState(true)
   const scroll = useScroll()
 
   const domain = 'https://cloudstudio.net/api/public/login'
@@ -38,6 +40,14 @@ const Header = () => {
     setHeaderTop(scroll.top)
   }, [scroll])
 
+  useEffect(() => {
+    if (width > 1135) {
+      setIsPcMenu(true)
+    } else {
+      setIsPcMenu(false)
+    }
+  }, [width])
+
   const download = (type) => {
     const down = document.createElement('a')
     down.href = downloadList[type]
@@ -48,7 +58,7 @@ const Header = () => {
   return (
     <>
       <header className={classNames('menu-header fixed', headerTop && 'header-fixed')}>
-        <div className="h-full w-full max-w-[1440px] xs:px-4 sm:px-6 md:px-8 xl:px-12 xxl:px-12">
+        <div className="h-full w-full xs:px-4 sm:px-6 md:px-8 xl:px-20 xxl:px-20">
           <section className="menu-component flex items-center justify-between">
             <nav className="flex items-center">
               <Link href="https://cloudstudio.net" className="mr-2 flex items-center">
@@ -61,12 +71,12 @@ const Header = () => {
                 />
               </Link>
 
-              <div className="hidden h-full items-center xl:flex xxl:flex">
-                <MenuBox isInline={false} />
+              <div className="h-full items-center">
+                <MenuBox isInline={false} isShow={isPcMenu} />
               </div>
             </nav>
 
-            <nav className="flex items-center justify-end xxl:flex">
+            <nav className="flex items-center justify-end">
               <div className="sm:hidden md:hidden">
                 <Popover
                   placement="bottomLeft"
@@ -241,7 +251,7 @@ const Header = () => {
               })}
             >
               <div className="nav-panel-box">
-                <MenuBox isInline={true} />
+                <MenuBox isInline={true} isShow={!isPcMenu} />
                 <div className="nav-login flex items-center justify-center py-8 xs:px-4 sm:px-2">
                   <Button className="login" onClick={handleLogin}>
                     登录/注册
@@ -265,7 +275,10 @@ const Header = () => {
                 </div>
               </nav>
               <nav className="flex flex-nowrap items-center justify-end pl-5 xs:pl-2 sm:pl-3">
-                <Link href="/appointment" className="appointment-text flex items-center">
+                <Link
+                  href="https://cloudstudio.net/ai-apply"
+                  className="appointment-text flex items-center"
+                >
                   预约申请
                 </Link>
               </nav>
