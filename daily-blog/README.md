@@ -41,8 +41,6 @@ http://localhost:3000/blog
 
 next.js 13 以前的版本使用 `next/legacy/image`，之后新页面编写都使用最新的 `next/image`，api 相关可查看 next.js 官方最新文档。
 
-> 因为在新官网上线之前 next.js 才发布 13 版本，因此部分文件 image 会保留旧的写法。
-
 ## 📒 目录规范
 
 - `src/components` 存放公共业务组件

@@ -5,7 +5,6 @@ import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
-// import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
@@ -28,7 +27,6 @@ interface LayoutProps {
 export default function PostLayout({ content, authorDetails, next, prev }: LayoutProps) {
   const { path, date, title, tags } = content
   const basePath = path.split('/')[0]
-  // const [loadComments, setLoadComments] = useState(false)
 
   return (
     <SectionContainer>
