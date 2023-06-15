@@ -114,7 +114,7 @@ const items: MenuProps['items'] = [
         href="https://cloudstudio.net/docs"
         target="_blank"
         rel="noopener noreferrer"
-        className="px-4 mb:relative mb:px-0"
+        className="px-4 layerMax:px-0 mb:relative"
       >
         产品文档
       </Link>

@@ -37,6 +37,9 @@ module.exports = {
       pcMin: {
         max: '1280px',
       },
+      layerMax: {
+        max: '1135px',
+      },
       layer: {
         max: '1024px',
       },
