@@ -18,3 +18,5 @@ WORKDIR /app
 ADD package.json /app/
 COPY --from=downloader /app/node_modules /app/node_modules
 COPY --from=builder /app/.next /app/.next
+
+CMD ["npm", "run", "serve"]
