@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useScroll } from 'ahooks'
 import MenuBox from './Menu'
 import useWindowSize from 'hooks/windowSize'
-import { DownOutlined, RightOutlined } from '@ant-design/icons'
+import { RightOutlined } from '@ant-design/icons'
 import { identificationBrowser } from './../until/device'
 import { Browsers } from './../until/enums'
 
@@ -213,7 +213,12 @@ const Header = () => {
                   >
                     <span>下载客户端</span>
                     <div className="dtn-one"></div>
-                    <DownOutlined />
+                    <Image
+                      src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download-arr.png"
+                      width={11}
+                      height={6}
+                      alt=""
+                    />
                   </button>
                 </Popover>
               </div>
