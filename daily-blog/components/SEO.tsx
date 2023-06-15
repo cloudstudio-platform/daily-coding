@@ -15,6 +15,7 @@ interface CommonSEOProps {
       }[]
   twImage: string
   canonicalUrl?: string
+  keywords: string
 }
 
 const CommonSEO = ({
@@ -24,28 +25,24 @@ const CommonSEO = ({
   ogImage,
   twImage,
   canonicalUrl,
+  keywords,
 }: CommonSEOProps) => {
   const router = useRouter()
   return (
     <Head>
       <title>{title}</title>
       <meta name="robots" content="follow, index" />
-      <meta name="description" content={description} />
       <meta property="og:url" content={`${siteMetadata.siteUrl}${router.asPath}`} />
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content={siteMetadata.title} />
       <meta property="og:description" content={description} />
+      <meta property="og:keywords" content={keywords} />
       <meta property="og:title" content={title} />
       {Array.isArray(ogImage) ? (
         ogImage.map(({ url }) => <meta property="og:image" content={url} key={url} />)
       ) : (
         <meta property="og:image" content={ogImage} key={ogImage} />
       )}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={siteMetadata.twitter} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={twImage} />
       <link
         rel="canonical"
         href={canonicalUrl ? canonicalUrl : `${siteMetadata.siteUrl}${router.asPath}`}
@@ -56,10 +53,11 @@ const CommonSEO = ({
 
 interface PageSEOProps {
   title: string
-  description: string
+  description?: string
+  keywords?: string
 }
 
-export const PageSEO = ({ title, description }: PageSEOProps) => {
+export const PageSEO = ({ title, description, keywords }: PageSEOProps) => {
   const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
   const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
   return (
@@ -69,11 +67,12 @@ export const PageSEO = ({ title, description }: PageSEOProps) => {
       ogType="website"
       ogImage={ogImageUrl}
       twImage={twImageUrl}
+      keywords={keywords}
     />
   )
 }
 
-export const TagSEO = ({ title, description }: PageSEOProps) => {
+export const TagSEO = ({ title, description, keywords }: PageSEOProps) => {
   const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
   const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
   const router = useRouter()
@@ -85,6 +84,7 @@ export const TagSEO = ({ title, description }: PageSEOProps) => {
         ogType="website"
         ogImage={ogImageUrl}
         twImage={twImageUrl}
+        keywords={keywords}
       />
       <Head>
         <link
@@ -112,6 +112,8 @@ export const BlogSEO = ({
   url,
   images = [],
   canonicalUrl,
+  keywords,
+  description,
 }: BlogSeoProps) => {
   const publishedAt = new Date(date).toISOString()
   const modifiedAt = new Date(lastmod || date).toISOString()
@@ -164,7 +166,8 @@ export const BlogSEO = ({
         url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
       },
     },
-    description: summary,
+    description: description,
+    keywords: keywords,
   }
 
   const twImageUrl = featuredImages[0].url
@@ -178,6 +181,7 @@ export const BlogSEO = ({
         ogImage={featuredImages}
         twImage={twImageUrl}
         canonicalUrl={canonicalUrl}
+        keywords={keywords}
       />
       <Head>
         {date && <meta property="article:published_time" content={publishedAt} />}
