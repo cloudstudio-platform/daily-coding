@@ -250,10 +250,11 @@
 .ant-popover {
     width: rem(360);
     .ant-popover-inner {
-        background: #1d1d1d !important;
+        background: #fff !important;
+        border-radius: rem(8);
 
         .ant-popover-inner-content {
-            padding: rem(16);
+            padding: rem(0);
         }
     }
 
@@ -262,6 +263,7 @@
     }
 
     .download-tabs {
+        padding: rem(28) rem(24) rem(16) rem(24);
         .ant-tabs-nav {
             &::before {
                 border-bottom: rem(2) solid #111111 !important;
@@ -273,25 +275,39 @@
                     display: flex;
                     justify-content: center;
                     padding: 0 rem(10) rem(10) rem(10) !important;
-                    color: #fff;
+                    color: #606c80;
                     font-size: rem(14);
                 }
 
                 .ant-tabs-tab-active {
                     .ant-tabs-tab-btn {
-                        color: #fff;
+                        color: #606c80;
                     }
                 }
             }
         }
 
+        .cate-title {
+            font-size: rem(16);
+            line-height: rem(24);
+        }
+
         .load-items {
-            height: rem(40);
+            height: rem(22);
             border-radius: rem(8);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 rem(11) 0 rem(15);
+            margin-top: rem(16);
+            border: none;
+            outline: none;
+            box-shadow: none;
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
             &-title-box {
                 display: flex;
@@ -304,28 +320,41 @@
 
                 .items-title {
                     font-size: rem(14);
-                    color: #ffffff;
+                    color: #606c80;
                 }
             }
 
             &-desc {
-                color: #ffffff;
+                color: #606c80;
                 font-size: rem(12);
                 opacity: 0.6;
             }
 
             &:hover {
-                background: rgba(255, 255, 255, 0.04);
                 cursor: pointer;
+                .items-title {
+                    color: #4080ff;
+                }
             }
         }
 
         .load-divider {
-            background: #000000;
+            background: #e1e1e1;
             height: rem(1);
             width: 100%;
-            margin: rem(10) 0;
+            margin: rem(24) 0;
         }
+    }
+
+    .load-items-turn {
+        width: 100%;
+        height: rem(56);
+        display: flex;
+        background: rgba(64, 128, 255, 0.1);
+        align-items: center;
+        justify-content: center;
+        color: #3065fc;
+        gap: rem(8);
     }
 }
 
@@ -342,12 +371,10 @@
     justify-content: center;
     &.header-fixed {
         background: rgba(255, 255, 255, 0.8);
-        box-shadow: inset 0px -1px 0px #f2f5f8;
-        backdrop-filter: blur(54px);
+        backdrop-filter: blur(10px);
         .sticky-blur {
             background: rgba(255, 255, 255, 0.8);
-            box-shadow: inset 0px -1px 0px #f2f5f8;
-            backdrop-filter: blur(54px);
+            backdrop-filter: blur(10px);
         }
     }
     .nav-extension {
@@ -567,6 +594,7 @@
             font-weight: 500;
             &:hover {
                 outline: none;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(83.66deg, #2D61FC 0.04%, #4983F7 100.04%);
             }
         }
     }
@@ -862,6 +890,8 @@
 
         &:hover {
             cursor: pointer;
+            border: 1px solid #4080FF;
+            color: #4080FF;
         }
     }
 
@@ -887,18 +917,11 @@
 
 .sticky-blur {
     background: rgba(255, 255, 255, 0.8);
-    box-shadow: inset 0px -1px 0px #f2f5f8;
     backdrop-filter: blur(54px);
 }
 
 .message-header {
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.1) 51.04%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    border: rem(1) solid rgba(255, 255, 255, 0.1);
+    background: #D2E2FF !important;
     backdrop-filter: blur(rem(8));
     /* Note: backdrop-filter has minimal browser support */
 
@@ -1047,6 +1070,16 @@
 @media (min-width: 768px) and (max-width: 1135px) {
     .menu-header {
         height: 64px;
+
+        .menus-box {
+            .ant-menu-item-only-child {
+                padding-left: 8px !important;
+                .ant-menu-title-content {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+        }
 
         .btn-try,
         .btn-login {

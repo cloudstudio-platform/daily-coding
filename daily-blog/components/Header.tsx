@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
-import { Popover, Tabs, Divider, Button } from 'antd'
+import { Popover, Divider, Button } from 'antd'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useScroll } from 'ahooks'
 import MenuBox from './Menu'
 import useWindowSize from 'hooks/windowSize'
+import { DownOutlined, RightOutlined } from '@ant-design/icons'
+import { identificationBrowser } from './../until/device'
+import { Browsers } from './../until/enums'
 
 export const getCookieValue = (name) => {
   const match = document.cookie.match('(^|[^;]+)\\s*' + name + '\\s*=\\s*([^;]+)')
@@ -22,6 +25,8 @@ const Header = () => {
   const { width } = useWindowSize()
   const [isPcMenu, setIsPcMenu] = useState(true)
   const scroll = useScroll()
+  const [url, setUrl] = useState(null)
+  const [curBrowser, setCurBrowser] = useState(null)
 
   const domain = 'https://cloudstudio.net/api/public/login'
   const handleLogin = (e) => {
@@ -47,6 +52,13 @@ const Header = () => {
       setIsPcMenu(false)
     }
   }, [width])
+
+  useEffect(() => {
+    const browser = identificationBrowser()
+    setCurBrowser(browser)
+    const data = Browsers[browser]
+    setUrl(data)
+  }, [])
 
   const download = (type) => {
     const down = document.createElement('a')
@@ -81,45 +93,58 @@ const Header = () => {
                 <Popover
                   placement="bottomLeft"
                   content={
-                    <div className="popover-content">
-                      <Tabs className="download-tabs">
-                        <Tabs.TabPane tab="客户端" key="item-1">
-                          <div className="load-items">
+                    <>
+                      <div className="popover-content download-tabs">
+                        <div className="electron-box">
+                          <h3 className="cate-title">客户端</h3>
+                          <Button
+                            className="load-items"
+                            onClick={() => {
+                              window.open(
+                                'https://cs-res.codehub.cn/cloudstudio-home/Cloud Studio-darwin-x64-1.0.0.zip'
+                              )
+                            }}
+                          >
                             <div className="load-items-title-box">
                               <picture>
                                 <img
                                   className="items-icon"
-                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/apple.svg"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/downloads/apple-grey.svg"
                                   alt=""
                                 />
                               </picture>
                               <div className="items-title">macOS</div>
                             </div>
-                            <div className="load-items-desc">X86 (适用于 inter 芯片)</div>
-                          </div>
+                            <div className="load-items-desc">X86 (适用于 Intel 芯片)</div>
+                          </Button>
 
-                          <div className="load-items">
+                          <Button
+                            className="load-items"
+                            onClick={() => {
+                              window.open(
+                                'https://cs-res.codehub.cn/cloudstudio-home/Cloud Studio-darwin-arm64-1.0.0.zip'
+                              )
+                            }}
+                          >
                             <div className="load-items-title-box">
                               <picture>
                                 <img
                                   className="items-icon"
-                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/apple.svg"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/downloads/apple-grey.svg"
                                   alt=""
                                 />
                               </picture>
                               <div className="items-title">macOS</div>
                             </div>
                             <div className="load-items-desc">ARM (适用于 M 系列芯片)</div>
-                          </div>
-
-                          <Divider className="load-divider" />
+                          </Button>
 
                           <div className="load-items">
                             <div className="load-items-title-box">
                               <picture>
                                 <img
                                   className="items-icon"
-                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/windows.svg"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/downloads/win-grey.svg"
                                   alt=""
                                 />
                               </picture>
@@ -127,98 +152,68 @@ const Header = () => {
                             </div>
                             <div className="load-items-desc">敬请期待</div>
                           </div>
-
-                          <Divider className="load-divider" />
-
-                          <div className="load-items">
+                        </div>
+                        <Divider className="load-divider" />
+                        <div className="chrome-box">
+                          <h3 className="cate-title">浏览器插件</h3>
+                          <Link href={url} target="_blank" className="load-items">
                             <div className="load-items-title-box">
                               <picture>
                                 <img
                                   className="items-icon"
-                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/airplay.svg"
-                                  alt=""
-                                />
-                              </picture>
-                              <div className="items-title">
-                                <Link href="https://cloudstudio.net/download">前往下载中心</Link>
-                              </div>
-                            </div>
-                          </div>
-                        </Tabs.TabPane>
-                        <Tabs.TabPane tab="浏览器插件" key="item-2">
-                          <div className="load-items">
-                            <div className="load-items-title-box">
-                              <picture>
-                                <img
-                                  className="items-icon"
-                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/chrome.png"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/downloads/chrome.png"
                                   alt=""
                                 />
                               </picture>
                               <div className="items-title">Chrome</div>
                             </div>
-                          </div>
-
-                          <Divider className="load-divider" />
-
-                          <div className="load-items">
+                            {curBrowser === 'chrome' && (
+                              <div className="load-items-desc">当前浏览器</div>
+                            )}
+                          </Link>
+                          <Link href={url} target="_blank" className="load-items">
                             <div className="load-items-title-box">
                               <picture>
                                 <img
                                   className="items-icon"
-                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/edge.png"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/downloads/edge.png"
                                   alt=""
                                 />
                               </picture>
                               <div className="items-title">Edge</div>
                             </div>
-                          </div>
-
-                          <Divider className="load-divider" />
-
+                            {curBrowser === 'edge' && (
+                              <div className="load-items-desc">当前浏览器</div>
+                            )}
+                          </Link>
                           <Button className="load-items" onClick={() => download('package')}>
                             <div className="load-items-title-box">
                               <picture>
                                 <img
                                   className="items-icon"
-                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/package.svg"
+                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/downloads/package.svg"
                                   alt=""
                                 />
                               </picture>
                               <div className="items-title">离线安装包</div>
                             </div>
                           </Button>
-
-                          <Divider className="load-divider" />
-
-                          <div className="load-items">
-                            <div className="load-items-title-box">
-                              <picture>
-                                <img
-                                  className="items-icon"
-                                  src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download/airplay.svg"
-                                  alt=""
-                                />
-                              </picture>
-                              <div className="items-title">
-                                <Link href="https://cloudstudio.net/download">前往下载中心</Link>
-                              </div>
-                            </div>
-                          </div>
-                        </Tabs.TabPane>
-                      </Tabs>
-                    </div>
+                        </div>
+                      </div>
+                      <div className="load-items-turn">
+                        <Link href="https://cloudstudio.net/download">前往下载中心</Link>
+                        <RightOutlined />
+                      </div>
+                    </>
                   }
                 >
-                  <button className="download-btn mr-4 sm:hidden md:mr-5 md:hidden">
+                  <button
+                    id="download-tabs"
+                    className="download-btn mr-4 sm:hidden md:mr-5 md:hidden"
+                  >
                     <span>下载客户端</span>
                     <div className="dtn-one"></div>
-                    <Image
-                      src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/download-arr.png"
-                      width={11}
-                      height={6}
-                      alt=""
-                    />
+                    <DownOutlined />
                   </button>
                 </Popover>
               </div>
