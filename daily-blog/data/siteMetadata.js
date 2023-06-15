@@ -2,10 +2,13 @@
 
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Cloud Studio 博客',
+  title: 'Cloud Studio_技术博客_开发者社区_在线编程_在线IDE_WebIDE_CloudIDE_VS Code-腾讯云',
   author: 'Cloud Studio',
   headerTitle: '博客',
-  description: '',
+  keywords:
+    'Cloud Studio,技术博客,开发者社区,在线编程,WebIDE,CloudIDE,云端IDE,在线IDE,云端开发工具,在线集成开发环境,开发环境分享,代码托管,在线开发,在线调试,软件团队协作',
+  description:
+    'Cloud Studio（云端 IDE）是腾讯云自主研发的基于浏览器的集成式开发环境（IDE），向开发者提供了一个永不间断的云端工作站。用户在使用 Cloud Studio 时无需安装应用程序和插件，只要打开浏览器就能使用，非常的方便和用好。此外，Cloud Studio 还包含代码高亮、自动补全、Git 集成、终端等在线编程 IDE 的基础功能，同时支持实时调试、插件扩展等，可以帮助开发者快速完成各种应用的开发、编译与部署工作。',
   language: 'zh-CN',
   theme: 'system', // system, dark or light
   siteUrl: 'https://cloudstudio.net/blog',

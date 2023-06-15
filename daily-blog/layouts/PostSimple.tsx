@@ -20,11 +20,16 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, next, prev, children }: LayoutProps) {
-  const { path, date, title, avatar, author, tags } = content
+  const { path, date, title, avatar, author, tags, description, keywords } = content
 
   return (
     <SectionContainer>
-      <BlogSEO url={`${siteMetadata.siteUrl}/${path}`} {...content} />
+      <BlogSEO
+        keywords={keywords}
+        description={description}
+        url={`${siteMetadata.siteUrl}/${path}`}
+        {...content}
+      />
       <ScrollTopAndComment />
       <article className="relative z-10">
         <div className="pb-[104px] pt-[208px] mb:pt-[140px]">

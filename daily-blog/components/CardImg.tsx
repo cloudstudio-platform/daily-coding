@@ -58,7 +58,7 @@ const ArticleItem = ({
             : 'text-[18px] leading-6'
         )}
       >
-        {item.title}
+        {item.title.includes('-') ? item.title.split('-')[0] : item.title}
       </p>
       {item.list && <div className="mb-6 h-[1px] w-full bg-[#F5F7FA]"></div>}
       {item.subTitle && (

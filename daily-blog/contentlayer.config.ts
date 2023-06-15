@@ -59,6 +59,8 @@ export const Blog = defineDocumentType(() => ({
     isFirstRecommend: { type: 'boolean' },
     banner: { type: 'string' },
     subTitle: { type: 'string' },
+    description: { type: 'string' },
+    keywords: { type: 'string' },
   },
   computedFields,
 }))
