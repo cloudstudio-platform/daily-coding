@@ -1,22 +1,13 @@
-FROM node:16-buster AS downloader
-
-WORKDIR /app
-ADD package.json package-lock.json /app/
-RUN npm ci --only=production
-
 FROM node:16-buster AS builder
 
 WORKDIR /app
+ADD package.json package-lock.json /app/
+RUN npm ci
 ADD / /app
-RUN set -eux; \
-    npm ci; \
-    npm run build
+RUN npm run build
 
-FROM node:16-buster
+FROM nginx:1.24.0-bullseye
 
-WORKDIR /app
-ADD package.json /app/
-COPY --from=downloader /app/node_modules /app/node_modules
-COPY --from=builder /app/.next /app/.next
-
-CMD ["npm", "run", "serve"]
+EXPOSE 3000
+ADD ci/ /
+COPY --from=builder /app/out /usr/local/share/nginx
