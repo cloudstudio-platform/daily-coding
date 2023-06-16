@@ -43,7 +43,7 @@ export default function Footer() {
                     {item.list.map((data) => (
                       <li
                         key={data.key}
-                        className={width < 1136 && data.isTabletHidden && 'hidden'}
+                        className={width < 1136 && data.isTabletHidden ? 'hidden' : 'block'}
                       >
                         <a
                           href={data.link}
