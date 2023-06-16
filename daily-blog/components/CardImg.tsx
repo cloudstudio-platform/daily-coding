@@ -14,7 +14,7 @@ const ArticleItem = ({
   linkBoxClass = '',
 }) => (
   <Link
-    href={`/${item.path}`}
+    href={`/${item.slug}`}
     className={classNames(
       'relative block rounded-lg bg-white',
       isShowName ? 'cloudstudio_article_item' : 'cloudstudio_article_noName_item',

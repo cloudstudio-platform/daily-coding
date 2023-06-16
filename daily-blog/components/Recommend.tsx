@@ -12,11 +12,17 @@ const Recommend = ({ posts }) => {
         target="_blank"
         className="cloudstudio_article_noName_item relative row-span-3 rounded-lg bg-white px-10 py-8 pcMin:row-span-1 mb:px-5 mb:py-8"
       >
-        <div className="mb-10 flex h-[360px] w-full items-center justify-center rounded-lg mb:h-auto">
+        <div className="mb-10 flex h-[360px] w-full items-center justify-center overflow-hidden rounded-lg mb:h-auto">
           <picture>
             <img
-              src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/test-banner.png"
+              src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/blog-banner-pc.png"
               alt=""
+              className="layer:hidden"
+            />
+            <img
+              src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/blog-banner-mb.png"
+              alt=""
+              className="hidden layer:block"
             />
           </picture>
         </div>
