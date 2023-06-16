@@ -17,6 +17,10 @@ const items: MenuProps['items'] = [
             key: 'online-cloud',
           },
           {
+            label: <Link href="https://cloudstudio.net/ai">AI 助手 (beta)</Link>,
+            key: 'online-ai',
+          },
+          {
             label: <Link href="https://cloudstudio.net/metawork">Metawork 多人协作</Link>,
             key: 'online-metawork',
           },
