@@ -1,0 +1,4 @@
+.next
+ci/Dockerfile
+node_modules
+out
