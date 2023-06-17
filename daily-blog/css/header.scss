@@ -1054,13 +1054,11 @@
     .message-header {
         .message-component {
             .message-box {
-                width: calc(100% - 48px);
+                width: 100%;
             }
             .message-text {
-                max-width: 75%;
-                overflow-x: scroll;
-                position: relative;
-                top: 9px;
+                flex-wrap: wrap;
+                white-space: normal;
             }
             .message-text::-webkit-scrollbar { width: 0 !important }
         }
