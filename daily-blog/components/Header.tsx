@@ -78,8 +78,8 @@ const Header = () => {
                   alt="cs-logo"
                   src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/logo.png"
                   className="rounded-xl"
-                  height={30}
-                  width={208}
+                  height={width > 1135 ? 30 : 20}
+                  width={width > 1135 ? 208 : 140}
                 />
               </Link>
 
@@ -277,7 +277,7 @@ const Header = () => {
               <nav className="flex flex-nowrap items-center justify-end pl-5 xs:pl-2 sm:pl-3">
                 <Link
                   href="https://cloudstudio.net/ai-apply"
-                  className="appointment-text flex items-center"
+                  className="appointment-text flex items-center mb:hidden"
                 >
                   预约申请
                 </Link>
