@@ -78,8 +78,8 @@ const Header = () => {
                   alt="cs-logo"
                   src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/logo.png"
                   className="rounded-xl"
-                  height={30}
-                  width={208}
+                  height={width > 1135 ? 30 : 20}
+                  width={width > 1135 ? 208 : 140}
                 />
               </Link>
 
