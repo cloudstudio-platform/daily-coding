@@ -507,34 +507,49 @@
             height: 30px;
         }
         .nav-menu {
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
             border: none;
             outline: none;
-            em {
-                display: block;
-                width: 18px;
+            position: relative;
+            box-shadow: none;
+            span {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                bottom: auto;
+                right: auto;
+                background-color: #202d40;
                 height: 2px;
-                margin: 0 auto;
-                background-color: #171d26;
-                margin-top: 4px;
-                transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
-                    opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-                &:first-child {
-                    margin-top: 0;
+                width: 24px;
+                transform: translateX(-50%) translateY(-50%);
+                transition: background-color .2s;
+                &::after, &::before {
+                    position: absolute;
+                    background-color: #202d40;
+                    height: 2px;
+                    width: 24px;
+                    content: "";
+                    left: 0;
+                    transition: transform .2s;
+                }
+                &::before {
+                    transform: translateY(-0.5rem);
+                }
+                &::after {
+                    transform: translateY(0.5rem);
                 }
             }
 
             &.active {
-                em:first-child {
-                    transform: translateY(3px) rotate(-45deg);
-                }
-                em:nth-child(2) {
-                    opacity: 0;
-                    display: none;
-                }
-                em:last-child {
-                    transform: translateY(-3px) rotate(45deg);
+                span {
+                    background: transparent;
+                    &::before {
+                        transform: rotate(45deg);
+                    }
+                    &::after {
+                        transform: rotate(-45deg);
+                    }
                 }
             }
         }
@@ -1059,8 +1074,9 @@
             .message-text {
                 flex-wrap: wrap;
                 white-space: normal;
+                font-size: 11px;
+                line-height: 18px;
             }
-            .message-text::-webkit-scrollbar { width: 0 !important }
         }
     }
 }
