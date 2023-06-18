@@ -229,7 +229,6 @@ const Header = () => {
               >
                 登录/注册
               </button>
-
               <Button
                 className={classNames(
                   'nav-menu flex flex-col justify-center xl:hidden xxl:hidden',
@@ -239,9 +238,7 @@ const Header = () => {
                 )}
                 onClick={() => setMdActive(!mdActive)}
               >
-                <em />
-                <em />
-                <em />
+                <span></span>
               </Button>
             </nav>
 
@@ -261,13 +258,13 @@ const Header = () => {
             </nav>
           </section>
           <div className="sticky-blur message-header">
-            <section className="message-component flex w-full items-center justify-center xs:px-4 sm:px-6 md:px-8 xl:px-12 xxl:px-12">
-              <nav className="message-box flex items-center">
+            <section className="message-component flex w-full items-center justify-center xs:px-4 sm:px-6 md:px-8 xl:px-12 xxl:px-12 layer:justify-between">
+              <nav className="message-box flex items-center layer:items-start">
                 <Image
                   src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/new-btn.png"
-                  width={40}
-                  height={20}
-                  className="mr-5"
+                  width={width > 1135 ? 40 : 32}
+                  height={width > 1135 ? 20 : 16}
+                  className="mr-5 layer:mr-3"
                   alt=""
                 />
                 <div className="message-text flex items-center text-black">

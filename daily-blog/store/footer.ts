@@ -9,11 +9,6 @@ export const FOOTER_ATOM = [
         link: 'https://cloudstudio.net/cde',
       },
       {
-        key: 'ai',
-        name: 'AI 代码助手 (beta)',
-        link: '/ai',
-      },
-      {
         key: 'metawork',
         name: 'Metawork 多人协作',
         link: 'https://cloudstudio.net/metawork',
@@ -22,6 +17,11 @@ export const FOOTER_ATOM = [
         key: 'deployKit',
         name: 'DeployKit 云部署',
         link: 'https://cloudstudio.net/deploykit',
+      },
+      {
+        key: 'ai',
+        name: 'AI 代码助手 (内测)',
+        link: '/ai',
       },
       {
         key: 'teams',
@@ -79,7 +79,7 @@ export const FOOTER_ATOM = [
         key: 'download',
         name: '下载中心',
         link: 'https://cloudstudio.net/download',
-        isTabletHidden: true
+        isTabletHidden: true,
       },
       {
         key: 'terms',
