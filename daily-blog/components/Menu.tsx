@@ -10,7 +10,7 @@ const items: MenuProps['items'] = [
     children: [
       {
         type: 'group',
-        label: '产品特性',
+        label: '',
         children: [
           {
             label: <Link href="https://cloudstudio.net/cde">云端开发环境</Link>,
@@ -42,7 +42,7 @@ const items: MenuProps['items'] = [
     children: [
       {
         type: 'group',
-        label: '开发者社区',
+        label: '',
         children: [
           {
             label: <Link href="https://cloudstudio.net/incentive">开发者激励计划</Link>,
@@ -70,7 +70,7 @@ const items: MenuProps['items'] = [
     children: [
       {
         type: 'group',
-        label: '编程语言',
+        label: '',
         children: [
           {
             label: <Link href="https://cloudstudio.net/language/c">C</Link>,
