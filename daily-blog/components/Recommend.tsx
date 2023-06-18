@@ -6,13 +6,13 @@ const Recommend = ({ posts }) => {
   const recommendList = posts.filter((item) => item.isRecommend)
 
   return (
-    <div className="mt-[220px] grid w-full grid-flow-col grid-rows-3 gap-10 pcMin:flex pcMin:flex-col layer:mt-[152px] mb:mt-[127px]">
+    <div className="mt-[220px] grid w-full grid-flow-col grid-rows-3 gap-10 pcMin:flex pcMin:flex-col layer:mt-[152px] mb:mt-[67px]">
       <Link
         href="https://cloudstudio.net/incentive"
         target="_blank"
         className="cloudstudio_article_noName_item relative row-span-3 rounded-lg bg-white px-10 py-8 pcMin:row-span-1 mb:px-5 mb:py-8"
       >
-        <div className="mb-10 flex h-[360px] w-full items-center justify-center overflow-hidden rounded-lg mb:h-auto">
+        <div className="mb-10 flex h-[360px] w-full items-center justify-center overflow-hidden rounded-lg mb:mb-6 mb:h-auto">
           <picture>
             <img
               src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/blog-banner-pc.png"

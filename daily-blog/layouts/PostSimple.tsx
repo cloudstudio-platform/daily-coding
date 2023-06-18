@@ -32,7 +32,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
       />
       <ScrollTopAndComment />
       <article className="relative z-10">
-        <div className="pb-[104px] pt-[208px] mb:pt-[140px]">
+        <div className="pb-[104px] pt-[208px] mb:pt-[80px]">
           <header>
             <div className="flex">
               <Link href="/blog" className="text-[#4C576E] hover:text-blue-hover">
@@ -41,12 +41,12 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
               <span className="px-4">&gt;</span>
               <span className="text-[#202D40]">文章页</span>
             </div>
-            <div className="border-b border-gray-200 py-10">
+            <div className="border-b border-gray-200 py-10 mb:py-8">
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
               <dl>
-                <div className="flex items-center pt-10">
+                <div className="flex items-center pt-10 mb:pt-6">
                   <dd className="pr-3">
                     {avatar && (
                       <Image
@@ -80,14 +80,14 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
           </header>
           <div className="">
             <div className="relative flex justify-between">
-              <div className="article-content-box prose max-w-[980px] pb-[120px] pt-10 lgS:max-w-[55vw] layer:w-full layer:max-w-[none] mb:pb-20">
+              <div className="article-content-box prose max-w-[980px] pb-[120px] pt-10 lgS:max-w-[55vw] layer:w-full layer:max-w-[none] mb:pb-20 mb:pt-4">
                 {children}
               </div>
               <AsideBar newClass="absolute top-[-12px] right-[-32px] layer:hidden" />
             </div>
             <footer>
               <div className="mb-12 h-px w-full bg-gray-200"></div>
-              <div className="mb-16 flex w-full items-center">
+              <div className="mb-16 flex w-full items-center mb:mb-8">
                 <p className="pr-8 text-[18px] font-medium leading-6 text-[#232D3F]">标签</p>
                 {tags.map((data: string, index: number) => (
                   <div key={`tag${index}`} className="mr-3 rounded bg-[#FDEAD9] px-3">
@@ -97,7 +97,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
                   </div>
                 ))}
               </div>
-              <div className="mt-12 flex justify-between text-sm font-medium sm:text-base">
+              <div className="mt-12 flex justify-between text-sm font-medium sm:text-base mb:flex-col">
                 {prev && (
                   <div className="pt-4 xl:pt-8">
                     <Link

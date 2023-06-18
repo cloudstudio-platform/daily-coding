@@ -5,7 +5,7 @@ import React from 'react'
 const CommunityLink = () => (
   <div className="mt-10 flex w-full justify-between mb:mt-6 mb:flex-col">
     <div className="commuity-link-box flex w-full rounded-lg mb:flex-col">
-      <div className="mr-[72px] flex h-[175px] w-[260px] items-center justify-center rounded-[20px] bg-[#F5F7FA] layer:mr-8 mb:mr-0 mb:w-full">
+      <div className="mr-[72px] flex h-[175px] w-[260px] items-center justify-center rounded-[20px] bg-[#F5F7FA] layer:mr-8 mb:mr-0 mb:w-full mb:rounded-lg">
         <Image
           src="https://help-assets.codehub.cn/enterprise/new-static/images/cs/tencent-logo.png"
           width={147}
@@ -13,7 +13,7 @@ const CommunityLink = () => (
           alt={''}
         />
       </div>
-      <div className="pt-4 mb:pt-8">
+      <div className="pt-4">
         <p className="pb-4 text-[18px] font-medium leading-[25px]">腾讯云开发者社区</p>
         <p className="pb-12 text-[16px] leading-[22px] mb:pb-6">
           腾讯云开发者社区是腾讯云官方开发者社区，致力于打造开发者的技术分享型社区。
