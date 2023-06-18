@@ -73,7 +73,7 @@ export const FOOTER_ATOM = [
       {
         key: 'blog',
         name: '博客',
-        link: 'https://cloudstudio-daily-blog.vercel.app/blog',
+        link: 'https://cloudstudio.net/blog',
       },
       {
         key: 'download',

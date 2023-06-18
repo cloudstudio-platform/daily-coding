@@ -57,7 +57,7 @@ const items: MenuProps['items'] = [
             key: 'community',
           },
           {
-            label: <Link href="https://cloudstudio-daily-blog.vercel.app/blog">博客</Link>,
+            label: <Link href="https://cloudstudio.net/blog">博客</Link>,
             key: 'blog',
           },
         ],
