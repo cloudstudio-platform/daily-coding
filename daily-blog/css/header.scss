@@ -999,6 +999,13 @@
         font-size: 12px;
         width: 100vw;
         .menus-box {
+            .ant-menu-inline {
+                .ant-menu-item-group {
+                    .ant-menu-item-group-title {
+                        display: none;
+                    }
+                }
+            }
             .ant-menu-item-only-child {
                 padding-left: 8px !important;
                 .ant-menu-title-content {
