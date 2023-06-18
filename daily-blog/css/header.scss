@@ -107,7 +107,7 @@
 
     .ant-menu.ant-menu-sub.ant-menu-vertical {
         border-radius: rem(8);
-        padding: rem(28) rem(24);
+        padding: rem(12) rem(24);
     }
     .ant-menu-submenu-title {
         font-family: "PingFang SC";
@@ -1044,7 +1044,7 @@
         }
         .nav-panel {
             padding: 0 !important;
-            top: 104px;
+            top: 48px;
         }
         .btn-login {
             margin-left: 0 !important;
@@ -1074,6 +1074,7 @@
     }
 
     .message-header {
+        display: none;
         .message-component {
             .message-box {
                 width: 100%;
@@ -1093,6 +1094,13 @@
         height: 64px;
 
         .menus-box {
+            .ant-menu-inline {
+                .ant-menu-item-group {
+                    .ant-menu-item-group-title {
+                        display: none;
+                    }
+                }
+            }
             .ant-menu-item-only-child {
                 padding-left: 8px !important;
                 .ant-menu-title-content {
