@@ -17,7 +17,7 @@ export default function FourZeroFour() {
           </p>
           <p className="mb-8">我们正在全力排查中，请点击下方返回主页或稍后重试。</p>
           <Link
-            href="/blog"
+            href="/"
             className="inline rounded-lg border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-blue-700 focus:outline-none"
           >
             返回主页

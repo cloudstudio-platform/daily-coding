@@ -15,8 +15,8 @@ import AsideBar from '@/components/AsideBar'
 interface LayoutProps {
   content: CoreContent<Blog>
   children: ReactNode
-  next?: { path: string; title: string }
-  prev?: { path: string; title: string }
+  next?: { path: string; title: string; slug: string }
+  prev?: { path: string; title: string; slug: string }
 }
 
 export default function PostLayout({ content, next, prev, children }: LayoutProps) {
@@ -101,7 +101,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
                 {prev && (
                   <div className="pt-4 xl:pt-8">
                     <Link
-                      href={`/${prev.path}`}
+                      href={`/${prev.slug}`}
                       className="text-base text-[#0066ff] hover:opacity-80"
                       aria-label={`Previous post: ${prev.title}`}
                     >
@@ -113,7 +113,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
                 {next && (
                   <div className="self-end pt-4 xl:pt-8">
                     <Link
-                      href={`/${next.path}`}
+                      href={`/${next.slug}`}
                       className="text-base text-[#0066ff] hover:opacity-80"
                       aria-label={`Next post: ${next.title}`}
                     >
