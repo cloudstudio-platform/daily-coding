@@ -35,7 +35,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
         <div className="pb-[104px] pt-[208px] mb:pt-[80px]">
           <header>
             <div className="flex">
-              <Link href="/blog" className="text-[#4C576E] hover:text-blue-hover">
+              <Link href="/" className="text-[#4C576E] hover:text-blue-hover">
                 首页
               </Link>
               <span className="px-4">&gt;</span>
