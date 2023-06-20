@@ -23,7 +23,7 @@ const Header = () => {
   const [mdActive, setMdActive] = useState(false)
   const [headerTop, setHeaderTop] = useState(0)
   const { width } = useWindowSize()
-  const [isPcMenu, setIsPcMenu] = useState(true)
+  const [isPcMenu, setIsPcMenu] = useState(false)
   const scroll = useScroll()
   const [url, setUrl] = useState(null)
   const [curBrowser, setCurBrowser] = useState(null)
@@ -83,9 +83,7 @@ const Header = () => {
                 />
               </Link>
 
-              <div className="h-full items-center">
-                <MenuBox isInline={false} isShow={isPcMenu} />
-              </div>
+              <div className="h-full items-center">{isPcMenu && <MenuBox isInline={false} />}</div>
             </nav>
 
             <nav className="flex items-center justify-end">
@@ -248,7 +246,7 @@ const Header = () => {
               })}
             >
               <div className="nav-panel-box">
-                <MenuBox isInline={true} isShow={!isPcMenu} />
+                {!isPcMenu && <MenuBox isInline={true} />}
                 <div className="nav-login flex items-center justify-center py-8 xs:px-4 sm:px-2">
                   <Button className="login" onClick={handleLogin}>
                     登录/注册

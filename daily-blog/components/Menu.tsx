@@ -135,10 +135,8 @@ const items: MenuProps['items'] = [
   },
 ]
 
-const MenuBox = ({ isInline, isShow }) => {
-  return (
-    isShow && <Menu className="menus-box" mode={isInline ? 'inline' : 'horizontal'} items={items} />
-  )
+const MenuBox = ({ isInline }) => {
+  return <Menu className="menus-box" mode={isInline ? 'inline' : 'horizontal'} items={items} />
 }
 
 export default MenuBox

@@ -358,6 +358,10 @@
     }
 }
 
+.ant-menu-light:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover {
+    background: transparent;
+}
+
 .menu-header {
     background-color: transparent;
     height: 100px;
