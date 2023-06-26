@@ -1,5 +1,7 @@
 # 应用推荐
 
+`/recommend-apps` 是用来构建并上传 dashboard 的`应用推荐`的 demo 数据。通过 GitHub action 当 master 上有提交时，会扫描 `/recommend-apps/docs` 下的所有 `README.md` 文件，每个文件会生成一个 demo。建议参考原有的格式进行继续添加。具体细节如下：
+
 ## 目录结构说明
 
 ```
