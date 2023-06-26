@@ -224,11 +224,9 @@
         flex-wrap: wrap;
 
         .ant-menu-item.ant-menu-item-only-child {
-            // width: none;
             flex-shrink: 0;
             padding-left: 0 !important;
             padding-right: rem(20);
-            // width: rem(150);
             font-size: rem(13);
             color: #606c80;
             font-weight: 500;
@@ -437,44 +435,6 @@
         color: #171d26;
         padding: 0 rem(12);
         background-color: transparent;
-        // ul {
-        //     width: 100%;
-        //     li {
-        //         height: 48px;
-        //         line-height: 48px;
-        //         font-size: 16px;
-        //         .block {
-        //             position: relative;
-        //             border-bottom: solid 1px #f5f7fa;
-        //             padding-left: 8px;
-        //             font-weight: 500;
-        //         }
-        //         &.nav-active {
-        //             height: auto;
-        //             .allow {
-        //                 transform: rotate(180deg);
-        //             }
-        //             .unfold {
-        //                 height: 72px;
-        //             }
-        //             .block {
-        //                 border-bottom-width: 0;
-        //             }
-        //         }
-        //         .unfold {
-        //             height: 0;
-        //             overflow: hidden;
-        //         }
-        //         .allow {
-        //             position: absolute;
-        //             right: 8px;
-        //             top: 15px;
-        //         }
-        //         a:hover {
-        //             background-color: inherit;
-        //         }
-        //     }
-        // }
 
         &-box {
             width: 100%;
@@ -511,8 +471,8 @@
             height: 30px;
         }
         .nav-menu {
-            width: 32px;
-            height: 32px;
+            width: 24px;
+            height: 24px;
             border: none;
             outline: none;
             position: relative;
@@ -525,23 +485,25 @@
                 right: auto;
                 background-color: #202d40;
                 height: 2px;
-                width: 24px;
+                width: 20px;
                 transform: translateX(-50%) translateY(-50%);
                 transition: background-color .2s;
                 &::after, &::before {
                     position: absolute;
                     background-color: #202d40;
                     height: 2px;
-                    width: 24px;
+                    width: 20px;
                     content: "";
                     left: 0;
                     transition: transform .2s;
                 }
                 &::before {
                     transform: translateY(-0.5rem);
+                    top: 1px;
                 }
                 &::after {
                     transform: translateY(0.5rem);
+                    bottom: 1px;
                 }
             }
 
@@ -550,9 +512,11 @@
                     background: transparent;
                     &::before {
                         transform: rotate(45deg);
+                        top: 0px;
                     }
                     &::after {
                         transform: rotate(-45deg);
+                        bottom: 0px;
                     }
                 }
             }
@@ -568,10 +532,6 @@
             border: none;
             outline: none;
             box-shadow: none;
-            // &:focus {
-            //     outline: none;
-            //     opacity: 0.7;
-            // }
         }
         .item {
             width: 128px;
@@ -628,7 +588,6 @@
         }
         &.dark {
             .sticky-blur {
-                // background: rgba(23, 29, 38, 0.8);
                 background: #161616;
                 box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
                 backdrop-filter: blur(54px);
@@ -688,12 +647,6 @@
                     color: #0066ff;
                 }
             }
-            .btn-try {
-                // &:hover {
-                //     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-                //         #0066ff;
-                // }
-            }
             .allow {
                 fill: #171d26;
             }
@@ -705,33 +658,6 @@
         }
         .nav-panel {
             box-shadow: 0px 4px 9px rgba(68, 85, 111, 0.05), 0px 9px 26px rgba(68, 85, 111, 0.05);
-            // li {
-            //     &.nav-active {
-            //         background-color: #e5eeff;
-            //         .extension-name {
-            //             color: #0066ff;
-            //         }
-            //         .allow {
-            //             fill: #0066ff;
-            //         }
-            //         .unfold {
-            //             background-color: #fafbfc;
-            //             svg {
-            //                 fill: #171d26;
-            //             }
-            //             span {
-            //                 color: #171d26;
-            //             }
-            //         }
-            //     }
-            //     .block {
-            //         border-bottom-color: #f5f7fa;
-            //         color: #171d26;
-            //     }
-            //     svg {
-            //         fill: #fff;
-            //     }
-            // }
             .login {
                 color: #0066ff;
                 border: 1px solid #0066ff;
@@ -792,12 +718,6 @@
                     color: #4983f7;
                 }
             }
-            .btn-try {
-                // &:hover {
-                //     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-                //         #0066ff;
-                // }
-            }
             .allow {
                 fill: #fff;
             }
@@ -807,44 +727,6 @@
                 }
             }
         }
-        // .nav-panel {
-        //     background-color: #171d26;
-        //     color: #fff;
-        //     box-shadow: 0px 4px 9px rgba(68, 85, 111, 0.05), 0px 9px 26px rgba(68, 85, 111, 0.05);
-        //     // li {
-        //     //     &.nav-active {
-        //     //         background-color: #212636;
-        //     //         .extension-name {
-        //     //             color: #4983f7;
-        //     //         }
-        //     //         .allow {
-        //     //             fill: #4983f7;
-        //     //         }
-        //     //         .unfold {
-        //     //             background-color: #1c212e;
-        //     //             svg {
-        //     //                 fill: #fff;
-        //     //             }
-        //     //             span {
-        //     //                 color: #fff;
-        //     //             }
-        //     //         }
-        //     //     }
-        //     //     .block {
-        //     //         border-bottom-color: #30353f;
-        //     //     }
-        //     //     svg {
-        //     //         fill: #fff;
-        //     //     }
-        //     // }
-        //     .login {
-        //         color: #4983f7;
-        //         border: 1px solid #4983f7;
-        //     }
-        //     .try {
-        //         background-color: #4983f7;
-        //     }
-        // }
         .nav-extension {
             background: rgba(23, 29, 38, 1);
             box-shadow: 0px 4px 9px rgba(68, 85, 111, 0.05), 0px 9px 26px rgba(68, 85, 111, 0.05),
@@ -942,8 +824,6 @@
 .message-header {
     background: #D2E2FF !important;
     backdrop-filter: blur(rem(8));
-    /* Note: backdrop-filter has minimal browser support */
-
     border-radius: rem(4);
     position: absolute;
     left: 0;
@@ -1002,11 +882,24 @@
         height: 48px;
         font-size: 12px;
         width: 100vw;
+        .nav-panel-box {
+            box-shadow: none;
+        }
         .menus-box {
             .ant-menu-inline {
+                background-color: white !important;
                 .ant-menu-item-group {
                     .ant-menu-item-group-title {
                         display: none;
+                    }
+                }
+                .ant-menu-item-group-list {
+                    justify-content: space-between;
+                    .ant-menu-item.ant-menu-item-only-child {
+                        &:hover  {
+                            background: inherit;
+                            outline: none;
+                        }
                     }
                 }
             }
@@ -1028,27 +921,11 @@
                 display: none;
             }
         }
-        &.light {
-            // .nav-panel {
-            //     .login {
-            //         background-color: #0066ff;
-            //         color: #fff;
-            //         border-width: 0;
-            //     }
-            // }
-        }
-        &.dark {
-            // .nav-panel {
-            //     .login {
-            //         background-color: #4983f7;
-            //         color: #fff;
-            //         border-width: 0;
-            //     }
-            // }
-        }
         .nav-panel {
             padding: 0 !important;
             top: 48px;
+            width: calc(100vw - 24px);
+            left: -12px;
         }
         .btn-login {
             margin-left: 0 !important;

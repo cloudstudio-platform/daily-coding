@@ -133,7 +133,7 @@ export default function ListLayout({
                 <Button
                   key={`tag${index}`}
                   className={classNames(
-                    'mr-3 mt-2 h-7 cursor-pointer rounded border-0 bg-[#FDEAD9] px-3 mb:mr-4',
+                    'mr-3 mt-2 h-7 cursor-pointer rounded border-0 bg-[#FDEAD9] px-3',
                     activeObj.name === data && 'selected'
                   )}
                   id={activeObj.name === data ? 'selected-tag' : ''}
