@@ -37,7 +37,7 @@ language:
     percentage: 6.9
 star: '478'
 fork: '601'
-url: https://github.com/patorjk/JavaScript-Snake
+url: https://github.com/cloudstudio-platform/JavaScript-Snake
 banner: './image.png'
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./snake-game.mov
