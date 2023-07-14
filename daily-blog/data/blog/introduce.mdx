@@ -1,0 +1,134 @@
+---
+title: '玩转 Cloud Studio ——云编程之旅'
+subTitle: '带您快速上手 Cloud Studio'
+date: 2023-07-14
+lastmod: '2023-07-14'
+tags: ['远程开发','使用指南' ]
+summary: '本文通过对比本地IDE的痛点，详细介绍Cloud Studio的产品优势，通过分步骤的详细操作指引，帮助开发者快速上手玩转Cloud Studio，实现更好的开发体验'
+isRecommend: 
+description: 本文通过对比本地IDE的痛点，详细介绍Cloud Studio的产品优势，通过分步骤的详细操作指引，帮助开发者快速上手玩转Cloud Studio，实现更好的开发体验
+keywords: ChatGPT,AI,云端开发,Web IDE,云端 IDE,虚拟桌面,ISV,在线编程,CloudIDE,CloudStudio,在线IDE,云端开发工具,在线集成开发环境,开发环境分享,代码托管,在线开发,在线调试
+---
+
+
+## **Cloud Studio介绍 **
+
+
+Cloud Studio 是基于浏览器的集成式开发环境（IDE），为开发者提供稳定的云端工作站。在使用 Cloud Studio 时无需安装，打开浏览器即可快速启动项目。底层资源自动弹性扩缩，极大地节省成本，低代码开发省时又省力：
+- 基于 Web 端的代码编辑器，包含代码高亮、自动补全、Git 集成、终端等 IDE 的基础功能，同时支持实时调试、插件扩展等，提升开发、编译与部署工作效率；
+- 支持远程访问云服务器，为腾讯云 SCF 行业用户提供开发-测试-部署完整闭环的云原生开发体验；
+- 自研多款插件以满足开发需求，例如协作插件、自定义模板插件、预览插件、部署插件等，助力施展编程潜能。
+![001.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/001.png)
+
+
+## ** 使用本地 IDE 工作中的痛点**
+
+1、以下是在工作中遇到的一些问题点，某些方面比较效率低下：
+
+![002.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/002.png)
+
+2、平时工作中使用到的开发工具，由于 JetBrains 一套工具还是比较消耗内存，由当初的 16G 升级到 72G，毫无压力：
+
+![003.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/003.png)
+
+## ** Cloud Studio 实操**
+
+1、机器测试环境：
+
+![004.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/004.png)
+
+2、框架模板试用：
+
+![005.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/005.png)
+
+以下为在实际操作中，基本上可以快速初始化一个环境，然后开始 CODING：
+
+>基本在 7s 内可以完成创建、启动、连接工作空间，在不到 2 分钟完成拉取依赖并准备就绪
+
+
+![006.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/006.png)
+![007.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/007.png)
+
+以初始化 Go 项目为例：
+
+![008.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/008.png)
+
+## ** 创建工作空间 **
+
+1、查看 SSH 公钥：
+
+![009.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/009.png)
+
+2、在 Gitee 中设置 SSH 公钥：
+
+![010.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/010.png)
+
+3、填写工作空间相关信息，选择对应的分支(test)，选择需要构建的环境(vue.js)：
+
+>在 8s 内拉取 test 分支代码(时间与仓库代码大小也有关系)，个人体验的是比较快速的。
+
+![011.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/011.png)
+
+4、执行 yarn install 时，发现问题，在安装 node-sass 包时，需要 python 环境，而默认 vue.js 的开发环境是没有的。
+
+![012.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/012.png)
+
+5、更换开发环境为“Ubuntu”，安装 node 环境即可。
+
+>尝试将开发环境设置为”node”也不行。
+
+
+``` 
+# 使用wget 命令进行下载
+wget https://npm.taobao.org/mirrors/node/v10.16.0/node-v10.16.0-linux-x64.tar.xz
+# 使用tar对下载好的压缩包进行解压
+tar xvf node-v10.16.0-linux-x64.tar.xz
+mv node-v10.16.0-linux-x64 nodejs
+# 全局使用node与npm
+ln -s /usr/local/src/nodejs/bin/node /usr/local/bin/node
+ln -s /usr/local/src/nodejs/bin/npm /usr/local/bin/npm
+```
+
+## **CODING DevOps 与 Cloud Studio 结合**
+
+1、CODING DevOps 与 Cloud Studio 授权：
+
+![013.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/013.png)
+
+2、Cloud Studio 打开新建工作空间：
+
+![014.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/014.png)
+
+3、安装依赖环境报错：
+
+![015.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/015.png)
+
+4、忽略版本：
+
+![016.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/016.png)
+
+5、安装依赖：
+
+![017.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/017.png)
+
+6、最后可以启动：
+
+![018.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/018.png)
+![019.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/019.png)
+
+在云 IDE 中打开界面也是比较方便的，像我是 iMac 大屏，刚好多个几个窗口方便进行调试代码。
+
+## **总结 **
+
+1、问题点：
+
+![020.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/020.png)
+
+2、体验优化建议：
+
+![021.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/021.png)
+
+3、工作中的高效：
+
+![022.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/01-introduce/022.png)
+
