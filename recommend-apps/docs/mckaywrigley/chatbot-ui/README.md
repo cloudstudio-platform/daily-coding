@@ -34,8 +34,8 @@ language:
   - language: Typescript
     percentage: 98.1
 star: 14.5k
-fork: 3.9k
-url: https://github.com/mckaywrigley/chatbot-ui
+fork: 4.5k
+url: https://github.com/cloudstudio-platform/chatbot-ui
 banner: ./public/screenshots/screenshot-0402023.jpg
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./public/ChatGPT-UI.mov

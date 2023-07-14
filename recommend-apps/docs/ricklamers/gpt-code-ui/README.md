@@ -29,8 +29,8 @@ language:
   - language: HTML
     percentage: 0.8
 star: 1.7k
-fork: 163
-url: https://github.com/ricklamers/gpt-code-ui
+fork: 242
+url: https://github.com/cloudstudio-platform/gpt-code-ui
 banner: ./239578679-c29c504a-a7ed-4ae0-9360-d7224bc3e3d6.png
 icon: https://cs-res.codehub.cn/vscode/python.svg
 video: ./GPT-Code-UI.mov

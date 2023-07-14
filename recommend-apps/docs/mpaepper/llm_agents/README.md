@@ -16,8 +16,8 @@ language:
   - language: Python
     percentage: 100
 star: 686
-fork: 32
-url: https://github.com/mpaepper/llm_agents
+fork: 41
+url: https://github.com/cloudstudio-platform/llm_agents
 banner: ./banner.png
 icon: https://cs-res.codehub.cn/vscode/python.svg
 video: ./LLM-Agents.mov

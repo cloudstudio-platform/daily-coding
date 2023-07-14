@@ -17,8 +17,8 @@ language:
   - language: shell
     percentage: 1.2
 star: '5'
-fork: '0'
-url: https://github.com/andy19910102/openai-multi-langs-translator
+fork: '1'
+url: https://github.com/cloudstudio-platform/openai-multi-langs-translator
 banner: ./openai-multi-langs-translator-banner.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./OpenAIMultiLangsTranslator.mov

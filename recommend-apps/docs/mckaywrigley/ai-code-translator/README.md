@@ -24,9 +24,9 @@ language:
     percentage: 2.4
   - language: css
     percentage: 0.3
-star: 1.4k
-fork: '80'
-url: https://github.com/mckaywrigley/ai-code-translator
+star: 3.3k
+fork: '450'
+url: https://github.com/cloudstudio-platform/ai-code-translator
 banner: ./public/screenshot.png
 video: ./public/AI-Code-Translator.mov
 icon: https://cs-res.codehub.cn/vscode/node.svg

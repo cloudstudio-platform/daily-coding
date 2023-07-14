@@ -24,7 +24,7 @@ language:
     percentage: 3.9
 star: 1.2k
 fork: '351'
-url: https://github.com/Nutlope/twitterbio
+url: https://github.com/cloudstudio-platform/twitterbio
 banner: ./public/screenshot.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./public/TwitterBio.mov

@@ -17,8 +17,8 @@ language:
   - language: Python
     percentage: 41.5
 star: '574'
-fork: '35'
-url: https://github.com/Chainlit/chainlit
+fork: '201'
+url: https://github.com/cloudstudio-platform/chainlit
 banner: ./images/quick-start.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
 video: ./images/Chainlit.mov
