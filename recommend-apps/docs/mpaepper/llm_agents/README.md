@@ -38,14 +38,14 @@ order: 19
 
 &nbsp;&nbsp;代理运行的工作原理如下:
 
-&nbsp;&nbsp;* 它收到提示的指令,告诉它用工具解决任务的基本方法.
-&nbsp;&nbsp;* 工具是代理可以使用的自定义构建的组件
-   &nbsp;&nbsp; * 到目前为止,我们已经实现了在REPL中执行python代码,使用Google搜索以及在Hacker News上搜索的功能.
-&nbsp;&nbsp;* 代理在思想、行动、观察、思想...的循环中进行的.
-   &nbsp;&nbsp; * 思想和行动(以及行动的行动输入)是由大语言模型生成的部分
-   &nbsp;&nbsp; * 观察是通过使用工具生成的(例如Python的print输出或Google搜索的文本结果)
-&nbsp;&nbsp;* LLM在每个循环周期中获取附加到提示的新信息,从而可以根据该信息采取行动
-&nbsp;&nbsp;* 一旦代理获得足够多的信息,它就能够提供最终的答案
+* 它收到提示的指令,告诉它用工具解决任务的基本方法.
+* 工具是代理可以使用的自定义构建的组件
+    * 到目前为止,我们已经实现了在REPL中执行python代码,使用Google搜索以及在Hacker News上搜索的功能.
+* 代理在思想、行动、观察、思想...的循环中进行的.
+    * 思想和行动(以及行动的行动输入)是由大语言模型生成的部分
+    * T观察是通过使用工具生成的(例如Python的print输出或Google搜索的文本结果)
+* LLM在每个循环周期中获取附加到提示的新信息,从而可以根据该信息采取行动
+* 一旦代理获得足够多的信息,它就能够提供最终的答案
 
 &nbsp;&nbsp;有关其工作原理的更多详细信息,请查看 <a href="https://www.paepper.com/blog/posts/intelligent-agents-guided-by-llms/">this blog post</a>
 
