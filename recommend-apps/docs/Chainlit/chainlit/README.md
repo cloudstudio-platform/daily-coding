@@ -79,7 +79,7 @@ $ chainlit run demo.py -w
 ```
 
 
-<img src="/recommend-apps/does/Chainlit/chainlit/images/quick-start.png" alt="Quick Start"></img>
+<img src="/recommend-apps/docs/Chainlit/chainlit/images/quick-start.png" alt="Quick Start"></img>
 
 
 
