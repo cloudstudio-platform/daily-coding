@@ -1,7 +1,7 @@
 ---
 name: JavaScript Snake Game
 description: >-
-    This is a DOM-based game of Snake that I wrote in JavaScript over a decade ago. It was made to have sort of a nostalgic feel to it.
+    这是一个基于DOM的贪吃蛇游戏，是十多年前用JavaScript编写的，它被设计的有一种复古的风格。
 author:
   name: patorjk
   avatar: https://avatars.githubusercontent.com/u/521224?s=64&v=4
