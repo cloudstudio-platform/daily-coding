@@ -1,12 +1,7 @@
 ---
 name: StableStudio
 description: >-
-  StableStudio is Stability AI's official open-source variant of DreamStudio,
-  our user interface for generative AI.
-
-      It is a web-based application that allows users to create and edit generated images.
-      
-      We're not entirely sure where this project is going just yet, but we're excited to see what the community does with it!
+  StableStudio 是 Stability AI 的 DreamStudio 的官方开源变体，DreamStudio 是我们用于生成 AI 的用户界面。它是一个基于网络的应用程序，允许用户创建和编辑生成的图像。我们还不完全确定这个项目的进展情况，但我们很高兴看到社区用它做什么！
 author:
   name: Stability AI
   avatar: https://avatars.githubusercontent.com/u/100950301?s=88&v=4
@@ -32,13 +27,13 @@ order: 0
 
 # StableStudio by [Stability AI](https://stability.ai/)
 
-**👋 Welcome to the community repository for StableStudio, the open-source version of [DreamStudio](https://www.dreamstudio.ai)**
+**👋 欢迎来到[DreamStudio](https://www.dreamstudio.ai)的开源版本 StableStudio 的社区存储库**
 
-**🗺 Contents – [🚀 Quick Start](#quick-start) · [ℹ️ About](#about) · [🙋 FAQ](#faq) · [🧑‍💻 Contributing](#contributing)**
+**🗺 内容 – [🚀 快速入门](#quick-start) · [ℹ️ 关于](#about) · [🙋 FAQ](#faq) · [🧑‍💻 贡献](#contributing)**
 
-**📚 Documentation – [🎨 UI](./packages/stablestudio-ui/README.md) · [🔌 Plugins](./packages/stablestudio-plugin/README.md) · <a href="https://platform.stability.ai" target="_blank">⚡️ platform.stability.ai</a>**
+**📚 文档 – [🎨 用户界面](./packages/stablestudio-ui/README.md) · [🔌 插件](./packages/stablestudio-plugin/README.md) · <a href="https://platform.stability.ai" target="_blank">⚡️ 平台.稳定性.ai</a>**
 
-**🔗 Links – <a href="https://discord.com/channels/1002292111942635562/1108055793674227782" target="_blank">🎮 Discord</a> · <a href="https://dreamstudio.ai" target="_blank">🌈 DreamStudio</a> · <a href="https://github.com/Stability-AI/StableStudio/issues">🛟 Bugs & Support</a> · <a href="https://github.com/Stability-AI/StableStudio/discussions">💬 Discussion</a>**
+**🔗 链接 – <a href="https://discord.com/channels/1002292111942635562/1108055793674227782" target="_blank">🎮 Discord</a> · <a href="https://dreamstudio.ai" target="_blank">🌈 DreamStudio</a> · <a href="https://github.com/Stability-AI/StableStudio/issues">🛟 Bugs & 支持</a> · <a href="https://github.com/Stability-AI/StableStudio/discussions">💬 讨论</a>**
 
 </div>
 
@@ -47,11 +42,11 @@ order: 0
   <img src="./misc/EditScreenshot.png" style="width: 400px; max-width: 600px; flex-grow: 1;" />
 </div>
 
-# <a id="quick-start" href="#quick-start">🚀 Quick Start</a>
+# <a id="quick-start" href="#quick-start">🚀 快速开始</a>
 
-You'll need to have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed.
+&nbsp; &nbsp;您需要安装 [Node.js](https://nodejs.org/en/) 和 [Yarn](https://yarnpkg.com/) 
 
-Once that's done, you can run the following commands...
+&nbsp; &nbsp;完成后，您可以运行以下命令...
 
 ```bash
 git clone https://github.com/Stability-AI/StableStudio.git
@@ -63,57 +58,64 @@ yarn
 yarn dev
 ```
 
-_**That's it! 🎉**_
+_**就是这样 🎉**_
 
-StableStudio will be running at [localhost:3000](http://localhost:3000) by default.
+&nbsp; &nbsp;默认情况下 StableStudio 将在[localhost:3000](http://localhost:3000) 上运行
 
-You'll need to have your [API key](https://platform.stability.ai/docs/getting-started/authentication) handy to use the default [Stability API](https://platform.stability.ai/docs/getting-started) plugin.
+&nbsp; &nbsp;您需要准备好[API key](https://platform.stability.ai/docs/getting-started/authentication) 才是使用默认的 [Stability API](https://platform.stability.ai/docs/getting-started) 插件
 
-If you don't have one, you can create an account on [DreamStudio](https://dreamstudio.ai) and get a key from the [account page](https://dreamstudio.ai/account).
+&nbsp; &nbsp;如果您没有,您可以在[DreamStudio](https://dreamstudio.ai)上创建一个账户,并从[account page](https://dreamstudio.ai/account)获取密钥
 
-# <a id="about" href="#about">ℹ️ About</a>
+# <a id="about" href="#about">ℹ️ 关于</a>
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 1em; margin: 0 0 2em 0;">
   <img src="./misc/PainterWithRobot.png" style="flex-grow: 1; flex-shrink: 1;" />
 </div>
 
-StableStudio is [Stability AI](https://stability.ai)'s official open-source variant of [DreamStudio](https://www.dreamstudio.ai), our user interface for generative AI.
+&nbsp; &nbsp;StableStudio 是 [Stability AI](https://stability.ai)的 DreamStudio 的官方开源变体, [DreamStudio](https://www.dreamstudio.ai)是我们用于生成AI的用户界面.
+它是一个基于网络的应用程序，允许用户创建和编辑生成的图像。
 
-It is a web-based application that allows users to create and edit generated images.
-
-We're not entirely sure where this project is going just yet, but we're excited to see what the community does with it!
+&nbsp; &nbsp;我们还不完全确定这个项目的进展情况，但我们很高兴看到社区用它做什么！
 
 # <a id="faq" href="#faq">🙋 FAQ</a>
 
-## What's the difference between StableStudio and [DreamStudio](https://dreamstudio.ai)?
+## StableStudio 和 [DreamStudio](https://dreamstudio.ai) 有什么区别?
 
-_Not much!_ There are a few tweaks we made to make the project more community-friendly:
+&nbsp; &nbsp;不多！为了使该项目对社区更加友好，我们做了一些调整：
 
-- We removed [DreamStudio](https://dreamstudio.ai)-specific branding.
+-我们删除了[DreamStudio](https://dreamstudio.ai)特定的品牌
 
-- All "over-the-wire" API calls have been replaced by a [plugin system](./packages/stablestudio-plugin/README.md) which allows you to easily swap out the back-end.
+-所有“在线”API 调用均已被[插件系统](./packages/stablestudio-plugin/README.md)取代,该系统允许您轻松更换后段
 
-  - On release, we'll only be providing a plugin for the Stability API, but with a little bit of TypeScript, you can [create your own](./packages/stablestudio-plugin/README.md).
+  - 在发布时，我们只会为 Stability API 提供一个插件，但使用一点 TypeScript，您就可以[创建自己的](./packages/stablestudio-plugin/README.md).
 
-- We removed Stability-specific account features such as billing, API key management, etc.
+- 我们删除了特定于稳定性的帐户功能，例如计费、API 密钥管理等。
 
-  - These features are still available at [DreamStudio's account page](https://dreamstudio.ai/account).
+  - 这些功能仍然可以在[DreamStudio's account page](https://dreamstudio.ai/account)上使用
 
-## Will [DreamStudio](https://dreamstudio.ai) still be supported?
+## [DreamStudio](https://dreamstudio.ai) 还会支持吗?
 
-_Yes!_ Stability's hosted deployment of StableStudio will remain [DreamStudio](https://dreamstudio.ai).
+_是的！Stability 的 StableStudio 托管部署仍将是[DreamStudio](https://dreamstudio.ai).
 
-It will continue to get updates and stay up-to-date with StableStudio whenever possible.
+&nbsp; &nbsp;它将继续获取更新，并尽可能与 StableStudio 保持同步。
 
-# <a id="contributing" href="#contributing">🧑‍💻 Contributing</a>
+# <a id="contributing" href="#contributing">🧑‍💻 贡献</a>
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 1em; margin: 0 0 2em 0;">
   <img src="./misc/ProgrammingRobots.png" style="flex-grow: 1; flex-shrink: 1;" />
 </div>
 
-_**Community contributions are encouraged!**_
+_**鼓励社区贡献!**_
 
-_**The UI package's [README](./packages/stablestudio-ui/README.md) is a great place to start.**_
+_**UI包的[README](./packages/stablestudio-ui/README.md)是一个很好的开始**_
+
+&nbsp; &nbsp;错误修复、文档、常规清理、新功能等都是受欢迎的。
+
+&nbsp; &nbsp;这里有一些有用的链接...
+- [讨论](https://github.com/Stability-AI/StableStudio/discussions)
+- [开放式问题](https://github.com/Stability-AI/StableStudio/issues)
+- [打开拉去请求](https://github.com/Stability-AI/StableStudio/pulls)
+- [行为准则](./CODE_OF_CONDUCT.md)
 
 Bug fixes, documentation, general clean-up, new features, etc. are all welcome.
 
