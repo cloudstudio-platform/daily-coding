@@ -25,25 +25,25 @@ order: 8
 
 # Javascript AI Rock Paper Scissors
 
-## Demo
+## 演示
 
-The game can be played on GitHub by [clicking here](https://ozboware.github.io/Javascript-AI-Rock-Paper-Scissors/)
+&nbsp; &nbsp;该游戏可以在 GitHub 上玩，[点击这里](https://ozboware.github.io/Javascript-AI-Rock-Paper-Scissors/)
 
-## Installation
+## 安装
 
-**No installation**
+**无需安装**
 
-Just open the index file in your browser to play.
+&nbsp; &nbsp;只需在浏览器中打开索引文件即可播放。
 
-## Controls
+## 控制
 
-Click on your choice and wait for the computer to take its turn. I've slowed the time between player and computer choice to draw out the game a bit, but by modifying the timeout in the app.js script, you can control the length of time between plays.
+&nbsp; &nbsp;单击您的选择并等待计算机轮流进行。我放慢了玩家和计算机选择之间的时间来稍微延长游戏时间，但通过修改 app.js 脚本中的超时，您可以控制游戏之间的时间长度。
 
-The AI will remember patterns and make moves based on your historical moves.
+&nbsp; &nbsp;人工智能会记住模式并根据您的历史动作采取行动。
 
-Created using [brain.js](https://brain.js.org/) for the AI.
+&nbsp; &nbsp;使用[brain.js](https://brain.js.org/)为AI创建
 
-## Screenshots
+## 截图
 
 
 ![Javascript AI Rock Paper Scissors screenshot 1](https://user-images.githubusercontent.com/95859352/223067524-cfb54c8f-9bf1-442f-8022-7cf13b766745.png)
