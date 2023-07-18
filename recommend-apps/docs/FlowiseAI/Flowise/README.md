@@ -54,58 +54,58 @@ order: 16
 <a href="https://github.com/FlowiseAI/Flowise">
 <img width="100%" src="https://github.com/FlowiseAI/Flowise/blob/main/images/flowise.gif?raw=true"></a>
 
-&nbsp; &nbsp;拖动UI以使用[LangchainJS](https://github.com/hwchase17/langchainjs)构建您的定制LLM流程
+拖动UI以使用[LangchainJS](https://github.com/hwchase17/langchainjs)构建您的定制LLM流程
 
 ## ⚡快速开始
 
-&nbsp; &nbsp;1. 安装 Flowise
+1. 安装 Flowise
     ```bash
     npm install -g flowise
     ```
-&nbsp; &nbsp;2. 开始 Flowise
+2. 开始 Flowise
 
     ```bash
     npx flowise start
     ```
 
- &nbsp; &nbsp;   有用户名和密码
+    有用户名和密码
 
     ```bash
     npx flowise start --FLOWISE_USERNAME=user --FLOWISE_PASSWORD=1234
     ```
 
-&nbsp; &nbsp;3. 打开 [http://localhost:3000](http://localhost:3000)
+3. 打开 [http://localhost:3000](http://localhost:3000)
 
 ## 🐳 Docker
 
 ### Docker 组合
 
-&nbsp; &nbsp;1. 转到 `docker` 项目根目录下的文件夹
-&nbsp; &nbsp;2. 创建 `.env` 文件并指定 `PORT` (参考 `.env.example`)
-&nbsp; &nbsp;3. `docker-compose up -d`
-&nbsp; &nbsp;4. 打开[http://localhost:3000](http://localhost:3000)
-&nbsp; &nbsp;5. 您可以通过以下方式将容器放下`docker-compose stop`
+1. 转到 `docker` 项目根目录下的文件夹
+2. 创建 `.env` 文件并指定 `PORT` (参考 `.env.example`)
+3. `docker-compose up -d`
+4. 打开[http://localhost:3000](http://localhost:3000)
+5. 您可以通过以下方式将容器放下`docker-compose stop`
 
 ### Docker 镜像
 
-&nbsp; &nbsp;1. 本地构建镜像:
+1. 本地构建镜像:
     ```bash
     docker build --no-cache -t flowise .
     ```
-&nbsp; &nbsp;2. 运行:
+2. 运行:
 
     ```bash
     docker run -d --name flowise -p 3000:3000 flowise
     ```
 
-&nbsp; &nbsp;3. 停止:
+3. 停止:
     ```bash
     docker stop flowise
     ```
 
 ## 👨‍💻 开发
 
-&nbsp; &nbsp;Flowise 在一个单一存储库中有 3 个不同的模块。
+Flowise 在一个单一存储库中有 3 个不同的模块。
 
 -   `server`: 服务API逻辑的节点后端
 -   `ui`: 反应前端
@@ -120,49 +120,49 @@ order: 16
 
 ### 设置
 
-&nbsp; &nbsp;1. 克隆存储库
+1. 克隆存储库
 
     ```bash
     git clone https://github.com/FlowiseAI/Flowise.git
     ```
 
-&nbsp; &nbsp;2. 进入存储库文件夹
+2. 进入存储库文件夹
 
     ```bash
     cd Flowise
     ```
 
-&nbsp; &nbsp;3. 安装所有模块的所有 dependencies:
+3. 安装所有模块的所有 dependencies:
 
     ```bash
     yarn install
     ```
 
-&nbsp; &nbsp;4. 构建所有代码：
+4. 构建所有代码：
 
     ```bash
     yarn build
     ```
 
-&nbsp; &nbsp;5. 启动应用程序：
+5. 启动应用程序：
 
     ```bash
     yarn start
     ```
 
-&nbsp; &nbsp;您可以通过[http://localhost:3000](http://localhost:3000)访问该app
+    您可以通过[http://localhost:3000](http://localhost:3000)访问该app
 
-&nbsp; &nbsp;6. 对于 development build:
+6. 对于 development build:
 
     ```bash
     yarn dev
     ```
 
-&nbsp; &nbsp;任何代码更改都会在[http://localhost:8080](http://localhost:8080)上自动重新加载应用程序
+    任何代码更改都会在[http://localhost:8080](http://localhost:8080)上自动重新加载应用程序
 
 ## 🔒 验证
 
-&nbsp; &nbsp;要启用应用程序级别身份验证，请将 `FLOWISE_USERNAME` 和添加 `FLOWISE_PASSWORD` 到 `packages/server` 位置下的 `.env`:
+要启用应用程序级别身份验证，请将 `FLOWISE_USERNAME` 和添加 `FLOWISE_PASSWORD` 到 `packages/server` 位置下的 `.env`:
 
 ```
 FLOWISE_USERNAME=user
@@ -189,17 +189,17 @@ FLOWISE_PASSWORD=1234
 
 ## 💻 云托管
 
-&nbsp; &nbsp;即将推出
+即将推出
 
 ## 🙋 支持
 
-&nbsp; &nbsp;欢迎在[讨论](https://github.com/FlowiseAI/Flowise/discussions)中提出任何问题并请求新功能
+欢迎在[讨论](https://github.com/FlowiseAI/Flowise/discussions)中提出任何问题并请求新功能
 
 ## 🙌 贡献
 
-&nbsp; &nbsp;请参阅[贡献指南](CONTRIBUTING.md),如果您又任何的疑问或者问题,请通过[Discord](https://discord.gg/jbaHfsRVBW)联系我们
+请参阅[贡献指南](CONTRIBUTING.md),如果您又任何的疑问或者问题,请通过[Discord](https://discord.gg/jbaHfsRVBW)联系我们
 [![Star History Chart](https://api.star-history.com/svg?repos=FlowiseAI/Flowise&type=Timeline)](https://star-history.com/#FlowiseAI/Flowise&Date)
 
 ## 📄 许可
 
-&nbsp; &nbsp;该存储库中的源代码根据[MIT License](LICENSE.md)提供
+该存储库中的源代码根据[MIT License](LICENSE.md)提供
