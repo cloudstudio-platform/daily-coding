@@ -1,10 +1,7 @@
 ---
 name: Jupiter
 description: >-
-  Jupiter an AI that uses a Monte Carlo Tree Search (MCTS) algorithm to beat the
-  popular online game 2048. Jupiter is run on the web, and can consistently win
-  (achieve the 2048 tile) given a sufficient number of simulations, a number
-  which can be easily changed on the site.
+ Jupiter 是一个人工智能，使用蒙特卡罗树搜索 (MCTS) 算法来击败流行的在线游戏 2048。Jupiter 在网络上运行，并且可以在足够数量的模拟下持续获胜（实现 2048 块），这个数字可以可以在网站上轻松更改。
 author:
   name: xtrp
   avatar: https://avatars.githubusercontent.com/u/36894883?s=96&v=4
@@ -31,39 +28,42 @@ order: 10
 <h1 align="center"><a href="https://jupiter.xtrp.io/">Jupiter</a></h1>
 <p align="center"><em>a Monte-Carlo based AI to beat 2048</em></p>
 
-## Description
+## 描述
 
-Jupiter an AI that uses a [Monte Carlo Tree Search](https://en.wikipedia.org/wiki/Monte_Carlo_tree_search) (MCTS) algorithm to beat the popular online game [2048](https://play2048.co/). Jupiter is run on the web, and can consistently win (achieve the 2048 tile) given a sufficient number of simulations, a number which can be easily changed on the site.
+&nbsp; &nbsp;Jupiter 是一款使用 [Monte Carlo Tree Search](https://en.wikipedia.org/wiki/Monte_Carlo_tree_search) (MCTS) 算法 击败流行在线游戏[2048](https://play2048.co/)的人工智能。Jupiter 在网络上运行，只要有足够数量的模拟，就可以持续获胜（达到 2048 块），该数字可以在网站上轻松更改。
 
 ![Demo Image](demo-image.png)
 
 
-## Algorithm
+## 算法
 
-For every position, or **game state**, there are a certain set of possible moves: typically left, right, up, and down. For each possible move (referred to as `N`), the algorithm creates `S` (number of simulations) new games starting at the current game state, and plays `N` (the current possible move) as the first move in each simulation.
+&nbsp; &nbsp;对于每个位置或**游戏状态**,都有一组特定的可能的移动：通常是向左、向右、向上和向下。对于每个可能的移动(称为`N`), 算法会从 `S` 的游戏状态开始创建 (模拟次数) 新游戏 并将 `N` (当前可能的移动）作为每个模拟中的第一个移动。
 
-For example, in case where `S = 50`, there would be 200 simulations starting at a particular game state, where 50 play left as the first move, 50 play right, 50 play up, and 50 play down. After playing the first move in each simulation, all simulations play completely random games until the games are over.
+&nbsp; &nbsp;例如,在 `S = 50` 的情况下,将从特定游戏状态开始进行 200 次模拟，其中 50 次向左下棋作为第一步，50 次向右下棋，50 次向上下棋，50 次向下下棋。在每次模拟中走完第一步后，所有模拟都会进行完全随机的游戏，直到游戏结束。
 
-After all simulations are run for the current game state, the algorithm calculates the average final game score for each starting move by averaging all of the `S` simulations for that move. Note: game score is calculated by adding the values of all tiles on the board.
+&nbsp; &nbsp;针对当前游戏状态运行所有模拟后，算法通过对该移动的所有模拟进行平均来计算每个起始移动`S`的平均最终游戏得分。注意：游戏得分是通过将棋盘上所有图块的值相加来计算的。
 
-The algorithm then finds the starting move whose simulations had the highest average score. This is the move to be played in the current game score.
+&nbsp; &nbsp;然后，算法找到模拟平均得分最高的起始动作。这是当前游戏比分中要采取的行动。
 
-For example, if the average final score for the move up was 1000, and the average final score for the move down was 1400, then down is, in general, a better move than up, at least in the simulations played. Therefore, the AI would play the move down in this situation, and then the entire process would start over again.
+&nbsp; &nbsp;例如，如果向上移动的平均最终得分为 1000，向下移动的平均最终得分为 1400，那么一般来说，向下移动比向上移动更好，至少在模拟中是这样。因此，在这种情况下，AI会淡化这一步棋，然后整个过程会重新开始。
 
-The number of simulations can be changed in the AI console, allowing users to increase AI performance by increasing the amount of simulations per move. However, as AI performance increases, AI speed decreases as there are more calculations being performed.
+&nbsp; &nbsp;模拟的数量可以在 AI 控制台中更改，允许用户通过增加每次移动的模拟数量来提高 AI 性能。然而，随着人工智能性能的提高，人工智能速度会随着执行更多计算而降低。
 
-The default number of simulations per move is 50, and with this amount, Jupiter consistently achieves at least a 1024 and 512 tile, with a high (~60%) chance of a 2048 tile.
+&nbsp; &nbsp;每次移动的默认模拟次数为 50，在这个数量下，Jupiter 始终能够获得至少 1024 和 512 块，并且很有可能 (~60%) 获得 2048 块。
 
-Jupiter is written in JavaScript to run on the web, meaning it can run seamlessly on almost all devices and browsers. Jupiter also takes advantage of JavaScript [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API), allowing the CPU work in algorithm and Monte Carlo simulations to be divided equally among multiple threads.
 
-## Contributing
+&nbsp; &nbsp;Jupiter 是用 JavaScript 编写的，可以在网络上运行，这意味着它可以在几乎所有设备和浏览器上无缝运行。
 
-If you'd like to add a new feature to Jupiter, make it faster, or even fix a mistake in the documentation, please feel free to contribute and [add pull request](https://github.com/xtrp/jupiter/compare)! I would love to have more contributors to Jupiter.
+&nbsp; &nbsp;Jupiter还利用了JavaScript[Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)，允许CPU在算法和蒙特卡罗模拟中的工作在多个线程之间平均分配。
 
-If you find a bug, also please feel free to [submit an issue](https://github.com/xtrp/jupiter/issues/new).
 
-## License & Credits
+## 贡献
 
-Jupiter was built by web developer and student [Gabriel Romualdo](https://xtrp.io/).
+&nbsp; &nbsp;如果您想向 Jupiter 添加新功能、使其更快，甚至修复文档中的错误，请随时贡献并[添加拉取请求](https://github.com/xtrp/jupiter/compare)! 我希望有更多的人为 Jupiter 做出贡献。
+&nbsp; &nbsp;如果您发现错误，也请随时[提交问题](https://github.com/xtrp/jupiter/issues/new).
 
-Jupiter is licensed under the MIT License. Please refer to LICENSE.txt for more information.
+## 许可和积分
+
+&nbsp; &nbsp;Jupiter 是由网络开发人员和学生[Gabriel Romualdo](https://xtrp.io/)构建的
+
+&nbsp; &nbsp;Jupiter 根据 MIT 许可证获得许可。请参阅 LICENSE.txt 了解更多信息。
