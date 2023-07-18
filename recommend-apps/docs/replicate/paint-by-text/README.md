@@ -1,6 +1,6 @@
 ---
 name: Paint by Text
-description: Modify images by chatting with a generative AI model.
+description: 通过与生成式 AI 模型聊天来修改图像。
 author:
   name: replicate
   avatar: https://avatars.githubusercontent.com/u/60410876?s=88&v=4
@@ -32,39 +32,39 @@ license: MIT
 order: 6
 ---
 
-# 👩‍🎨 Paint by Text
+# 👩‍🎨 按文本绘画
 
-Modify images by chatting with a generative AI model.
+&nbsp; &nbsp;通过与生成式 AI 模型聊天来修改图像。
 
-Try it out at [paintbytext.chat](http://paintbytext.chat)
+&nbsp; &nbsp;在[paintbytext.chat](http://paintbytext.chat)上尝试一下
 
-## How it works
+## 怎么运行的
 
-This app is powered by:
+&nbsp; &nbsp;该 app 由以下成员提供支持：
 
-🚀 [Replicate](https://replicate.com/?utm_source=project&utm_campaign=paintbytext), a platform for running machine learning models in the cloud.
+🚀 [Replicate](https://replicate.com/?utm_source=project&utm_campaign=paintbytext), 一个在云中运行机器学习模型的平台。
 
-🎨 [InstructPix2Pix](https://replicate.com/timothybrooks/instruct-pix2pix?utm_source=project&utm_campaign=paintbytext), an open-source machine learning model that generates images from text.
+🎨 [InstructPix2Pix](https://replicate.com/timothybrooks/instruct-pix2pix?utm_source=project&utm_campaign=paintbytext), 一种从文本生成图像的开源机器学习模型。
 
-▲ [Vercel](https://vercel.com/), a platform for running web apps.
+▲ [Vercel](https://vercel.com/), 一个运行网络应用程序的平台。
 
-⚡️ Next.js [server-side API routes](pages/api), for talking to the Replicate API.
+⚡️ Next.js [server-side API routes](pages/api), 用于与复制 API 对话。
+👀 Next.js React components, 用于浏览器 UI。
 
-👀 Next.js React components, for the browser UI.
-
-🍃 [Tailwind CSS](https://tailwindcss.com/), for styles.
+🍃 [Tailwind CSS](https://tailwindcss.com/), 用于样式。
 
 
 ## Development
 
-1. Install a recent version of [Node.js](https://nodejs.org/)
-1. Copy your [Replicate API token](https://replicate.com/account?utm_source=project&utm_campaign=paintbytext) and set it in your environment:
+1. 安装最新版本的[Node.js](https://nodejs.org/)
+1. 复制您的[Replicate API token](https://replicate.com/account?utm_source=project&utm_campaign=paintbytext) 并将其设置在您的环境中：
     ```
     echo "REPLICATE_API_TOKEN=<your-token-here>" > .env.local
     ````
-1. Install dependencies and run the server:
+1. 安装依赖项并运行服务器：
     ```
     npm install
     npm run dev
     ```
-1. Open [localhost:3000](http://localhost:3000) in your browser. That's it!
+1. 在浏览器中打开[localhost:3000](http://localhost:3000) 就是这样！
+   
