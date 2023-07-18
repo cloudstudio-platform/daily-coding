@@ -1,6 +1,6 @@
 ---
 name: TwitterBio
-description: This project generates Twitter bios for you using AI.
+description: 该项目使用 AI 为您生成 Twitter 简介。
 author:
   name: Nutlope
   avatar: https://avatars.githubusercontent.com/u/63742054?s=64&v=4
@@ -32,30 +32,33 @@ license: ''
 order: 2
 ---
 
-# [TwitterBio.com](https://www.twitterbio.com/)
+# [twitterbio.io](https://www.twitterbio.io/)
 
-This project generates Twitter bios for you using AI.
+&nbsp; &nbsp;该项目使用 AI 为您生成 Twitter 简介。
 
-[![Twitter Bio Generator](./public/screenshot.png)](https://www.twitterbio.com)
+[![Twitter Bio Generator](./public/screenshot.png)](https://www.twitterbio.io)
 
-## How it works
+## 如何运行
 
-This project uses the [ChatGPT API](https://openai.com/api/) and [Vercel Edge functions](https://vercel.com/features/edge-functions) with streaming. It constructs a prompt based on the form and user input, sends it to the chatGPT API via a Vercel Edge function, then streams the response back to the application.
+&nbsp; &nbsp;该项目使用 [ChatGPT API](https://openai.com/api/)和 [Vercel Edge 功能](https://vercel.com/features/edge-functions) 它根据表单和用户输入构建提示，通过 Vercel Edge 函数将其&nbsp; &nbsp;发送到 chatGPT API，然后将响应流式传输回应用程序。
 
-If you'd like to see how I built this, check out the [video](https://youtu.be/JcE-1xzQTE0) or [blog post](https://vercel.com/blog/gpt-3-app-next-js-vercel-edge-functions).
+&nbsp; &nbsp;如果您想了解我是如何构建它的，请查看 [视频](https://youtu.be/JcE-1xzQTE0) or [博客文章](https://vercel.com/blog/gpt-3-app-next-js-vercel-edge-functions).
 
-## Running Locally
+## 本地运行
 
-After cloning the repo, go to [OpenAI](https://beta.openai.com/account/api-keys) to make an account and put your API key in a file called `.env`.
+&nbsp; &nbsp;克隆存储库后，前往[OpenAI](https://beta.openai.com/account/api-keys) 创建一个帐户，并&nbsp; &nbsp;将您的 API 密钥放入名为`.env`.
 
-Then, run the application in the command line and it will be available at `http://localhost:3000`.
+&nbsp; &nbsp;然后，在命令行中运行该应用程序，它将在`http://localhost:3000`.处可用
+```bash
+npm i
+```
 
 ```bash
 npm run dev
 ```
 
-## One-Click Deploy
+## 一键部署
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+&nbsp; &nbsp; [使用Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples)部署示例:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nutlope/twitterbio&env=OPENAI_API_KEY&project-name=twitter-bio-generator&repo-name=twitterbio)
