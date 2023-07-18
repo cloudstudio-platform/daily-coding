@@ -4,9 +4,7 @@ author:
   name: ozboware
   avatar: https://avatars.githubusercontent.com/u/95859352?s=96&v=4
 description: >-
-  A rock, paper, scissors game using artificial intelligence as the computer
-  player. The program will remember patterns and make moves based on your
-  historical moves
+  一款使用人工智能作为电脑玩家的石头剪刀布游戏。该程序将记住模式并根据您的历史动作进行动作
 contributors: []
 language:
   - language: Javascript
