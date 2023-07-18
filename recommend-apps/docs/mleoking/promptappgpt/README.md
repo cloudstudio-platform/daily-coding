@@ -1,7 +1,7 @@
 ---
 name: PromptAppGPT
 description: >-
-  PromptAppGPT is a low-code prompt-based rapid app development framework. PromptAppGPT contains features such as low-code prompt-based development, GPT text generation, DALLE image generation, online prompt editer+compiler+runer, automatic user interface generation, support for plug-in extensions, etc. PromptAppGPT aims to enable natural language app development based on GPT.
+ PromptAppGPT 是一个基于低代码提示的快速应用程序开发框架。PromptAppGPT包含基于低代码提示的开发、GPT文本生成、DALLE图像生成、在线提示编辑器+编译器+运行器、自动用户界面生成、支持插件扩展等功能。PromptAppGPT旨在启用自然语言应用程序基于GPT的开发。
 author:
   name: mleoking
   avatar: https://avatars.githubusercontent.com/u/5763751?s=96&v=4
@@ -24,51 +24,51 @@ order: 20
 ---
 
 # 💡 PromptAppGPT
-PromptAppGPT is a low-code prompt-based rapid app development framework. PromptAppGPT contains features such as low-code prompt-based development, GPT text generation, DALLE image generation, online prompt editer+compiler+runer, automatic user interface generation, support for plug-in extensions, etc. PromptAppGPT aims to enable natural language app development based on GPT.
+&nbsp; &nbsp;PromptAppGPT 是一个基于低代码提示的快速应用程序开发框架。PromptAppGPT包含基于低代码提示的开发、GPT文本生成、DALLE图像生成、在线提示编辑器+编译器+运行器、自动用户界面生成、支持插件扩展等功能。PromptAppGPT旨在启用自然语言应用程序基于GPT的开发。
 
-**PromptAppGPT significantly lowers the barrier to GPT application development, allowing anyone to develop AutoGPT-like applications with a few lines of low code.**
+**PromptAppGPT 显着降低了 GPT 应用程序开发的门槛，让任何人都可以用几行低代码开发类似 AutoGPT 的应用程序**
 
-See the example apps: [Imaginative Image Creator, Web & Image Searcher, My AutoGPT, ...](PagApps.md)
+&nbsp; &nbsp;请参阅示例应用程序：[Imaginative Image Creator, Web & Image Searcher, My AutoGPT, ...](PagApps.md)
 
 ![PromptAppGPT](images/pag-image-creator-edit.png)
 
-## 🛠️ Features
+## 🛠️ 特征
 
-- ⚡ Low-code prompt-based rapid app development
-- 🧠 GPT3/4 executors for text generation
-- 🍯 Dalle executors for image generation
-- 🔌 Extensibility with executors (plugins)
-- #️⃣ Online prompt editor, compiler and runner
-- ⚙️ Automatic user interface generation
-- 🧨 English and Chinese user interface
+- ⚡ 基于低代码提示的快速应用程序开发
+- 🧠 用于文本生成的 GPT3/4 执行器
+- 🍯 用于图像生成的 Dalle 执行器
+- 🔌 执行器（插件）的可扩展性
+- #️⃣ 在线提示编辑器、编译器和运行器
+- ⚙️ 自动生成用户界面
+- 🧨 中英文用户界面
 
-## 🚀 Quickstart
+## 🚀 快速开始
 
-1. Get an OpenAI [API Key](https://platform.openai.com/account/api-keys).
-2. Visit the website [PromptAppGPT Web Home](http://promptappgpt.wangzhishi.net) or download the [Windows 10+ APP](dist/pag.exe).
-3. Set the OpenAI Key/OpenAI Api Proxy/OpenAI Gpt Model.
-- OpenAI Key: the api key obtained from OpenAI.
-- OpenAI Api Proxy: the proxy to the openai api, if you can directly access openai api, the proxy is `https://api.openai.com/`, otherwise the proxy should be another website (e.g. `https://api.openai-proxy.com/`) that can proxy your request to the openai api.
-- OpenAI Gpt Model: gpt-4/gpt-3.5-turbo
+1. 获取 OpenAI[API Key](https://platform.openai.com/account/api-keys).
+2. 访问网站[PromptAppGPT Web Home](http://promptappgpt.wangzhishi.net)或下载[Windows 10+ APP](dist/pag.exe).
+3. 设置 OpenAI 密钥/OpenAI Api 代理/OpenAI Gpt 模型。
+- OpenAI Key：从OpenAI获取的api密钥。
+- OpenAI Api Proxy：openai api的代理，如果您可以直接访问openai api，则代理为`https://api.openai.com/`, 否则代理应该是另一个 (e.g. `https://api.openai-proxy.com/`) 可以将您的请求代理到openai api的网站
+- OpenAI Gpt 模型: gpt-4/gpt-3.5-turbo
 
 ![Set the OpenAI Key/OpenAI Api Proxy/OpenAI Gpt Model](images/pag-settings-note.png)
 
-4. Select and run a app.
+4. 选择并运行应用程序。
 
 ![Select and run a app](images/pag-image-creator-run1-note.png)
 ![Select and run a app](images/pag-image-creator-run2-note.png)
 ![Select and run a app](images/pag-image-creator-run3-note.png)
 
-5. Edit and compile the app.
+5. 编辑并编译应用程序。
 
 ![Edit and compile the app](images/pag-image-creator-edit-note.png)
 
 
-## ⌨️ Development
+## ⌨️ 发展
 
-The code for PromptAppGPT is based on the YAML format. For a basic understanding of the YAML format you can refer to [YAML cheatsheet](https://quickref.me/yaml).
+&nbsp; &nbsp;PromptAppGPT 的代码基于 YAML 格式。要基本了解 YAML 格式，您可以参考[YAML cheatsheet](https://quickref.me/yaml).
 
-We use the following program to illustrate how to conduct app development in PromptAppGPT.  
+&nbsp; &nbsp;我们通过以下程序来说明如何在PromptAppGPT中进行应用程序开发。
 
 ``` yaml
 ---
@@ -99,48 +99,48 @@ userTask:
 
 extra: 
 ```
-The **author** section is the name of the author; The **name** section is the name of the app; The **description** section is the description of the app; The **gptRound** section determines whether to use gpt for single-round (`single`) or multi-round (`multiple`) conversations, for most apps the value should be `single`; The **failedRetries** section sets the number of retries on failures or the output is invalid.
+**author**部分是作者姓名;**name** 是应用程序的名称；**description**部分是应用程序的描述；**gptRound** 部分确定是否将 gpt 用于 (`single`) 或者 multi-round (`multiple`)对话, 对于大多数应用程序，该值应为 `single`; **failedRetries** 部分设置失败或输出无效时重试的次数。
 
-The **sysTask** section is a collection of tasks separated by `-`, setting the behavior of the executor (gpt). For many apps this field can leave empty. When this section is not empty, each task must define the `prompt` and `executor` attributes. 
+**sysTask** 部分是由 `-` 分隔的任务集合，,设置gpt的行为,对于许多应用程序，此字段可以留空。当此部分不为空时，每个任务必须定义 `prompt` 和 `executor` 属性
 
-- `executor` is the executor of a task.
-- `prompt` is the text to feed into the executor.
+- `executor` 是任务的执行者。
+- `prompt` 是输入执行器的文本。
 
-The **userTask** section contains user-defined tasks separated by `-`. Each task must define the `prompt` and `executor` attributes, and the attributes of  `trigger`, `outputer` and `validator` are optional. The app loops through the user tasks in an orderly fashion, using the output of the previous task to match each task's `trigger`, with the first task to pass the match being the currently running task. The output of the app is empty on the first run. Tasks without a `trigger` attribute can match any output, and these tasks should be placed at the end of the user tasks to allow tasks with more explicit `trigger` conditions to be triggered first.
+**userTask** 部分包含由  `-` 分隔的用户定义的任务. 每个任务必须定义`prompt` 和 `executor`属性, 并且`trigger`, `outputer` 和 `validator`是可选的. 应用程序以有序的方式循环执行用户任务，使用前一个任务的输出来匹配每个任务的，第一个通过匹配的任务是当前正在运行的任务。第一次运行时应用程序的输出为空。没有属性的任务可以匹配任何输出，并且这些任务应该放置在用户任务的末尾，以允许首先触发具有更明确条件的任务。
 
-- `trigger`  is the trigger of a task and it is a regular expression. A task runs when its trigger matches the output of the *previous* task. Here is the [regular expression cheatsheet](https://quickref.me/regex).
-- `executor` is the executor of a task. Currently the executors of `gpt`, `dalle`, `bingWeb`, `bingImage`, `webFetch`, `javaScript`, and `log` are supported.
-- `prompt` is the text to feed into the executor. Within the `prompt`, `$i{xxx}` is the user input, `$e{xxx}` is the extractor that extracts the text from the *previous* task output.
-- `outputer` is the text used to post process the output of *this* task. `$e{xxx}` is the extractor that extract the text from the output of *this* task. 
-- `validator` is a regular expression used to validate the output of *this* task. The app stops at the currently task if its output fails to match the `validator` regular expression. For example, `validator: .{15,}` checks whether the length of task output is longer than or equal to 15.  
+- `trigger` 是任务的触发器，它是一个正则表达式。当任务的触发器与前一个任务的输出匹配时，任务就会运行。这是[正则表达式备忘单](https://quickref.me/regex).
+- `executor` 是任务的执行者。目前支持 `gpt`, `dalle`, `bingWeb`, `bingImage`, `webFetch`, `javaScript`, 和 `log` 的执行者
+- `prompt`是输入执行器的文本。其中 `prompt`, `$i{xxx}` 是用户输入，是从先前 `$e{xxx}` 任务输出中提取文本的提取器。
+- `outputer` 是用于后处理此任务的输出的文本。是从此 `$e{xxx}` 任务的输出中提取文本的提取器。
+- `validator` 是用于验证此任务的输出的正则表达式。如果其输出与正则表达式不匹配，应用程序将停止在当前任务处`validator` 。例如`validator: .{15,}` 检查任务输出的长度是否大于或等于15。
 
-The input of the app's user interface is automatically generated from the `$i{xxx}` expressions in the `prompt`. The format of the `$i{xxx}` expression is `$i{input label@input type#select options=default value}`. Currently three types of input are supported: `select`, `input`, and `textarea`. The options of `select` input is separated by `/`.
+&nbsp; &nbsp;应用程序用户界面的输入是 `$i{xxx}`根据`prompt`.表达式的格式 `$i{xxx}` 为 `$i{input label@input type#select options=default value}`. 目前支持三种类型的输入： `select`, `input`, and `textarea`. 输入的选项 `select` input 以`/`为分隔
 
-The `$e{xxx}` expression is the extractor that extracts the text from the output of *previous*/*this* task. The format of the `$e{xxx}` expression is `$e{regular expression}`. If there is a group construct `(xxx)` in the regular expression, only the text matches the group is extracted, otherwise the text matches the whole regular expression is extracted.   
+&nbsp; &nbsp;表达式是从上一个此`$e{xxx}` 任务的输出中提取文本的提取器。表达式的格式为 `$e{xxx}` expression is `$e{regular expression}`如果正则表达式中存在组构造，则仅提取与该组匹配的文本，否则提取与整个正则表达式匹配的文本。
 
-The **extra** section can be empty and it is not enabled currently. 
+&nbsp; &nbsp;额外部分可以为空，并且当前未启用。
 
-## ❤️ Contributors
+## ❤️ 贡献者
 
 ![Contributors](https://contrib.rocks/image?repo=mleoking/PromptAppGPT)
 
-## 🙋 FAQs
+## 🙋 常见问题解答
 
-### Failed to fetch Error
+### 无法获取错误
 
-Check if you have acess to the internet and have set the OpenAI Key/OpenAI Api Proxy/OpenAI Gpt Model correctly. 
+&nbsp; &nbsp;检查您是否可以访问互联网并正确设置 OpenAI Key/OpenAI Api Proxy/OpenAI Gpt Model。
 
-### Web security error
-The browser security checks block PromptAppGPT's requests to openai api when it is lauched from the website. You can unblock PromptAppGPT website by following the steps below.
+### 网络安全错误
 
-**For Windows Chrome Users:**
-1. Right click on desktop, add new shortcut
-2. Add the target as "[PATH_TO_CHROME]\chrome.exe" --disable-web-security --user-data-dir=%LOCALAPPDATA%\Google\chromeTemp
-3. Click OK.
+&nbsp; &nbsp;当 PromptAppGPT 从网站启动时，浏览器安全检查会阻止对 openai api 的请求。您可以按照以下步骤解锁 PromptAppGPT 网站。
 
-**For Mac Chrome Users:**
-1. open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+**对于 Windows Chrome 用户：**
+1. 右键桌面，添加新快捷方式
+2. 将目标添加为“[PATH_TO_CHROME]\chrome.exe” --disable-web-security --user-data-dir=%LOCALAPPDATA%\Google\chromeTemp
+3. 单击 OK.
 
-**For Linux Chrome Users:**
+**对于 Mac Chrome 用户：**
+1. 打开 -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+
+**对于 Linux Chrome 用户：**
 1. google-chrome --disable-web-security -–allow-file-access-from-files
-
