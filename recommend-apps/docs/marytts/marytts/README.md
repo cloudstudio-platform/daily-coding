@@ -1,9 +1,7 @@
 ---
 name: MaryTTS
 description: >-
-  This is the source code repository for the multilingual open-source MARY
-  text-to-speech platform (MaryTTS). MaryTTS is a client-server system written
-  in pure Java, so it runs on many platforms.
+  这是多语言开源 MARY 文本转语音平台 (MaryTTS) 的源代码存储库。MaryTTS是一个用纯Java编写的客户端-服务器系统，因此它可以在许多平台上运行。
 author:
   name: marytts
   avatar: https://avatars.githubusercontent.com/u/1397306?s=88&v=4
@@ -57,65 +55,57 @@ order: 4
 
 # MaryTTS
 
-This is the source code repository for the multilingual open-source MARY text-to-speech platform (MaryTTS).
-MaryTTS is a client-server system written in pure Java, so it runs on many platforms.
+&nbsp; &nbsp;这是多语言开源 MARY 文本转语音平台 (MaryTTS) 的源代码存储库。MaryTTS是一个用纯Java编写的客户端-服务器&nbsp; &nbsp;系统，因此它可以在许多平台上运行。
+**要获取可供使用的可下载包，请参阅[发布页面](https://github.com/marytts/marytts/releases).**
 
-**For a downloadable package ready for use, see [the releases page](https://github.com/marytts/marytts/releases).**
+&nbsp; &nbsp;较老的文档也可以在 https://github.com/marytts/marytts-wiki, http://mary.dfki.de 和 https://mary.opendfki.de 中找到
 
-Older documentation can also be found at https://github.com/marytts/marytts-wiki, http://mary.dfki.de and https://mary.opendfki.de.
+&nbsp; &nbsp;该README是 MaryTTS 源代码存储库的一部分。它包含有关编译和开发 MaryTTS 源的信息。
 
-This README is part of the the MaryTTS source code repository.
-It contains information about compiling and developing the MaryTTS sources.
-
-The code comes under the Lesser General Public License LGPL version 3 -- see LICENSE.md for details.
+&nbsp; &nbsp;该代码采用较宽松的通用公共许可证 LGPL 版本 3 - 请参阅 LICENSE.md 了解详细信息。
 
 
-## Running MaryTTS
+## 运行 MaryTTS
 
-Run `./gradlew run`  (or `gradlew.bat run` on Windows) to start a MaryTTS server.
-Then access it at http://localhost:59125 using your web browser.
+&nbsp; &nbsp;运行 `./gradlew run`  (或者 `gradlew.bat run` 在 Windows 上) 启动 MaryTTS 服务器
+&nbsp; &nbsp;然后使用 Web 浏览器访问 http://localhost:59125 
 
-If you want to start a MaryTTS on a different address and port, you can use the following options:
-
+如果您想在不同的地址和端口上启动 MaryTTS，您可以使用以下选项：
 ```sh
 ./gradlew run -Dsocket.port=5920 -Dsocket.addr=0.0.0.0 --info
 ```
-where 5920 is the new port and 0.0.0.0 the new address. In case of the address being 0.0.0.0, all the interfaces will be listened.
+其中 5920 是新端口，0.0.0.0 是新地址。当地址为0.0.0.0时，所有接口都会被监听。
 
-By using the option `--info`, you set the logger of `gradle` *AND* MaryTTS at the level INFO. By using `--debug`, you set the level to DEBUG.
+&nbsp; &nbsp;通过使用选项`--info`, 您可以将 `gradle` *AND* MaryTTS 的记录器设置为 INFO 级别。通过使用 `--debug`, 您可以将级别设置为 DEBUG。
+&nbsp; &nbsp;还可以通过定义系统变量`log4j.logger.marytts`将 MaryTTS记录器级别设置为  `INFO` 或 `DEBUG` 
+## 下载并安装语音
 
-It is also possible to set the MaryTTS logger level to `INFO` or `DEBUG` by defining the system variable `log4j.logger.marytts`.
+&nbsp; &nbsp;运行 `./gradlew runInstallerGui` 以启动安装程序 GUI 以下载并安装更多语音。在使用新语音之前，需要重新启动正在运行的 MaryTTS 服务器。
 
-## Downloading and installing voices
+## 创建 MaryTTS
 
-Run `./gradlew runInstallerGui` to start an installer GUI to download and install more voices.
-A running MaryTTS server needs to be restarted before the new voices can be used.
+&nbsp; &nbsp;运行 `./gradlew build`.
+&nbsp; &nbsp;这将编译和测试所有模块，并为每个下创建输出 `build/`.
 
-
-## Building MaryTTS
-
-Run `./gradlew build`.
-This will compile and test all modules, and create the output for each under `build/`.
-
-Note that previously, MaryTTS v5.x was built with Maven. Please refer to the [**5.x branch**](https://github.com/marytts/marytts/tree/5.x).
+&nbsp; &nbsp;请注意，以前，MaryTTS v5.x 是使用 Maven 构建的。请参考[**5.x branch**](https://github.com/marytts/marytts/tree/5.x).
 
 
-## Packaging MaryTTS
+## 包装 MaryTTS
 
-Run `./gradlew distZip` or `./gradlew distTar` to build a distribution package under `build/distributions`.
-You can also "install" an unpacked distribution directly into `build/install` by running `./gradlew installDist`.
+&nbsp; &nbsp;运行 `./gradlew distZip` 或 `./gradlew distTar` 在`build/distributions`下构建分发包
+&nbsp; &nbsp;您还可以通过运行`./gradlew installDist`直接"install"解压后的发行版`build/install`到其中
 
-The distribution contains all the files required to run a standalone MaryTTS server instance, or to download and install more voices.
-The scripts to run the server or installer GUI can be found inside the distribution in the `bin/` directory.
+&nbsp; &nbsp;该发行版包含运行独立的 MaryTTS 服务器实例或下载和安装更多语音所需的所有文件。运行服务器或安装程序 GUI 的脚本可以在发行版的目录`bin/`中找到
 
 
-##  Using MaryTTS in your own Java projects
+##  在您自己的 Java 项目中使用 MaryTTS
 
-The easiest way to use MaryTTS in your own Java projects is to declare a dependency on a relevant MaryTTS artifact, such as the default US English HSMM voice:
+&nbsp; &nbsp;在您自己的 Java 项目中使用 MaryTTS 的最简单方法是声明对相关 MaryTTS 工件的依赖关系，例如默认的美国英语 HSMM 语音：
+
 
 ### Maven
 
-Add to your `pom.xml`:
+添加到您的`pom.xml`:
 ```xml
 <repositories>
   <repository>
@@ -144,7 +134,7 @@ Add to your `pom.xml`:
 
 ### Gradle
 
-Add to your `build.gradle`:
+添加到 `build.gradle`:
 ```groovy
 repositories {
    mavenCentral()
@@ -170,58 +160,54 @@ dependencies {
 ```
 
 
-## Synthesizing speech
+## 合成语音
 
-Text to wav basic examples are proposed in this repository
+&nbsp; &nbsp;此存储库中提出了文本到 wav 的基本示例
 - Maven: https://github.com/marytts/marytts-txt2wav/tree/maven
 - Gradle: https://github.com/marytts/marytts-txt2wav/tree/gradle
 
 
-## Using MaryTTS for other programming languages
+## 将 MaryTTS 用于其他编程语言
 
-If you want to use MaryTTS for other programming languages (like python for example), you need to achieve 3 steps
+&nbsp; &nbsp;如果您想将MaryTTS用于其他编程语言（例如python），您需要实现3个步骤
 
-1. compiling marytts
-2. starting the server
-3. query synthesis on the server
+1. 编译 marytts
+2. 启动服务器
+3. 服务器上的查询综合
 
 
-### Synthesize speech using the server
+### 使用服务器合成语音
 
-Synthesizing speech, using the server, is pretty easy.
-You need to generate proper HTTP queries and deal with the associated HTTP responses.
-Examples are proposed :
+&nbsp; &nbsp;使用服务器合成语音非常容易。您需要生成正确的 HTTP 查询并处理关联的 HTTP 响应。建议举例：
 - python 3: https://github.com/marytts/marytts-txt2wav/tree/python
 - shell: https://github.com/marytts/marytts-txt2wav/tree/sh
 
-## Extra documentation
+## 额外文档
 
-### Server as service (Linux specific)
+### 服务器即服务（Linux 特定）
 
-An example of how to define marytts server as service is proposed [here](./src/main/dist/misc/marytts.server).
-
-### User dictionaries
-
-You can extend the dictionaries by adding a user dictionary. The documentation of how to do it is [here](./src/main/dist/user-dictionaries/README.md).
-
-## Contributing
-
-The recommended workflow for making contributions to the MaryTTS source code is to follow the GitHub model:
-
-1. fork the MaryTTS repository into your own profile on GitHub, by navigating to https://github.com/marytts/marytts and clicking "fork" (of course you need a GitHub account);
-
-2. use the `git clone`, `commit`, and `push` commands to make modifications on your own marytts repository;
-   in this process, make sure to `git pull upstream master` regularly to stay in sync with latest developments on the master repo;
-
-3. when you think a reusable contribution is ready, open a "pull request" on GitHub to allow for easy merging into the master repository.
-
-Have a look at the [GitHub documentation](http://help.github.com/) for further details.
+&nbsp; &nbsp;[这里](./src/main/dist/misc/marytts.server)提出了如何将 marytts 服务器定义为服务的示例。
 
 
-### IDE configuration
+### 用户词典
 
-Wiki pages are available to help you to configure your IDE to develop MaryTTS.
-The following IDEs have been tested and documented:
+&nbsp; &nbsp;您可以通过添加用户词典来扩展词典。有关如何执行此操作的文档位于[此处](./src/main/dist/user-dictionaries/README.md).
 
-- IntelliJ IDEA
+## 贡献
+
+&nbsp; &nbsp;为 MaryTTS 源代码做出贡献的推荐工作流程是遵循 GitHub 模型：
+
+1. 通过导航到 https://github.com/marytts/marytts 并单击“fork” ，将 MaryTTS 存储库分叉到您自己的 GitHub 个人资料中（当然您需要一个 GitHub 帐户）;
+
+2. 使用 `git clone`, `commit`, 和 `push` 命令对您自己的 marytts 存储库进行修改；在此过程中,请确保`git pull upstream master` 定期与主存储库的最新进展保持同步；
+
+3. 当您认为可重用的贡献已准备就绪时，请在 GitHub 上打开“拉取请求”，以便轻松合并到主存储库中。
+
+请查看[GitHub 文档](http://help.github.com/) 以获取更多详细信息。
+
+### IDE 配置
+
+&nbsp; &nbsp;Wiki 页面可帮助您配置 IDE 来开发 MaryTTS。以下 IDE 已经过测试和记录：
+
+- 智能 IDEA
 - Eclipse: https://github.com/marytts/marytts/wiki/Eclipse
