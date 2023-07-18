@@ -1,6 +1,6 @@
 ---
 name: Inpainter
-description: A web GUI for inpainting with Stable Diffusion using the Replicate API.
+description: 用于使用 Replicate API 通过稳定扩散进行修复的 Web GUI。
 author:
   name: zeke
   avatar: https://avatars.githubusercontent.com/u/2289?s=64&v=4
@@ -28,42 +28,42 @@ order: 7
 
 # 🎨 Inpainter
 
-A web GUI for inpainting with [Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion) using the Replicate API.
+&nbsp; &nbsp;用于使用 Replicate API通过[Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion)进行修复的 Web GUI 。
 
-Try it out at [inpainter.vercel.app](https://inpainter.vercel.app/)
+&nbsp; &nbsp;在[inpainter.vercel.app](https://inpainter.vercel.app/)上尝试一下
 
 https://user-images.githubusercontent.com/2289/188992670-3dc9db47-fb8e-45c1-85ee-afc850009c48.mp4
 
-## How it works
+## 如何运行的
 
-🐢🚀 This is a Node.js app! It's powered by:
+🐢🚀 这是一个 Node.js 应用程序！它的动力来自：
 
-- [Replicate](https://replicate.com/), a platform for running machine learning models in the cloud.
-- [Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion), an open-source text-to-image generation model.
-- Next.js [server-side API routes](pages/api) for talking to the Replicate API
-- Next.js React components for the inpainting GUI
-- [Tailwind CSS](https://tailwindcss.com/) for styling
-- [Lucide](https://lucide.dev/) for Icons
+- [Replicate](https://replicate.com/), 一个在云中运行机器学习模型的平台。
+- [Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion), 一种开源文本到图像生成模型。
+- 用于与 Replicate API 对话的Next.js [server-side API routes](pages/api) 
+- Next.js 用于修复 GUI 的 React 组件
+- [Tailwind CSS](https://tailwindcss.com/) 样式
+- [Lucide](https://lucide.dev/)图标
 
-## Development
+## 发展
 
-Prerequisites:
-
-1. Recent version of Node.js
-2. [Replicate API token](https://replicate.com/account)
+&nbsp; &nbsp;先决条件：
 
 
-Set your Replicate API token in your environment:
+1. Node.js 的最新版本
+2. [复制 API 令牌](https://replicate.com/account)
 
+
+&nbsp; &nbsp;在您的环境中设置复制 API 令牌：
 ```
 REPLICATE_API_TOKEN=<your-token-here>
 ```
 
-Then install dependencies and run the server:
-
+&nbsp; &nbsp;然后安装依赖项并运行服务器：
 ```sh
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
+&nbsp; &nbsp;打开[http://localhost:3000](http://localhost:3000)
+
