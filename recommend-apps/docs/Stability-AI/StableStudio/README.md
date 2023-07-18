@@ -117,11 +117,3 @@ _**UI包的[README](./packages/stablestudio-ui/README.md)是一个很好的开�
 - [打开拉去请求](https://github.com/Stability-AI/StableStudio/pulls)
 - [行为准则](./CODE_OF_CONDUCT.md)
 
-Bug fixes, documentation, general clean-up, new features, etc. are all welcome.
-
-Here are some useful links...
-
-- [Discussion](https://github.com/Stability-AI/StableStudio/discussions)
-- [Open Issues](https://github.com/Stability-AI/StableStudio/issues)
-- [Open Pull Requests](https://github.com/Stability-AI/StableStudio/pulls)
-- [Code of Conduct](./CODE_OF_CONDUCT.md)
