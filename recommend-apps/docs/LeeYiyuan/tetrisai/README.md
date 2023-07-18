@@ -1,8 +1,7 @@
 ---
 name: Tetris AI
 description: >-
-  A graphical interface for Tetris that contains an AI and a genetic tuner for
-  the AI. You can also play it yourself.
+ 俄罗斯方块的图形界面，包含人工智能和人工智能的基因调谐器。你也可以自己玩。
 author:
   name: LeeYiyuan
   avatar: https://avatars.githubusercontent.com/u/2479951?s=64&v=4
@@ -33,14 +32,14 @@ order: 9
 ---
 
 # Tetris AI
-A graphical interface for Tetris that contains an AI and a genetic tuner for the AI. You can also play it yourself.
+&nbsp; &nbsp;俄罗斯方块的图形界面，包含人工智能和人工智能的基因调谐器。你也可以自己玩。
 
-## Live Webpage
-The live webpage containing the graphical interface can be found [here](http://leeyiyuan.github.io/tetrisai).
+## 实时网页
+&nbsp; &nbsp;包含图形界面的实时网页可以[在这里](http://leeyiyuan.github.io/tetrisai).
 
-## Tuning
-To tune, open up the Developer Console in the web browser and run the command `new Tuner().tune();`.
+## 调整
+&nbsp; &nbsp;要进行调整,请在 Web 浏览器中打开开发者控制台并运行命令`new Tuner().tune();`.
 
-## License
-Copyright (C) 2014 - 2017 [Yiyuan Lee](https://leeyiyuan.info)
+## 许可
+&nbsp; &nbsp;版权所有 (C) 2014 - 2017 [Yiyuan Lee](https://leeyiyuan.info)
 [MIT License](https://github.com/LeeYiyuan/tetrisai/blob/gh-pages/License.md)
