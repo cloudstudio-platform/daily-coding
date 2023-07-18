@@ -1,7 +1,7 @@
 ---
 name: Flowise
 description: >-
-  Drag & drop UI to build your customized LLM flow using LangchainJS
+  拖放 UI 以使用 LangchainJS 构建您的定制 LLM 流程
 author:
   name: FlowiseAI
   avatar: https://avatars.githubusercontent.com/u/128289781?s=88&v=4
@@ -54,126 +54,126 @@ order: 16
 <a href="https://github.com/FlowiseAI/Flowise">
 <img width="100%" src="https://github.com/FlowiseAI/Flowise/blob/main/images/flowise.gif?raw=true"></a>
 
-Drag & drop UI to build your customized LLM flow using [LangchainJS](https://github.com/hwchase17/langchainjs)
+&nbsp; &nbsp;拖动UI以使用[LangchainJS](https://github.com/hwchase17/langchainjs)构建您的定制LLM流程
 
-## ⚡Quick Start
+## ⚡快速开始
 
-1. Install Flowise
+&nbsp; &nbsp;1. 安装 Flowise
     ```bash
     npm install -g flowise
     ```
-2. Start Flowise
+&nbsp; &nbsp;2. 开始 Flowise
 
     ```bash
     npx flowise start
     ```
 
-    With username & password
+ &nbsp; &nbsp;   有用户名和密码
 
     ```bash
     npx flowise start --FLOWISE_USERNAME=user --FLOWISE_PASSWORD=1234
     ```
 
-3. Open [http://localhost:3000](http://localhost:3000)
+&nbsp; &nbsp;3. 打开 [http://localhost:3000](http://localhost:3000)
 
 ## 🐳 Docker
 
-### Docker Compose
+### Docker 组合
 
-1. Go to `docker` folder at the root of the project
-2. Create `.env` file and specify the `PORT` (refer to `.env.example`)
-3. `docker-compose up -d`
-4. Open [http://localhost:3000](http://localhost:3000)
-5. You can bring the containers down by `docker-compose stop`
+&nbsp; &nbsp;1. 转到 `docker` 项目根目录下的文件夹
+&nbsp; &nbsp;2. 创建 `.env` 文件并指定 `PORT` (参考 `.env.example`)
+&nbsp; &nbsp;3. `docker-compose up -d`
+&nbsp; &nbsp;4. 打开[http://localhost:3000](http://localhost:3000)
+&nbsp; &nbsp;5. 您可以通过以下方式将容器放下`docker-compose stop`
 
-### Docker Image
+### Docker 镜像
 
-1. Build the image locally:
+&nbsp; &nbsp;1. 本地构建镜像:
     ```bash
     docker build --no-cache -t flowise .
     ```
-2. Run image:
+&nbsp; &nbsp;2. 运行:
 
     ```bash
     docker run -d --name flowise -p 3000:3000 flowise
     ```
 
-3. Stop image:
+&nbsp; &nbsp;3. 停止:
     ```bash
     docker stop flowise
     ```
 
-## 👨‍💻 Developers
+## 👨‍💻 开发
 
-Flowise has 3 different modules in a single mono repository.
+&nbsp; &nbsp;Flowise 在一个单一存储库中有 3 个不同的模块。
 
--   `server`: Node backend to serve API logics
--   `ui`: React frontend
--   `components`: Langchain components
+-   `server`: 服务API逻辑的节点后端
+-   `ui`: 反应前端
+-   `components`: Langchain组件
 
-### Prerequisite
+### 先决条件
 
--   Install Yarn
+-   安装 Yarn
     ```bash
     npm i -g yarn
     ```
 
-### Setup
+### 设置
 
-1. Clone the repository
+&nbsp; &nbsp;1. 克隆存储库
 
     ```bash
     git clone https://github.com/FlowiseAI/Flowise.git
     ```
 
-2. Go into repository folder
+&nbsp; &nbsp;2. 进入存储库文件夹
 
     ```bash
     cd Flowise
     ```
 
-3. Install all dependencies of all modules:
+&nbsp; &nbsp;3. 安装所有模块的所有 dependencies:
 
     ```bash
     yarn install
     ```
 
-4. Build all the code:
+&nbsp; &nbsp;4. 构建所有代码：
 
     ```bash
     yarn build
     ```
 
-5. Start the app:
+&nbsp; &nbsp;5. 启动应用程序：
 
     ```bash
     yarn start
     ```
 
-    You can now access the app on [http://localhost:3000](http://localhost:3000)
+&nbsp; &nbsp;您可以通过[http://localhost:3000](http://localhost:3000)访问该app
 
-6. For development build:
+&nbsp; &nbsp;6. 对于 development build:
 
     ```bash
     yarn dev
     ```
 
-    Any code changes will reload the app automatically on [http://localhost:8080](http://localhost:8080)
+&nbsp; &nbsp;任何代码更改都会在[http://localhost:8080](http://localhost:8080)上自动重新加载应用程序
 
-## 🔒 Authentication
+## 🔒 验证
 
-To enable app level authentication, add `FLOWISE_USERNAME` and `FLOWISE_PASSWORD` to the `.env` file in `packages/server`:
+&nbsp; &nbsp;要启用应用程序级别身份验证，请将 `FLOWISE_USERNAME` 和添加 `FLOWISE_PASSWORD` 到 `packages/server` 位置下的 `.env`:
 
 ```
 FLOWISE_USERNAME=user
 FLOWISE_PASSWORD=1234
 ```
 
-## 📖 Documentation
+## 📖 文档
 
 [Flowise Docs](https://docs.flowiseai.com/)
 
-## 🌐 Self Host
+## 🌐 自托管
 
 ### [Railway](https://docs.flowiseai.com/deployment/railway)
 
@@ -187,19 +187,19 @@ FLOWISE_PASSWORD=1234
 
 ### [DigitalOcean](https://docs.flowiseai.com/deployment/digital-ocean)
 
-## 💻 Cloud Hosted
+## 💻 云托管
 
-Coming soon
+&nbsp; &nbsp;即将推出
 
-## 🙋 Support
+## 🙋 支持
 
-Feel free to ask any questions, raise problems, and request new features in [discussion](https://github.com/FlowiseAI/Flowise/discussions)
+&nbsp; &nbsp;欢迎在[讨论](https://github.com/FlowiseAI/Flowise/discussions)中提出任何问题并请求新功能
 
-## 🙌 Contributing
+## 🙌 贡献
 
-See [contributing guide](CONTRIBUTING.md). Reach out to us at [Discord](https://discord.gg/jbaHfsRVBW) if you have any questions or issues.
+&nbsp; &nbsp;请参阅[贡献指南](CONTRIBUTING.md),如果您又任何的疑问或者问题,请通过[Discord](https://discord.gg/jbaHfsRVBW)联系我们
 [![Star History Chart](https://api.star-history.com/svg?repos=FlowiseAI/Flowise&type=Timeline)](https://star-history.com/#FlowiseAI/Flowise&Date)
 
-## 📄 License
+## 📄 许可
 
-Source code in this repository is made available under the [MIT License](LICENSE.md).
+&nbsp; &nbsp;该存储库中的源代码根据[MIT License](LICENSE.md)提供
