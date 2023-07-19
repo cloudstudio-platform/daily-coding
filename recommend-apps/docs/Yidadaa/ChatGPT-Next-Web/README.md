@@ -131,110 +131,104 @@ One-Click to deploy well-designed ChatGPT web UI on Vercel.
 - 🚀 v2.0 已经发布，现在你可以使用面具功能快速创建预制对话了！ 了解更多： [ChatGPT 提示词高阶技能：零次、一次和少样本提示](https://github.com/Yidadaa/ChatGPT-Next-Web/issues/138)。
 - 💡 想要更方便地随时随地使用本项目？可以试下这款桌面插件：https://github.com/mushan0x0/AI0x0.com
 
-## Get Started
+## 开始使用
 
-> [简体中文 > 如何开始使用](./README_CN.md#开始使用)
+1. 获得 [OpenAI API Key](https://platform.openai.com/account/api-keys);
+2. 点击
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYidadaa%2FChatGPT-Next-Web&env=OPENAI_API_KEY&env=CODE&project-name=chatgpt-next-web&repository-name=ChatGPT-Next-Web), 记住这 `CODE` 是您的页面密码;
+3. 享受 :)
 
-1. Get [OpenAI API Key](https://platform.openai.com/account/api-keys);
-2. Click
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYidadaa%2FChatGPT-Next-Web&env=OPENAI_API_KEY&env=CODE&project-name=chatgpt-next-web&repository-name=ChatGPT-Next-Web), remember that `CODE` is your page password;
-3. Enjoy :)
-
-## FAQ
+## 常见问题
 
 [简体中文 > 常见问题](./docs/faq-cn.md)
 
 [English > FAQ](./docs/faq-en.md)
 
-## Keep Updated
+## 保持更新
 
-> [简体中文 > 如何保持代码更新](./README_CN.md#保持更新)
+&nbsp; &nbsp;如果您按照上述步骤一键部署了自己的项目，可能会遇到不断出现“Updates available”的问题。这是因为Vercel默认会为您创建一个新项目而不是fork这个项目，从而导致无法正确检测更新。
 
-If you have deployed your own project with just one click following the steps above, you may encounter the issue of "Updates Available" constantly showing up. This is because Vercel will create a new project for you by default instead of forking this project, resulting in the inability to detect updates correctly.
+&nbsp; &nbsp;我们建议您按照以下步骤重新部署：
 
-We recommend that you follow the steps below to re-deploy:
+- 删除原来的仓库；
+- 使用页面右上角的fork按钮来fork该项目；
+- 再次选择在Vercel中部署,[请看详细教程](./docs/vercel-cn.md).
 
-- Delete the original repository;
-- Use the fork button in the upper right corner of the page to fork this project;
-- Choose and deploy in Vercel again, [please see the detailed tutorial](./docs/vercel-cn.md).
+### 启用自动更新
 
-### Enable Automatic Updates
+> 如果遇到Upstream Sync执行失败，请手动同步fork一次。
 
-> If you encounter a failure of Upstream Sync execution, please manually sync fork once.
-
-After forking the project, due to the limitations imposed by GitHub, you need to manually enable Workflows and Upstream Sync Action on the Actions page of the forked project. Once enabled, automatic updates will be scheduled every hour:
+&nbsp; &nbsp;fork项目后，由于GitHub的限制，您需要在fork项目的Actions页面手动启用Workflows和Upstream Sync Action。启用后，将安排每小时自动更新：
 
 ![Automatic Updates](./docs/images/enable-actions.jpg)
 
 ![Enable Automatic Updates](./docs/images/enable-actions-sync.jpg)
 
-### Manually Updating Code
+### 手动更新代码
 
-If you want to update instantly, you can check out the [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) to learn how to synchronize a forked project with upstream code.
+&nbsp; &nbsp;如果您想立即更新，可以查看[GitHub 文档](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) ，了解如何将 fork 项目与上游代码同步。
 
-You can star or watch this project or follow author to get release notifictions in time.
 
-## Access Password
+&nbsp; &nbsp;您可以关注该项目或关注作者以及时获取发布通知。
 
-> [简体中文 > 如何增加访问密码](./README_CN.md#配置页面访问密码)
+## 访问密码
 
-This project provides limited access control. Please add an environment variable named `CODE` on the vercel environment variables page. The value should be passwords separated by comma like this:
 
+&nbsp; &nbsp;该项目提供有限的访问控制。请添加在 vercel 环境变量页面上命名的环境变量`CODE`。该值应该是用逗号分隔的密码，如下所示：
 ```
 code1,code2,code3
 ```
 
-After adding or modifying this environment variable, please redeploy the project for the changes to take effect.
+&nbsp; &nbsp;添加或修改此环境变量后，请重新部署项目以使更改生效。
 
-## Environment Variables
+## 环境变量
 
-> [简体中文 > 如何配置 api key、访问密码、接口代理](./README_CN.md#环境变量)
 
-### `OPENAI_API_KEY` (required)
+### `OPENAI_API_KEY` (必要的)
 
-Your openai api key.
+您的 openai api 密钥。
 
-### `CODE` (optional)
+### `CODE` (可选择的)
 
-Access passsword, separated by comma.
+访问密码，以逗号分隔。
 
-### `BASE_URL` (optional)
+### `BASE_URL` (可选择的)
 
 > Default: `https://api.openai.com`
 
 > Examples: `http://your-openai-proxy.com`
 
-Override openai api request base url.
+覆盖 openai api 请求基本 url。
 
-### `OPENAI_ORG_ID` (optional)
+### `OPENAI_ORG_ID` (可选择的)
 
-Specify OpenAI organization ID.
+指定 OpenAI 组织 ID。
 
-### `HIDE_USER_API_KEY` (optional)
-
-> Default: Empty
-
-If you do not want users to input their own API key, set this value to 1.
-
-### `DISABLE_GPT4` (optional)
+### `HIDE_USER_API_KEY` (可选择的)
 
 > Default: Empty
 
-If you do not want users to use GPT-4, set this value to 1.
+如果您不希望用户输入自己的 API 密钥，请将此值设置为 1。
 
-## Development
+### `DISABLE_GPT4` (可选择的)
 
-> [简体中文 > 如何进行二次开发](./README_CN.md#开发)
+> Default: Empty
+
+如果您不希望用户使用 GPT-4，请将此值设置为 1。
+
+## 发展
+
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Yidadaa/ChatGPT-Next-Web)
 
-Before starting development, you must create a new `.env.local` file at project root, and place your api key into it:
+在开始开发之前，您必须在项目根目录创建一个新 `.env.local` 文件，并将您的 api 密钥放入其中：
+
 
 ```
 OPENAI_API_KEY=<your api key here>
 ```
 
-### Local Development
+### 本地发展
 
 ```shell
 # 1. install nodejs and yarn first
@@ -244,11 +238,7 @@ yarn install
 yarn dev
 ```
 
-## Deployment
-
-> [简体中文 > 如何部署到私人服务器](./README_CN.md#部署)
-
-### Docker (Recommended)
+### Docker (推荐)
 
 ```shell
 docker pull yidadaa/chatgpt-next-web
@@ -259,7 +249,7 @@ docker run -d -p 3000:3000 \
    yidadaa/chatgpt-next-web
 ```
 
-You can start service behind a proxy:
+您可以在代理后面启动服务：
 
 ```shell
 docker run -d -p 3000:3000 \
@@ -275,19 +265,19 @@ docker run -d -p 3000:3000 \
 bash <(curl -s https://raw.githubusercontent.com/Yidadaa/ChatGPT-Next-Web/main/scripts/setup.sh)
 ```
 
-## Screenshots
+## 截图
 
 ![Settings](./docs/images/settings.png)
 
 ![More](./docs/images/more.png)
 
-## Donation
+## 捐赠
 
 [Buy Me a Coffee](https://www.buymeacoffee.com/yidadaa)
 
-## Special Thanks
+## 特别鸣谢
 
-### Sponsor
+### 赞助
 
 > 仅列出捐赠金额 >= 100RMB 的用户。
 
@@ -313,10 +303,10 @@ bash <(curl -s https://raw.githubusercontent.com/Yidadaa/ChatGPT-Next-Web/main/s
 [@AnsonHyq](https://github.com/AnsonHyq)
 [@synwith](https://github.com/synwith)
 
-### Contributor
-
+### 贡献
 [Contributors](https://github.com/Yidadaa/ChatGPT-Next-Web/graphs/contributors)
 
-## LICENSE
+## 许可
 
 [Anti 996 License](https://github.com/kattgu7/Anti-996-License/blob/master/LICENSE_CN_EN)
+
