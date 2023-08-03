@@ -1,3 +1,15 @@
+---
+title: Cloud Studio助力少年功夫熊猫成长为技术上的神龙大侠
+subTitle: 腾讯云DeployKit ，帮助开发者把任意应用一键部署到任意平台
+date: '2023-8-1'
+tags: ['用户体验']
+summary: 腾讯云DeployKit ，帮助开发者把任意应用一键部署到任意平台
+isRecommend: true
+description: 在 Serverless 技术背景下，应用的开发到部署这个过程，存在很大的优化空间。腾讯云DeployKit 帮忙开发者将自己的应用一键部署到 Serverless 平台。部署过程简单且快速，以满足应用高频部署的需求。
+keywords: Cloud Studio,在线编程,WebIDE,CloudIDE,云端IDE,在线IDE,云端开发工具,在线集成开发环境,开发环境分享,代码托管,在线开发,在线调试,软件团队协作
+---
+
+
 # CloudStudio助力少年功夫熊猫成长为技术上的神龙大侠
 
 我经常喜欢看CSDN的技术文章,看着看着,发现很多当年的技术小白,经过岁月的洗礼,已经成为技术领域的老师傅.
