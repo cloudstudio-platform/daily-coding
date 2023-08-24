@@ -1,5 +1,5 @@
 ---
-name: cherry-markdown
+name: Cherry-Markdown
 description: >-
   Cherry Markdown Editor 是一款 Javascript Markdown 编辑器，具有开箱即用、轻量简洁、易于扩展等特点. 它可以运行在浏览器或服务端(NodeJs)。
 author:
