@@ -1,3 +1,37 @@
+---
+name: Cherry-Markdown
+description: >-
+  Cherry Markdown Editor 是一款 Javascript Markdown 编辑器，具有开箱即用、轻量简洁、易于扩展等特点. 它可以运行在浏览器或服务端(NodeJs)。
+author:
+  name: Tencent
+  avatar: 
+contributors: 
+  - name: jiawei686
+    avatar: https://avatars.githubusercontent.com/u/12953093?v=4
+language:
+  - language: TypeScript
+    percentage: 84.7
+  - language: Less
+    percentage: 8.7
+  - language: SCSS
+    percentage: 2.4
+  - language: TypeScript
+    percentage: 1.2
+  - language: CSS
+    percentage: 0.2
+  - language: HTML
+    percentage: 0.1
+star: '2600'
+fork: '303'
+url: https://github.com/Tencent/cherry-markdown
+banner: ./logo/new_logo.png
+icon: https://cs-res.codehub.cn/vscode/node.svg
+video: 
+license: Apache-2.0
+order: 21
+---
+
+
 <p align="center"><img src="logo/logo--color.svg" alt="cherry logo" width="50%"/></p>
 
 # Cherry Markdown Editor
