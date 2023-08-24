@@ -25,7 +25,7 @@ star: '2600'
 fork: '303'
 url: https://github.com/Tencent/cherry-markdown
 banner: ./logo/new_logo.png
-icon: ./logo/new_logo.png
+icon: 
 video: 
 license: Apache-2.0
 order: 21
