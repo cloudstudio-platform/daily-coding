@@ -9,7 +9,7 @@ contributors:
   - name: jiawei686
     avatar: https://avatars.githubusercontent.com/u/12953093?v=4
 language:
-  - language: TypeScript
+  - language: JavaScript
     percentage: 84.7
   - language: Less
     percentage: 8.7
