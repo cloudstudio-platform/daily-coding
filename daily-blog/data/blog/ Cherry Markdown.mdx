@@ -1,0 +1,100 @@
+---
+title: Cloud Studio + Cherry Markdown =效率超高的云端Markdown编辑器
+subTitle: 腾讯云与 Cherry Markdown 帮助开发者使用高效Markd编辑器
+date: '2023-8-26'
+tags: ['云端开发','远程开发']
+summary: 腾讯云与 Cherry Markdown 帮助开发者使用高效Markd编辑器
+isRecommend: true
+description: Cherry Markdown Editor 是一款 Javascript Markdown 编辑器，具有开箱即用、轻量简洁、易于扩展等特点. 它可以运行在浏览器或服务端(NodeJs)。
+keywords: Cloud Studio,在线编程,WebIDE,CloudIDE,云端IDE,在线IDE,云端开发工具,在线集成开发环境,开发环境分享,代码托管,在线开发,在线调试,软件团队协作
+---
+#  Cloud Studio + Cherry Markdown =效率超高的云端Markdown编辑器
+
+
+大家在编写Markdown文件时会出现很多小问题,例如html转换md格式;设置图片大小等等。这些小问题积累起来就会让开发过程十分繁琐。
+
+  基于此 Cloud Studio 与腾讯开源Markdown编辑器 Cherry Markdown 一起把轻量简洁且功能强大的 Cherry Markdown 嵌入我们的云端开发环境中,让大家能够更轻便简洁的享受开发。
+
+
+## 介绍 Cherry Markdown 
+
+Cherry Markdown Editor 是一款 Javascript Markdown 编辑器，具有开箱即用、轻量简洁、易于扩展等特点.
+
+###  **开箱即用**
+
+开发者可以使用非常简单的方式调用并实例化 Cherry
+Markdown 编辑器，实例化的编辑器默认支持大部分常用的markdown语法（如标题、目录、流程图、公式等）。
+
+###  **易于拓展**
+
+当 Cherry Markdown
+编辑器支持的语法不满足开发者需求时，可以快速的进行二次开发或功能扩展。同时，Cherry Markdown 编辑器应该由纯JavaScript实现，不应该依赖angular、vue、react等框架技术，框架只提供容器环境即可。
+
+## **功能演示**
+
+
+ **所见即所得**  
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/8/640-1.gif)
+
+ **HTML自动转Markdown** 
+  ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/8/640-3.gif)
+
+  ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/8/640.png)
+
+
+ **图片支持**
+ ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/8/640-1.png)
+
+ **pdf导出**  
+
+  ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/8/640-2.png)
+
+
+
+ ## 如何使用
+
+ 直接点击这里
+[![Cloud Studio Template](https://cs-res.codehub.cn/common/assets/icon-badge.svg)](https://cloudstudio.net#https://github.com/Tencent/cherry-markdown)
+
+ 进入我们的 Cloud Studio 的云端环境里面,可以看见我们的初始界面
+ ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/8/2.png)
+之后我们可以通过添加<span style="color:green">preview.yml</span>文件让文件能够自动启动.我们通过创建
+<span style="color:green">.vscode</span>文件夹以及下面的<span style="color:green">preview.yml</span>文件内容为
+
+```
+# .vscode/preview.yml
+autoOpen: true # 打开工作空间时是否自动开启所有应用的预览
+apps:
+  - port: 8000 # 应用的端口
+    run: yarn && yarn run dev # 应用的启动命令
+    root: ./ # 应用的启动目录
+    name: Cherry Markdown Editor # 应用名称
+    description: Cherry Markdown Editor # 应用描述
+    autoOpen: true # 打开工作空间时是否自动开启预览（优先级高于根级 autoOpen）
+```
+
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/8/3.png)
+
+之后再在<span style="color:green">build</span>文件夹下的<span style="color:green">dev.js</span>中的  
+```
+if (process.env.CODESPACES === 'true') {
+  // a hack for rollup-plugin-livereload's websocket connection
+  process.env.CODESANDBOX_SSE = 'true';
+}
+```
+下面添加
+```
+// Using Tencent Cloud Studio is always 'TRUE' for Cloud Development Environment (X_IDE_IS_CLOUDSTUDIO=TRUE)
+if (process.env.X_IDE_IS_CLOUDSTUDIO === 'TRUE') {
+  // a hack for rollup-plugin-livereload's websocket connection
+  process.env.CODESANDBOX_SSE = 'true';
+}
+```
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/8/1.png)
+
+之后我们只需要刷新一下页面就可以看到 Cherry Markdown 已经在 CLoud Studio 中启动了
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/8/5.png)
+
+完成后我们就可以顺利的使用 Cherry Markdown 了,快来自己尝试一下吧! ! !
+
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/8/6.png)
