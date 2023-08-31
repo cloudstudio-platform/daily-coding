@@ -37,7 +37,15 @@ const items: MenuProps['items'] = [
     ],
   },
   {
-    label: <Link href="https://club.cloudstudio.net?channel=blog" target="_blank" rel="noopener noreferrer">开发者社区</Link>,
+    label: (
+      <Link
+        href="https://club.cloudstudio.net?channel=blog"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        开发者社区
+      </Link>
+    ),
     key: 'code-design',
   },
   {
