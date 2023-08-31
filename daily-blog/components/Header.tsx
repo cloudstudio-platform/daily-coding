@@ -266,15 +266,15 @@ const Header = () => {
                   alt=""
                 />
                 <div className="message-text flex items-center text-black">
-                  Cloud Studio AI 代码助手已经上线内测，用技术改变世界，用 AI 改变代码！
+                  Cloud Studio 实战训练营，最受欢迎作品评选，火热进行中！
                 </div>
               </nav>
               <nav className="flex flex-nowrap items-center justify-end pl-5 xs:pl-2 sm:pl-3">
                 <Link
-                  href="https://cloudstudio.net/ai-apply"
+                  href="https://club.cloudstudio.net/ranking?channel=blog"
                   className="appointment-text flex items-center mb:hidden"
                 >
-                  预约申请
+                  查看活动
                 </Link>
               </nav>
             </section>
