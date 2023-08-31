@@ -37,32 +37,8 @@ const items: MenuProps['items'] = [
     ],
   },
   {
-    label: '开发者社区',
+    label: <Link href="https://club.cloudstudio.net?channel=blog" target="_blank" rel="noopener noreferrer">开发者社区</Link>,
     key: 'code-design',
-    children: [
-      {
-        type: 'group',
-        label: '',
-        children: [
-          {
-            label: <Link href="https://cloudstudio.net/incentive">开发者激励计划</Link>,
-            key: 'incentive',
-          },
-          {
-            label: (
-              <Link href="https://cloud.tencent.com/developer/zone/cloudstudio?from=19165">
-                腾讯云开发者社区
-              </Link>
-            ),
-            key: 'community',
-          },
-          {
-            label: <Link href="https://cloudstudio.net/blog">博客</Link>,
-            key: 'blog',
-          },
-        ],
-      },
-    ],
   },
   {
     label: '编程语言',
@@ -140,6 +116,34 @@ const items: MenuProps['items'] = [
       </Link>
     ),
     key: 'payment',
+  },
+  {
+    label: '更多',
+    key: 'more',
+    children: [
+      {
+        type: 'group',
+        label: '',
+        children: [
+          {
+            label: <Link href="https://cloudstudio.net/incentive">开发者激励计划</Link>,
+            key: 'incentive',
+          },
+          {
+            label: (
+              <Link href="https://cloud.tencent.com/developer/zone/cloudstudio?from=19165">
+                腾讯云开发者社区
+              </Link>
+            ),
+            key: 'community',
+          },
+          {
+            label: <Link href="https://cloudstudio.net/blog">博客</Link>,
+            key: 'blog',
+          },
+        ],
+      },
+    ],
   },
 ]
 
