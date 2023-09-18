@@ -1,11 +1,24 @@
-#  教你快速上手AI应用——吴恩达AI系列教程(2)
+---
+title: 教你快速上手AI应用——吴恩达AI系列教程 第二课
+subTitle: 吴恩达教你快速上手AI应用
+date: '2023-9-18'
+tags: ['吴恩达AI系列教程']
+summary: 如何通过 AI 利用 Langchain 封装一本书
+isRecommend: true
+description: 我们将介绍吴恩达AI系列教程的第二部分,教你如何快速上手AI应用——我们将学习如何通过langchain构建向量数据库从而封装一本书,然后我们可以通过提问获取这本书相应的问题。
+keywords: Cloud Studio,在线编程,WebIDE,CloudIDE,云端IDE,在线IDE,云端开发工具,在线集成开发环境,开发环境分享,代码托管,在线开发,在线调试,软件团队协作
+---
+
+
+
+#  教你快速上手AI应用——吴恩达AI系列教程 第二课
 
 
 人工智能风靡全球,它的应用已经渗透到我们生活的方方面面,从自动驾驶到智能家居,再到医疗辅助和量化交易等等。他们逐渐改变了我们的生活方式,然而,对于许多人来说,AI仍然是一个神秘且无法理解的领域。
 
 为了帮助更多的人理解并掌握AI技术,更享受AI带给人们便捷的服务,吴恩达博士开设了一系列的AI教程。
 
-在这篇博客中,我们将介绍吴恩达AI系列教程的第二部分,教你如何快速上手AI应用——我们将学习如何通过langchain构建向量数据库从而封装一本书,然后我们可以通过提问获取这本书相应的问题。
+在这篇博客中,我们将介绍吴恩达AI系列教程的第二部分,教你如何快速上手AI应用——我们将学习如何通过 langchain 构建向量数据库从而封装一本书,然后我们可以通过提问获取这本书相应的问题。
 
 无论你是AI领域的初学者,还是有一定基础想要进一步提升的开发者。我们都能通过引导你让你在AI世界中发现自己的道路。
 
@@ -33,11 +46,11 @@
 
 
 让我们先来看看我们封装书籍后我们现在需要有防晒效果的全部衬衫以及对这些衬衫做一个总结:
-<br>
-<br>
+<br />
+<br />
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/10/9.png)
-<br>
-<br>
+<br />
+<br />
  我们可以看到模型会把所有的防晒衬衫全部信息表出来,并且会有一句很精炼的总结。
 
 
@@ -47,23 +60,23 @@
 
  **首先我们要设置环境的配置**
 
-- 安装langchain
+- 安装 langchain
 ```python
 pip install langchain                                                        
 ```
 
 
-- 安装docarray
+- 安装 docarray
 ```python
 pip install docarray                                                      
 ```
 
-- 安装tiktoken
+- 安装 tiktoken
 ```python
 pip install tiktoken                                                    
 ```
 
-- 同时我们要设置自己的API_KEY环境变量
+- 同时我们要设置自己的 API_KEY 环境变量
 
 ```python
 import openal
@@ -73,28 +86,28 @@ openai.api_base= “https://service-4v8atua4-1259057771.sa.apiaw.tencentcs.com/v
              
 ```
 
-只需要您将API_KET填写在里面即可
-<br>
-<br>
+只需要您将 API_KEY 填写在里面即可
+<br />
+<br />
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/10/1.png)
-<br>
-<br>
+<br />
+<br />
 
-**我们先明白如何通过langchain调用模型**
+**我们先明白如何通过 langchain 调用模型**
 
 
-LangChain是一个强大的框架，旨在帮助开发人员使用语言模型构建端到端的应用程序。它提供了一套工具、组件和接口，可简化创建由大型语言模型 (LLM) 和聊天模型提供支持的应用程序的过程。LangChain 可以轻松管理与语言模型的交互，将多个组件链接在一起，并集成额外的资源，例如 API 和数据库。
+LangChain 是一个强大的框架，旨在帮助开发人员使用语言模型构建端到端的应用程序。它提供了一套工具、组件和接口，可简化创建由大型语言模型 (LLM) 和聊天模型提供支持的应用程序的过程。LangChain 可以轻松管理与语言模型的交互，将多个组件链接在一起，并集成额外的资源，例如 API 和数据库。
 
-而langchain里面的模型主要分为三个类型:
+而 langchain 里面的模型主要分为三个类型:
 
-**LLM（大型语言模型）**：这些模型将文本字符串作为输入并返回文本字符串作为输出。它们是许多语言模型应用程序的支柱。
+ **LLM（大型语言模型）**：这些模型将文本字符串作为输入并返回文本字符串作为输出。它们是许多语言模型应用程序的支柱。
 
- **聊天模型( Chat Model)**：聊天模型由语言模型支持，但具有更结构化的 API。他们将聊天消息列表作为输入并返回聊天消息。这使得管理对话历史记录和维护上下文变得容易。
+ **聊天模型(Chat Model)**：聊天模型由语言模型支持，但具有更结构化的 API。他们将聊天消息列表作为输入并返回聊天消息。这使得管理对话历史记录和维护上下文变得容易。
 
  **文本嵌入模型(Text Embedding Models)**：这些模型将文本作为输入并返回表示文本嵌入的浮点列表。这些嵌入可用于文档检索、聚类和相似性比较等任务。
 
 
-- **首先调用LLM模型**
+- **首先调用 LLM 模型**
 
 ```python
 import os
@@ -102,7 +115,7 @@ import os
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv()) #读取环境变量                                                 
 ```
-然后我们问llm模型如何评价人工智能,他就会通过langchain自动调用你的OPENAI_API_KEY告诉你llm模型生成的答案:
+然后我们问 llm 模型如何评价人工智能,他就会通过 langchain 自动调用你的 OPENAI_API_KEY 告诉你 llm 模型生成的答案:
 
 ```python
 from langchain.llms import OpenAI
@@ -111,7 +124,7 @@ llm = OpenAI(model_name="text-davinci-003",max_tokens=1024)
 llm("怎么评价人工智能")                                               
 ```
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/10/2.png)
-<br><br>
+<br /><br />
 我们可以从图中看到,模型通过调用api接口回答了“怎么评价人工智能的回答”
 
 
@@ -119,11 +132,11 @@ llm("怎么评价人工智能")
 
 
 
-## 导入embedding模型和向量存储组件
+## 导入 embedding 模型和向量存储组件
 
-接下来我们会学习使用embedding模型和向量数据库做一个存储,利用langchain将我们的书籍进行封装。
+接下来我们会学习使用 embedding 模型和向量数据库做一个存储,利用 langchain 将我们的书籍进行封装。
 
-- **我们首先把langchain的一些功能的包加载下来**:
+- **我们首先把 langchain 的一些功能的包加载下来**:
 
 ```python
 from langchain.chains import RetrievalQA #检索QA链，在文档上进行检索
@@ -132,7 +145,7 @@ from langchain.document_loaders import CSVLoader #文档加载器，采用csv格
 from langchain.vectorstores import DocArrayInMemorySearch #向量存储
 from IPython.display import display, Markdown #在jupyter显示信息的工具                                                         
 ```
-在本次小项目中,我们的数据使用Dock Array内存搜索向量存储中,作为一个内存向量存储，不需要连接外部数据库
+在本次小项目中,我们的数据使用 Dock Array 内存搜索向量存储中,作为一个内存向量存储，不需要连接外部数据库
 
 - **读取我们的户外户外服装目录书籍**
 
@@ -155,8 +168,8 @@ data
 
 
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/10/3.png)
-<br>
-<br>
+<br />
+<br />
 可以看到我们通过查看数据发现他提供了一个户外服装的CSV文件,文件中有很多种类衣服与他们的介绍,我们可以将这些与语言模型结合使用
 
 - **创建向量存储**
@@ -191,21 +204,21 @@ display(Markdown(response))#查看查询返回的内容
 ```
 
 我们就可以看到结果:
-<br>
-<br>
+<br />
+<br />
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/10/4.png)
-<br>
-<br>
-我们发现得到了一个Markdown的表格,其中包含了所有带有防晒衣的衬衫的名字与描述,还通过llm的总结得到了一个不错的总结“our shirts provide UPF 50+ sun protection, blocking 98% of the sun's harmful rays. The Men's Tropical Plaid Short-Sleeve Shirt is made of 100% polyester and is wrinkle-resistant”
+<br />
+<br />
+我们发现得到了一个 Markdown 的表格,其中包含了所有带有防晒衣的衬衫的名字与描述,还通过llm的总结得到了一个不错的总结“our shirts provide UPF 50+ sun protection, blocking 98% of the sun's harmful rays. The Men's Tropical Plaid Short-Sleeve Shirt is made of 100% polyester and is wrinkle-resistant”
 
 ## 语言模型与文档的结合使用
 
-我们上面完成了一个书籍的存储以及调用语言模型回答里面的问题,而在我们的实际生活中如果想让语言模型与许多文档结合,怎么才能让他回答其中所有的内容呢?我们可以通过embedding和向量存储可以实现
+我们上面完成了一个书籍的存储以及调用语言模型回答里面的问题,而在我们的实际生活中如果想让语言模型与许多文档结合,怎么才能让他回答其中所有的内容呢?我们可以通过 embedding 和向量存储可以实现
 - **embedding**
 文本片段创建数值表示文本语义，相似内容的文本片段将具有相似的向量，这使我们可以在向量空间中比较文本片段
 
 - **向量数据库**
-向量数据库是存储我们在上一步中创建的这些向量表示的一种方式，我们创建这个向量数据库的方式是用来自传入文档的文本块填充它。 当我们获得一个大的传入文档时，我们首先将其分成较小的块，因为我们可能无法将整个文档传递给语言模型，因此采用分块embedding的方式储存到向量数据库中。这就是创建索引的过程。
+向量数据库是存储我们在上一步中创建的这些向量表示的一种方式，我们创建这个向量数据库的方式是用来自传入文档的文本块填充它。 当我们获得一个大的传入文档时，我们首先将其分成较小的块，因为我们可能无法将整个文档传递给语言模型，因此采用分块 embedding 的方式储存到向量数据库中。这就是创建索引的过程。
 
 通过运行时使用索引来查找与传入查询最相关的文本片段，然后我们将其与向量数据库中的所有向量进行比较，并选择最相似的n个，返回语言模型得到最终答案
 
@@ -225,9 +238,9 @@ docs = loader.load()
 
 
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/10/5.png)
-<br>
-<br>
-之后我们可以对文档进行分块和embedding,当文档非常大的时候,我们需要对文档进行分块处理,因为如果在较大文件的情况下我们的索引和提取会占用较大的内存使得效率变得很低,但是在此次小实验中,我们的文档并不大所以不需要进行分块处理,仅仅去做一个embedding就可以了
+<br />
+<br />
+之后我们可以对文档进行分块和 embedding ,当文档非常大的时候,我们需要对文档进行分块处理,因为如果在较大文件的情况下我们的索引和提取会占用较大的内存使得效率变得很低,但是在此次小实验中,我们的文档并不大所以不需要进行分块处理,仅仅去做一个 embedding 就可以了
 
 
 ```python
@@ -243,11 +256,11 @@ print(len(embed))#查看这个embedding，我们可以看到有超过一千个�
 
 ```
 
-我们的这个embbding可以查看到一千多个不同的元素,每个元素都是映射的数字值,组合起来就创建了这段文本的总体数值的表示  
+我们的这个 embbding 可以查看到一千多个不同的元素,每个元素都是映射的数字值,组合起来就创建了这段文本的总体数值的表示  
 
-- **接下来我们将embedding存储在向量存储中**
+- **接下来我们将 embedding 存储在向量存储中**
 
-为刚才的文本创建embedding，准备将它们存储在向量存储中，使用向量存储上的from documents方法来实现。
+为刚才的文本创建 embedding ，准备将它们存储在向量存储中，使用向量存储上的 from documents 方法来实现。
 该方法接受文档列表、嵌入对象，然后我们将创建一个总体向量存储
 
 ```python
@@ -276,14 +289,14 @@ len(docs)
 
 
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/10/7.png)
-<br>
-<br>
+<br />
+<br />
 可以看到返回了四个文档,同时我们可以打开第一个文档:
-<br>
-<br>
+<br />
+<br />
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/10/8.png)
-<br>
-<br>
+<br />
+<br />
 你可以看到,第一个文档的确是关于防晒的衬衫相关的内容
 
 
@@ -313,12 +326,12 @@ response = llm.call_as_llm("Question: Please list all your shirts with sun prote
 
 ```
 
-然后我们可以通过markdown形式查看语言模型通过调用语言模型的总结,以及在文本中存在的关于防晒功能衬衫的所有信息
-<br>
-<br>
-![](9.png)
-<br>
-<br>
+然后我们可以通过 markdown 形式查看语言模型通过调用语言模型的总结,以及在文本中存在的关于防晒功能衬衫的所有信息
+<br />
+<br />
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/10/9.png)
+<br />
+<br />
 这样我们就得到了我们想要的结果!
 
 
