@@ -266,7 +266,7 @@ const Header = () => {
                   alt=""
                 />
                 <div className="message-text flex items-center text-black">
-                  Cloud Studio 开发者社区全新上线，不限开发时长，一键分享应用 【快速体验】
+                  Cloud Studio 开发者社区全新上线，不限开发时长，一键分享应用
                 </div>
               </nav>
               <nav className="flex flex-nowrap items-center justify-end pl-5 xs:pl-2 sm:pl-3">
@@ -274,7 +274,7 @@ const Header = () => {
                   href="https://club.cloudstudio.net/?channel=blog"
                   className="appointment-text flex items-center mb:hidden"
                 >
-                  查看活动
+                  快速体验
                 </Link>
               </nav>
             </section>
