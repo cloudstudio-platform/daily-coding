@@ -266,12 +266,12 @@ const Header = () => {
                   alt=""
                 />
                 <div className="message-text flex items-center text-black">
-                  Cloud Studio 实战训练营，最受欢迎作品评选，火热进行中！
+                  Cloud Studio 开发者社区全新上线，不限开发时长，一键分享应用 【快速体验】
                 </div>
               </nav>
               <nav className="flex flex-nowrap items-center justify-end pl-5 xs:pl-2 sm:pl-3">
                 <Link
-                  href="https://club.cloudstudio.net/ranking?channel=blog"
+                  href="https://club.cloudstudio.net/?channel=blog"
                   className="appointment-text flex items-center mb:hidden"
                 >
                   查看活动
