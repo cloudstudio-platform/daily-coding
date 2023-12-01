@@ -121,7 +121,7 @@ export default function Footer() {
               <div className="pb-4 text-[13px] leading-4 mb:pb-3 mb:leading-[22px]">
                 <span>Copyright © {new Date().getFullYear()} </span>
                 <Link href="http://coding.net" className="hover:text-blue-hover">
-                  深圳市腾云扣钉科技有限公司
+                  深圳市腾讯计算机系统有限公司
                 </Link>
                 <span>. All rights reserved.</span>
               </div>
