@@ -126,7 +126,7 @@ export default function Footer() {
                 <span>. All rights reserved.</span>
               </div>
               <div className="flex items-center mb:flex-col mb:items-start">
-                <a
+                {/* <a
                   className="text-[13px] leading-4 hover:text-blue-hover mb:leading-[22px]"
                   href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502002265"
                   target="_blank"
@@ -134,14 +134,14 @@ export default function Footer() {
                 >
                   粤公网安备 44030502002265号
                 </a>
-                <div className="bg-gray-normal mx-2 h-[6px] w-px mb:hidden"></div>
+                <div className="bg-gray-normal mx-2 h-[6px] w-px mb:hidden"></div> */}
                 <a
                   className="text-[13px] leading-4 hover:text-blue-hover mb:pt-2 mb:leading-[22px]"
                   target="_blank"
                   href="https://beian.miit.gov.cn/"
                   rel="noreferrer"
                 >
-                  粤ICP备 14029750号-1
+                  粤ICP备 粤B2-20090059-2258
                 </a>
               </div>
             </div>
